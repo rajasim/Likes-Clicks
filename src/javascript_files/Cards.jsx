@@ -51,6 +51,28 @@ function Cards() {
       <div>
         <aside>
           <blockquote>
+            <h1>1. Marketing Automation</h1>
+            <h2>ONE PAGE WEBSITE</h2>
+          </blockquote>
+          <mark>
+            <h2>$695</h2>/setup
+          </mark>
+        </aside>
+        <aside>
+          <p>
+            Good for Basic Website With limited Content and a business that just
+            needs a modern website presence
+          </p>
+          <h2>FEATURES</h2>
+          <blockquote>
+            <p>Professional Website Design</p>
+            <p>Home Page Slideshow</p>
+          </blockquote>
+        </aside>
+      </div>
+      <div>
+        <aside>
+          <blockquote>
             <h1>3. CRO</h1>
             <h2>UPTO 7 PAGE WEBSITE</h2>
           </blockquote>

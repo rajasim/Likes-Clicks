@@ -15,7 +15,7 @@ function Navbar() {
       <h1>Likes and Clicks</h1>
       <blockquote>
         <mark>
-          <h3>Portfolio</h3>
+          
         </mark>
         <mark
           onMouseEnter={() => {
@@ -48,10 +48,10 @@ function Navbar() {
         }}
       >
         <ul>
-          <li>Marketing Automation</li>
-          <li>SEO (Search Engine Optimization)</li>
-          <li>CRO (Conversion Rate Optimization)</li>
-          <li>Google Analytics</li>
+          <li> <a href="#aboutus">Marketing Automation</a></li>
+          <li><a a href="#aboutus">SEO (Search Engine Optimization)</a></li>
+          <li><a a href="#aboutus">CRO (Conversion Rate Optimization)</a></li>
+          <li><a a href="#aboutus">App development</a></li>
         </ul>
       </div>
     </nav>

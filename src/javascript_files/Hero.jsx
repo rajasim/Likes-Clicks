@@ -5,10 +5,11 @@ function Hero() {
   return (
     <div className="hero">
       <figure>
-        <img src="/images/premium_photo-1712175879037-86f0007dc7dd.png" />
+        <video src="/videos/lcc.mp4" autoPlay loop muted></video>
+
         <figcaption>
-          Your Journey to a Digital Future. <br /> Our IT Solutions, Tailored to
-          Your Needs.
+        Grow Your Brand with Powerful Online Marketing.
+         <br />Smart Strategies, Engaging Content, and Real Results
         </figcaption>
       </figure>
     </div>

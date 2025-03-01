@@ -36,9 +36,9 @@ function AboutUs() {
   }, []);
   return (
     <section style={{ width: "100%", overflow: "hidden" }} ref={aboutusref}>
-      <div className="about-us" id="about-us">
+      <div className="about-us">
         <figure>
-          <img src="/images/Image 724.png" />
+          <img src="/images/About.jpg" />
         </figure>
         <aside>
           <blockquote style={{ width: "70%", margin: "0 auto" }}>

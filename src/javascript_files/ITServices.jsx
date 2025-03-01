@@ -3,42 +3,9 @@ import "../css_files/ITServices.css";
 
 function ITServices() {
   const itservicesref = useRef();
-  useEffect(() => {
-    const observe = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const figures = entry.target.querySelectorAll("aside figure");
-          for (let i = 0; i < figures.length; i++) {
-            figures[i].style.transform = "translateY(0px)";
-            figures[i].style.opacity = 1;
-            figures[i].style.transition = "transform 2s ease";
-          }
-
-          observer.disconnect();
-        }
-      });
-    };
-
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
-    const observer = new IntersectionObserver(observe, options);
-
-    if (itservicesref.current) {
-      observer.observe(itservicesref.current);
-    }
-
-    return () => {
-      if (itservicesref.current) {
-        observer.unobserve(itservicesref.current);
-      }
-    };
-  }, []);
-
+  
   return (
-    <div className="it-services" ref={itservicesref}>
+    <div className="it-services"  id="aboutus" ref={itservicesref}>
       <blockquote>
         <h2>Our IT Services</h2>
         <h1>
@@ -63,7 +30,7 @@ function ITServices() {
         </figure>
         <figure>
           <h3>2. SEO</h3>
-          <img src="/images/Image 772.jpg" />
+          <img src="/images/seo.png" />
           <blockquote>
             <ul>
               <li>Local SEO</li>
@@ -77,8 +44,24 @@ function ITServices() {
             </ul>
           </blockquote>
         </figure>
+
         <figure>
-          <h3>3. CRO</h3>
+          <h3>3. App Development</h3>
+          <img src="/images/Hybrid.png" />
+          <blockquote>
+            <ul>
+              <li>CI/CD Pipeline Automation</li>
+              <li>Infrastructure as Code </li>
+              <li> Automated Testing </li>
+              <li>API & Microservices Automation </li>
+              <li>Monitoring & Performance Automation</li>
+              <li>AI-powered Code Assistance</li>
+             
+            </ul>
+          </blockquote>
+        </figure>
+        <figure>
+          <h3>4. CRO</h3>
           <img src="/images/Image 774.jpg" />
           <blockquote>
             <ul>
@@ -94,7 +77,7 @@ function ITServices() {
           </blockquote>
         </figure>
         <figure>
-          <h3>4 . Google Analytics</h3>
+        <h3>5. Google Analytics</h3>
           <img src="/images/Image 775.jpg" />
           <blockquote>
             <ul>

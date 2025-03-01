@@ -4,18 +4,19 @@
 
 .hero figure {
   width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 
-.hero figure img {
+.hero figure video {
   width: 100%;
-  height: 87vh;
 }
+
 
 .hero figure figcaption {
   font-size: 2.5rem;
   position: absolute;
   bottom: 15%;
   left: 5%;
-  color: white;
+  color: rgb(3, 3, 63);
 }
