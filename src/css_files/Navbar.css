@@ -35,7 +35,7 @@ color: white;
 }
 
 .navbar blockquote mark:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .navbar blockquote mark:last-child {
