@@ -63,5 +63,5 @@ color: white;
 
 .navbar-service ul li:hover {
   background-color: rgba(225, 107, 10, 0.874);
-  text-decoration: underline;
+  text-decoration:none;
 }
