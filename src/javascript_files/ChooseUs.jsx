@@ -8,7 +8,7 @@ function ChooseUs() {
       <div>
         <aside>
           <button>
-            <i class="fa-solid fa-hand-holding-dollar"></i>
+          <i class="fa-solid fa-hand-holding-dollar"></i>
           </button>
           <blockquote>
             <h3>Affordable Pricing</h3>
@@ -20,7 +20,7 @@ function ChooseUs() {
         </aside>
         <aside>
           <button>
-            <i class="fa-solid fa-user-astronaut"></i>
+          <i class="fa-solid fa-user-astronaut"></i>
           </button>
           <blockquote>
             <h3>Vast Experience</h3>
@@ -32,7 +32,7 @@ function ChooseUs() {
         </aside>
         <aside>
           <button>
-            <i class="fa-solid fa-people-carry-box"></i>
+          <i class="fa-solid fa-people-carry-box"></i>
           </button>
           <blockquote>
             <h3>Diverse Services</h3>
@@ -41,7 +41,7 @@ function ChooseUs() {
         </aside>
         <aside>
           <button>
-            <i class="fa-solid fa-users-gear"></i>
+          <i class="fa-solid fa-users-gear"></i>
           </button>
           <blockquote>
             <h3>Free Consultation</h3>
@@ -50,7 +50,7 @@ function ChooseUs() {
         </aside>
         <aside>
           <button>
-            <i class="fa-solid fa-user-gear"></i>
+          <i class="fa-solid fa-user-gear"></i>
           </button>
           <blockquote>
             <h3>Australian Support</h3>
@@ -59,7 +59,7 @@ function ChooseUs() {
         </aside>
         <aside>
           <button>
-            <i class="fa-solid fa-clock"></i>
+          <i class="fa-solid fa-user-clock"></i>
           </button>
           <blockquote>
             <h3>Quick Turnaround</h3>
