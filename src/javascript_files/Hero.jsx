@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div className="hero">
       <figure>
-        <video src="/videos/lcc.mp4" autoPlay loop muted></video>
+        <video src="/videos/lc.mp4" autoPlay loop muted></video>
 
         <figcaption>
         Grow Your Brand with Powerful Online Marketing.

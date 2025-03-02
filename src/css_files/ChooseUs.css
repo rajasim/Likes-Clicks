@@ -5,10 +5,11 @@
   flex-direction: column;
   gap: 2rem;
   padding: 3rem 0;
+
  
   background-color: whitesmoke;
 }
-
+ 
 .choose-us h1 {
   font-size: 2.5rem;
   color: rgb(14, 20, 71);
@@ -21,6 +22,7 @@
   column-gap: 3rem;
   row-gap: 4rem;
   margin: 2rem auto;
+ 
 }
 
 .choose-us div aside {
