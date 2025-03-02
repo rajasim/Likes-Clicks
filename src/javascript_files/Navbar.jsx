@@ -28,7 +28,7 @@ function Navbar() {
           <i className="fa-solid fa-angle-down" />
         </mark>
         <mark>
-          <h3>About Us</h3>
+          <h3><a href="#about-us" className="links"> About Us</a></h3>
         </mark>
         <mark>
           <h3>Blog</h3>
@@ -48,10 +48,10 @@ function Navbar() {
         }}
       >
         <ul>
-          <li> <a href="#aboutus">Marketing Automation</a></li>
-          <li><a a href="#aboutus">SEO (Search Engine Optimization)</a></li>
-          <li><a a href="#aboutus">CRO (Conversion Rate Optimization)</a></li>
-          <li><a a href="#aboutus">App development</a></li>
+          <li> <a href="#aboutus" className="links">Marketing Automation</a></li>
+          <li><a a href="#aboutus" className="links">SEO (Search Engine Optimization)</a></li>
+          <li><a a href="#aboutus" className="links">CRO (Conversion Rate Optimization)</a></li>
+          <li><a a href="#aboutus" className="links">App development</a></li>
         </ul>
       </div>
     </nav>

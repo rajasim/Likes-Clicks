@@ -41,7 +41,7 @@ function ChooseUs() {
         </aside>
         <aside>
           <button>
-          <i class="fa-solid fa-users-gear"></i>
+          <i class="fa-solid fa-people-arrows"></i>
           </button>
           <blockquote>
             <h3>Free Consultation</h3>

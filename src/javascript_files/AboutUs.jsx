@@ -36,7 +36,7 @@ function AboutUs() {
   }, []);
   return (
     <section style={{ width: "100%", overflow: "hidden" }} ref={aboutusref}>
-      <div className="about-us">
+      <div className="about-us" id="about-us">
         <figure>
           <img src="/images/About.jpg" />
         </figure>
