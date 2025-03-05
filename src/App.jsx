@@ -7,6 +7,7 @@ import Hero from "./javascript_files/Hero";
 import ChooseUs from "./javascript_files/ChooseUs";
 import AboutUs from "./javascript_files/AboutUs";
 import ITServices from "./javascript_files/ITServices";
+import Page from "./javascript_files/Page";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <Navbar />
       <Hero />
       <ITServices/>
+      
       <AboutUs />
+      <Page/>
       <ChooseUs />
       <Footer />
     </>
