@@ -1,7 +1,7 @@
 /* Home.css */
 .home-container {
     text-align: center;
-    background-color: #ecececdc;
+    background-color: white;
     color: white;
     padding: 40px 20px;
   }
@@ -11,7 +11,7 @@
     max-width: 900px;
     margin: 0 auto 40px;
     line-height: 1.5;
-    color:rgb(14, 42, 116);
+    color: rgba(6, 6, 103, 0.888);
   }
   #gobacktohome{
     width: fit-content;
