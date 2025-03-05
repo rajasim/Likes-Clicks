@@ -1,0 +1,10 @@
+
+User-agent: Googlebot
+allow: 
+User-agent: googlebot-image
+allow: 
+User-agent: googlebot-mobile
+allow: 
+User-agent: *
+allow: 
+Sitemap: https://sozortus.com/
