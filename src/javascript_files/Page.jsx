@@ -6,7 +6,7 @@ const Page = () => {
   return (
     <div className="home-container" id="homecontainer">
       <h2 className="goal-text">
-      Our primary goal is to establish Easy Global Connect as a leading facilitator of international trade, recognized for its commitment to quality, reliability, and ethical sourcing practices. We aim to empower businesses globally by providing them with access to premium Indian products and services, while contributing positively to the economic and social development of our communities.
+      Our mission is to position likes and click as a premier leader in the marketing industry, known for innovation, results-driven strategies, and ethical business practices. We strive to empower brands worldwide by delivering cutting-edge marketing solutions that drive growth, enhance visibility, and create lasting impact. Our commitment extends beyond business success
       </h2>
       <div className="content"> 
         

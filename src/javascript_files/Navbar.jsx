@@ -31,7 +31,7 @@ function Navbar() {
           <h3><a href="#about-us" className="links"> About Us</a></h3>
         </mark>
         <mark>
-          <h3>Blog</h3>
+          <h3><a href="#homecontainer" className="links">Blog</a></h3>
         </mark>
         <mark>
           <h3>Contact Us</h3>
