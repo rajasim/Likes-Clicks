@@ -69,7 +69,7 @@ const HeroSection = () => {
       </div>
 
       {/* Premium decorative bottom element */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+      <div className="absolute inset-x-0 bottom-0 h-32 abc bg-gradient-to-t from-white via-white/80 to-transparent"></div>
     </div>
   );
 };
