@@ -63,7 +63,7 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center group">
             <span className="ml-3 text-2xl font-light tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              DevCraft
+              Likes and clicks
             </span>
           </a>
 
