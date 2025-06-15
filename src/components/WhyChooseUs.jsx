@@ -134,13 +134,13 @@ const WhyChooseUs = () => {
               Start Your Project
               <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
-            <a
+            {/* <a
               href="#portfolio"
               className="group inline-flex items-center gap-2 bg-blue-700 text-white px-8 py-3.5 rounded font-medium hover:bg-blue-800 transition-all duration-300 text-sm uppercase tracking-widest border border-blue-500"
             >
               View Our Work
               <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

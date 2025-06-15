@@ -45,26 +45,28 @@ const Navbar = () => {
         { name: "Cloud Architecture", href: "/services/cloud" },
       ],
     },
-    { name: "Work", href: "/portfolio" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "About", href: "/about" },
-    { name: "Insights", href: "/blog" },
+    { name: "Contact", href: "/Contact" },
   ];
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-500 ${
+      className={`fixed w-full z-50 transition-all duration-500  ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm "
           : "bg-transparent backdrop-blur-sm"
       }`}
     >
       <div className="max-w-8xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-17 items-center">
           {/* Logo */}
           <a href="/" className="flex items-center group">
-            <span className="ml-3 text-2xl font-light tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Likes and clicks
+            {/* <span className=" h-px w-8 bg-blue-600 left-0"></span> */}
+            <span className="text-lg uppercase tracking-widest text-blue-600 font-medium px-4">
+              Likes & Clicks
             </span>
+            {/* <span className=" h-px w-8 bg-blue-600 right-0"></span> */}
           </a>
 
           {/* Desktop Navigation */}
@@ -120,12 +122,12 @@ const Navbar = () => {
               </div>
             ))}
 
-            <a
+            {/* <a
               href="/contact"
               className="ml-4 px-6 py-2.5 rounded bg-blue-600 text-white text-sm uppercase tracking-wider font-medium hover:bg-blue-700 transition-all border border-blue-600 hover:border-blue-700"
             >
               Get in touch
-            </a>
+            </a> */}
           </nav>
 
           {/* Mobile menu button */}

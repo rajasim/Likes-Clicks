@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <div className="relative py-32 sm:py-40 lg:py-48 isolate px-6 bg-white">
+    <div className="relative py-32 sm:py-40 lg:py-48 isolate px-6 ">
       {/* Premium decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50/20 to-transparent"></div>
@@ -53,16 +53,6 @@ const HeroSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative">Get a Consultation</span>
-            </a>
-
-            <a
-              href="#portfolio"
-              className="group px-6 py-3.5 text-sm uppercase tracking-widest font-medium text-gray-900 hover:text-blue-600 flex items-center gap-2 transition-all duration-300"
-            >
-              <span className="relative">View Our Work</span>
-              <span className="group-hover:translate-x-1 transition-transform duration-300">
-                →
-              </span>
             </a>
           </div>
         </div>

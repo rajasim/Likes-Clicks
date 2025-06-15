@@ -144,13 +144,6 @@ const Testimonials = () => {
               Start Your Project
               {/* <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" /> */}
             </a>
-            <a
-              href="#portfolio"
-              className="group inline-flex items-center gap-2 px-8 py-3.5 bg-white text-gray-900 hover:bg-gray-50 transition-all duration-300 text-sm uppercase tracking-widest font-medium rounded border border-gray-300"
-            >
-              View Case Studies
-              {/* <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" /> */}
-            </a>
           </div>
         </div>
       </div>

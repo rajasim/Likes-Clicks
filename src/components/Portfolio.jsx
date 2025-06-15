@@ -246,13 +246,13 @@ const Portfolio = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            {/* <a
               href="/portfolio"
               className="group inline-flex items-center gap-2 px-8 py-4 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 text-sm uppercase tracking-widest font-medium"
             >
               View Full Portfolio
               <FiArrowRight className="transform transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+            </a> */}
 
             <a
               href="/contact"

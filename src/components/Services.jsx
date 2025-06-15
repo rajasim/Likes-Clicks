@@ -1,55 +1,103 @@
 import {
   FaCode,
   FaMobileAlt,
-  FaPaintBrush,
+  FaSearch,
+  FaHashtag,
+  FaAd,
+  FaPenFancy,
+  FaEnvelope,
+  FaLaptopCode,
   FaCloud,
-  FaMicrochip,
-  FaSyncAlt,
+  FaChartBar,
+  FaShieldAlt,
+  FaPaintBrush,
 } from "react-icons/fa";
 
 const Services = () => {
   const services = [
     {
-      name: "Custom Web Development",
+      name: "Website Development",
       description:
-        "Tailored web applications built with modern frameworks for optimal performance and scalability.",
+        "Custom websites for businesses, schools, e-commerce, and more using modern frameworks.",
       icon: <FaCode className="h-5 w-5" />,
-      cta: "View web projects",
+      cta: "Get started",
     },
     {
       name: "Mobile App Development",
       description:
-        "iOS and Android applications that deliver seamless, native-quality user experiences.",
+        "Android and iOS app development with responsive design and user-friendly interfaces.",
       icon: <FaMobileAlt className="h-5 w-5" />,
-      cta: "See mobile work",
+      cta: "Learn more",
+    },
+    {
+      name: "Search Engine Optimization (SEO)",
+      description:
+        "On-page and off-page SEO to improve website visibility and ranking.",
+      icon: <FaSearch className="h-5 w-5" />,
+      cta: "Boost rankings",
+    },
+    {
+      name: "Social Media Marketing (SMM)",
+      description:
+        "Campaigns and content strategies for platforms like Instagram, Facebook, and LinkedIn.",
+      icon: <FaHashtag className="h-5 w-5" />,
+      cta: "Grow followers",
+    },
+    {
+      name: "Pay-Per-Click Advertising (PPC)",
+      description:
+        "Google Ads, Meta Ads, and other paid ad management for high-converting traffic.",
+      icon: <FaAd className="h-5 w-5" />,
+      cta: "Increase leads",
+    },
+    {
+      name: "Content Marketing",
+      description:
+        "Blog writing, press releases, video content, and infographics to attract and retain audiences.",
+      icon: <FaPenFancy className="h-5 w-5" />,
+      cta: "See samples",
+    },
+    {
+      name: "Email Marketing Automation",
+      description:
+        "Bulk mailing, automated follow-ups, and personalized email campaigns.",
+      icon: <FaEnvelope className="h-5 w-5" />,
+      cta: "Automate now",
+    },
+    {
+      name: "Custom Software Development",
+      description:
+        "ERP, CRM, inventory, and custom SaaS solutions tailored to business needs.",
+      icon: <FaLaptopCode className="h-5 w-5" />,
+      cta: "Request demo",
+    },
+    {
+      name: "Cloud Services & Hosting",
+      description:
+        "Secure cloud storage, AWS/Azure management, and domain/hosting support.",
+      icon: <FaCloud className="h-5 w-5" />,
+      cta: "Migrate now",
+    },
+    {
+      name: "Data Analytics & Business Intelligence",
+      description:
+        "Visual dashboards, sales insights, and predictive analytics for better decisions.",
+      icon: <FaChartBar className="h-5 w-5" />,
+      cta: "Analyze data",
+    },
+    {
+      name: "Cybersecurity & Data Protection",
+      description:
+        "Firewall setup, penetration testing, encryption, endpoint protection, and GDPR compliance.",
+      icon: <FaShieldAlt className="h-5 w-5" />,
+      cta: "Secure assets",
     },
     {
       name: "UI/UX Design",
       description:
-        "Beautiful, intuitive interfaces crafted to drive engagement and improve conversion.",
+        "Attractive, user-friendly design for websites and mobile apps with wireframes and prototypes.",
       icon: <FaPaintBrush className="h-5 w-5" />,
-      cta: "View design portfolio",
-    },
-    {
-      name: "Cloud Solutions",
-      description:
-        "Scalable cloud architecture and SaaS platforms with robust infrastructure.",
-      icon: <FaCloud className="h-5 w-5" />,
-      cta: "Explore cloud services",
-    },
-    {
-      name: "AI Integration",
-      description:
-        "Intelligent automation and machine learning features to enhance your operations.",
-      icon: <FaMicrochip className="h-5 w-5" />,
-      cta: "Discover AI capabilities",
-    },
-    {
-      name: "Digital Transformation",
-      description:
-        "Comprehensive modernization of legacy systems and business processes.",
-      icon: <FaSyncAlt className="h-5 w-5" />,
-      cta: "Begin transformation",
+      cta: "View portfolio",
     },
   ];
 
@@ -67,7 +115,7 @@ const Services = () => {
           <div className="inline-flex items-center gap-2 px-0 mb-8">
             <span className="w-12 h-px bg-blue-600"></span>
             <span className="text-sm uppercase tracking-widest text-blue-600 font-medium">
-              Our Expertise
+              Our Services
             </span>
             <span className="w-12 h-px bg-blue-600"></span>
           </div>
@@ -75,23 +123,18 @@ const Services = () => {
             Comprehensive Digital Solutions
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            We deliver end-to-end technology services designed to elevate your
-            business and drive measurable results.
+            End-to-end technology and marketing services to grow your business
+            in the digital world.
           </p>
         </div>
 
         {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.name}
               className="group relative bg-white rounded-xl border border-gray-200 p-8 hover:border-blue-300 transition-all duration-300"
             >
-              {/* Icon with subtle gradient background */}
-              {/* <div className="absolute top-8 right-8 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 opacity-100 group-hover:opacity-100 transition-opacity duration-300">
-                {" "}
-              </div> */}
-
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-6">
                   {service.icon}
@@ -103,7 +146,7 @@ const Services = () => {
 
                 <p className="text-gray-600 mb-6">{service.description}</p>
 
-                <a
+                {/* <a
                   href="#"
                   className="text-sm font-medium text-blue-600 hover:text-blue-700 flex items-center gap-1.5 group-hover:gap-2 transition-all duration-300"
                 >
@@ -111,7 +154,7 @@ const Services = () => {
                   <span className="group-hover:translate-x-1 transition-transform duration-300">
                     →
                   </span>
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
