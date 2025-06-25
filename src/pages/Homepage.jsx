@@ -15,7 +15,7 @@ const Homepage = () => {
       <TrustedBySection />
       <WhyChooseUs />
       <Portfolio />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <NewsletterSection />
     </>
   );
