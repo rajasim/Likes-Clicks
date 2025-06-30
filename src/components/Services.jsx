@@ -26,8 +26,8 @@ const Services = () => {
         "Custom websites for businesses, schools, e-commerce, and more using modern frameworks.",
       icon: <FaCode className="h-6 w-6" />,
       cta: "Get started",
-      gradient: "from-blue-500 to-cyan-400",
-      bgGradient: "from-blue-500/10 to-cyan-400/10",
+      gradient: "from-blue-600 to-cyan-500",
+      bgGradient: "from-blue-600/10 to-cyan-500/10",
     },
     {
       name: "Mobile App Development",
@@ -35,8 +35,8 @@ const Services = () => {
         "Android and iOS app development with responsive design and user-friendly interfaces.",
       icon: <FaMobileAlt className="h-6 w-6" />,
       cta: "Learn more",
-      gradient: "from-purple-500 to-blue-500",
-      bgGradient: "from-purple-500/10 to-blue-500/10",
+      gradient: "from-purple-600 to-blue-600",
+      bgGradient: "from-purple-600/10 to-blue-600/10",
     },
     {
       name: "Search Engine Optimization",
@@ -44,8 +44,8 @@ const Services = () => {
         "On-page and off-page SEO to improve website visibility and ranking.",
       icon: <FaSearch className="h-6 w-6" />,
       cta: "Boost rankings",
-      gradient: "from-green-500 to-emerald-400",
-      bgGradient: "from-green-500/10 to-emerald-400/10",
+      gradient: "from-green-600 to-emerald-500",
+      bgGradient: "from-green-600/10 to-emerald-500/10",
     },
     {
       name: "Social Media Marketing",
@@ -53,8 +53,8 @@ const Services = () => {
         "Campaigns and content strategies for platforms like Instagram, Facebook, and LinkedIn.",
       icon: <FaHashtag className="h-6 w-6" />,
       cta: "Grow followers",
-      gradient: "from-pink-500 to-rose-400",
-      bgGradient: "from-pink-500/10 to-rose-400/10",
+      gradient: "from-pink-600 to-rose-500",
+      bgGradient: "from-pink-600/10 to-rose-500/10",
     },
     {
       name: "Pay-Per-Click Advertising",
@@ -62,8 +62,8 @@ const Services = () => {
         "Google Ads, Meta Ads, and other paid ad management for high-converting traffic.",
       icon: <FaAd className="h-6 w-6" />,
       cta: "Increase leads",
-      gradient: "from-orange-500 to-yellow-400",
-      bgGradient: "from-orange-500/10 to-yellow-400/10",
+      gradient: "from-orange-600 to-yellow-500",
+      bgGradient: "from-orange-600/10 to-yellow-500/10",
     },
     {
       name: "Content Marketing",
@@ -71,8 +71,8 @@ const Services = () => {
         "Blog writing, press releases, video content, and infographics to attract and retain audiences.",
       icon: <FaPenFancy className="h-6 w-6" />,
       cta: "See samples",
-      gradient: "from-indigo-500 to-purple-400",
-      bgGradient: "from-indigo-500/10 to-purple-400/10",
+      gradient: "from-indigo-600 to-purple-500",
+      bgGradient: "from-indigo-600/10 to-purple-500/10",
     },
     {
       name: "Email Marketing Automation",
@@ -80,8 +80,8 @@ const Services = () => {
         "Bulk mailing, automated follow-ups, and personalized email campaigns.",
       icon: <FaEnvelope className="h-6 w-6" />,
       cta: "Automate now",
-      gradient: "from-red-500 to-pink-400",
-      bgGradient: "from-red-500/10 to-pink-400/10",
+      gradient: "from-red-600 to-pink-500",
+      bgGradient: "from-red-600/10 to-pink-500/10",
     },
     {
       name: "Custom Software Development",
@@ -89,8 +89,8 @@ const Services = () => {
         "ERP, CRM, inventory, and custom SaaS solutions tailored to business needs.",
       icon: <FaLaptopCode className="h-6 w-6" />,
       cta: "Request demo",
-      gradient: "from-teal-500 to-cyan-400",
-      bgGradient: "from-teal-500/10 to-cyan-400/10",
+      gradient: "from-teal-600 to-cyan-500",
+      bgGradient: "from-teal-600/10 to-cyan-500/10",
     },
     {
       name: "Cloud Services & Hosting",
@@ -98,8 +98,8 @@ const Services = () => {
         "Secure cloud storage, AWS/Azure management, and domain/hosting support.",
       icon: <FaCloud className="h-6 w-6" />,
       cta: "Migrate now",
-      gradient: "from-blue-600 to-indigo-500",
-      bgGradient: "from-blue-600/10 to-indigo-500/10",
+      gradient: "from-blue-700 to-indigo-600",
+      bgGradient: "from-blue-700/10 to-indigo-600/10",
     },
     {
       name: "Data Analytics & BI",
@@ -107,8 +107,8 @@ const Services = () => {
         "Visual dashboards, sales insights, and predictive analytics for better decisions.",
       icon: <FaChartBar className="h-6 w-6" />,
       cta: "Analyze data",
-      gradient: "from-emerald-500 to-teal-400",
-      bgGradient: "from-emerald-500/10 to-teal-400/10",
+      gradient: "from-emerald-600 to-teal-500",
+      bgGradient: "from-emerald-600/10 to-teal-500/10",
     },
     {
       name: "Cybersecurity & Protection",
@@ -116,8 +116,8 @@ const Services = () => {
         "Firewall setup, penetration testing, encryption, endpoint protection, and GDPR compliance.",
       icon: <FaShieldAlt className="h-6 w-6" />,
       cta: "Secure assets",
-      gradient: "from-red-600 to-orange-500",
-      bgGradient: "from-red-600/10 to-orange-500/10",
+      gradient: "from-red-700 to-orange-600",
+      bgGradient: "from-red-700/10 to-orange-600/10",
     },
     {
       name: "UI/UX Design",
@@ -125,8 +125,8 @@ const Services = () => {
         "Attractive, user-friendly design for websites and mobile apps with wireframes and prototypes.",
       icon: <FaPaintBrush className="h-6 w-6" />,
       cta: "View portfolio",
-      gradient: "from-violet-500 to-purple-400",
-      bgGradient: "from-violet-500/10 to-purple-400/10",
+      gradient: "from-violet-600 to-purple-500",
+      bgGradient: "from-violet-600/10 to-purple-500/10",
     },
   ];
 
@@ -152,14 +152,14 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="relative py-24 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    <div className="relative py-24 bg-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.05),transparent_50%)]"></div>
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(0,0,0,0.03) 1px, transparent 0)`,
             backgroundSize: "60px 60px",
           }}
         ></div>
@@ -170,7 +170,7 @@ const Services = () => {
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full animate-pulse"
+            className="absolute w-2 h-2 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-full animate-pulse"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -185,24 +185,24 @@ const Services = () => {
         {/* Section Header */}
         <div className="mx-auto max-w-4xl text-center mb-20">
           <div className="inline-flex items-center gap-4 px-0 mb-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
-            <span className="text-sm uppercase tracking-[0.2em] text-cyan-400 font-semibold">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div>
+            <span className="text-sm uppercase tracking-[0.2em] text-blue-600 font-semibold">
               Our Services
             </span>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div>
           </div>
 
           <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent">
               Comprehensive
             </span>
             <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Digital Solutions
             </span>
           </h2>
 
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             End-to-end technology and marketing services designed to elevate
             your business in the digital ecosystem.
           </p>
@@ -231,7 +231,7 @@ const Services = () => {
               ></div>
 
               {/* Main Card */}
-              <div className="relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-xl p-8 h-full hover:bg-slate-800/80 transition-all duration-500 group-hover:border-slate-600/50 group-hover:scale-105">
+              <div className="relative bg-white backdrop-blur-xl border border-gray-200 rounded-xl p-8 h-full hover:bg-gray-50 transition-all duration-500 group-hover:border-gray-300 group-hover:scale-105 shadow-sm hover:shadow-md">
                 {/* Background Pattern */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
@@ -247,18 +247,18 @@ const Services = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-100 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
                     {service.name}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-300 mb-6 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
+                  <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {service.description}
                   </p>
 
                   {/* CTA Button */}
                   <button
-                    className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-lg opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-105 shadow-lg`}
+                    className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-lg opacity-100 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-105 shadow-lg`}
                   >
                     {service.cta}
                     <svg
@@ -301,7 +301,7 @@ const Services = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+          <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30">
             <span className="flex items-center gap-3">
               Get Started Today
               <svg

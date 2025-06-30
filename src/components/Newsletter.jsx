@@ -3,18 +3,18 @@ import { FaArrowRight, FaEnvelope } from "react-icons/fa";
 
 const NewsletterSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 to-black overflow-hidden">
+    <section className="relative bg-white overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-900/10 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-purple-900/10 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-50 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-50 to-transparent"></div>
 
         {/* Subtle grid pattern */}
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
-              "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+              "linear-gradient(to right, #3b82f6 1px, transparent 1px), linear-gradient(to bottom, #3b82f6 1px, transparent 1px)",
             backgroundSize: "40px 40px",
           }}
         ></div>
@@ -24,20 +24,20 @@ const NewsletterSection = () => {
         {/* Section header with decorative rule */}
         <div className="text-center mb-20">
           <div className="relative inline-flex items-center justify-center mb-8">
-            <span className="h-px w-16 bg-blue-400 left-0"></span>
-            <span className="text-xs uppercase tracking-[0.2em] text-blue-400 font-light px-4">
+            <span className="h-px w-16 bg-blue-500 left-0"></span>
+            <span className="text-xs uppercase tracking-[0.2em] text-blue-500 font-light px-4">
               Stay Updated
             </span>
-            <span className="h-px w-16 bg-blue-400 right-0"></span>
+            <span className="h-px w-16 bg-blue-500 right-0"></span>
           </div>
-          <h2 className="text-4xl font-light tracking-tight text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          <h2 className="text-4xl font-light tracking-tight text-gray-900 mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600">
               Subscribe to Our
             </span>
-            <span className="block text-white">Newsletter</span>
+            <span className="block text-gray-900">Newsletter</span>
           </h2>
           <div className="max-w-2xl mx-auto">
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Receive exclusive updates, industry insights, and special offers
               directly to your inbox.
             </p>
@@ -47,13 +47,13 @@ const NewsletterSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Newsletter form */}
           <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-            <div className="relative bg-gray-800 rounded-lg border border-gray-700 p-8 shadow-xl hover:shadow-2xl hover:shadow-blue-900/20 transition-all duration-300">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+            <div className="relative bg-white rounded-lg border border-gray-200 p-8 shadow-lg hover:shadow-xl hover:shadow-blue-100 transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-blue-900/30 p-3 rounded-lg backdrop-blur-sm">
-                  <FaEnvelope className="h-5 w-5 text-blue-400" />
+                <div className="bg-blue-100 p-3 rounded-lg">
+                  <FaEnvelope className="h-5 w-5 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-light text-white">
+                <h3 className="text-xl font-light text-gray-900">
                   Email Newsletter
                 </h3>
               </div>
@@ -66,20 +66,20 @@ const NewsletterSection = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
                     placeholder="Enter your email"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="group w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-light rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/20"
+                  className="group w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-light rounded-lg hover:from-blue-500 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-200"
                 >
                   Subscribe
                   <FaArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </form>
 
-              <p className="mt-4 text-sm text-gray-400">
+              <p className="mt-4 text-sm text-gray-500">
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </div>
@@ -91,7 +91,7 @@ const NewsletterSection = () => {
               {
                 icon: (
                   <svg
-                    className="h-6 w-6 text-blue-400"
+                    className="h-6 w-6 text-blue-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -110,7 +110,7 @@ const NewsletterSection = () => {
               {
                 icon: (
                   <svg
-                    className="h-6 w-6 text-blue-400"
+                    className="h-6 w-6 text-blue-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -129,7 +129,7 @@ const NewsletterSection = () => {
               {
                 icon: (
                   <svg
-                    className="h-6 w-6 text-blue-400"
+                    className="h-6 w-6 text-blue-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -148,7 +148,7 @@ const NewsletterSection = () => {
               {
                 icon: (
                   <svg
-                    className="h-6 w-6 text-blue-400"
+                    className="h-6 w-6 text-blue-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -167,14 +167,14 @@ const NewsletterSection = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-5 rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400/30 hover:bg-gray-700/50 transition-all duration-300 group"
+                className="flex items-start gap-4 p-5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 group"
               >
-                <div className="bg-blue-900/20 p-2 rounded-lg backdrop-blur-sm group-hover:bg-blue-900/30 transition-colors duration-300">
+                <div className="bg-blue-100 p-2 rounded-lg group-hover:bg-blue-200 transition-colors duration-300">
                   {item.icon}
                 </div>
                 <div>
-                  <h4 className="font-light text-white">{item.title}</h4>
-                  <p className="text-sm text-gray-300 mt-1">
+                  <h4 className="font-light text-gray-900">{item.title}</h4>
+                  <p className="text-sm text-gray-600 mt-1">
                     {item.description}
                   </p>
                 </div>
@@ -191,7 +191,7 @@ const NewsletterSection = () => {
           inset: 0;
           background: radial-gradient(
             circle at 20% 50%,
-            rgba(96, 165, 250, 0.1) 0%,
+            rgba(59, 130, 246, 0.1) 0%,
             transparent 50%
           );
           pointer-events: none;

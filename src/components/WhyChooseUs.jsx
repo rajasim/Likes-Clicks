@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
       icon: <FaRocket className="w-6 h-6" />,
       gradient: "from-orange-500 to-red-500",
       bgGradient: "from-orange-500/10 to-red-500/10",
-      glowColor: "shadow-orange-500/25",
+      glowColor: "shadow-orange-500/20",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
       icon: <FaChartLine className="w-6 h-6" />,
       gradient: "from-green-500 to-emerald-500",
       bgGradient: "from-green-500/10 to-emerald-500/10",
-      glowColor: "shadow-green-500/25",
+      glowColor: "shadow-green-500/20",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
       icon: <FaWallet className="w-6 h-6" />,
       gradient: "from-yellow-500 to-orange-500",
       bgGradient: "from-yellow-500/10 to-orange-500/10",
-      glowColor: "shadow-yellow-500/25",
+      glowColor: "shadow-yellow-500/20",
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
       icon: <FaHeadset className="w-6 h-6" />,
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-500/10 to-cyan-500/10",
-      glowColor: "shadow-blue-500/25",
+      glowColor: "shadow-blue-500/20",
     },
     {
       id: 5,
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
       icon: <FaShieldAlt className="w-6 h-6" />,
       gradient: "from-red-500 to-pink-500",
       bgGradient: "from-red-500/10 to-pink-500/10",
-      glowColor: "shadow-red-500/25",
+      glowColor: "shadow-red-500/20",
     },
     {
       id: 6,
@@ -75,7 +75,7 @@ const WhyChooseUs = () => {
       icon: <FaLightbulb className="w-6 h-6" />,
       gradient: "from-purple-500 to-indigo-500",
       bgGradient: "from-purple-500/10 to-indigo-500/10",
-      glowColor: "shadow-purple-500/25",
+      glowColor: "shadow-purple-500/20",
     },
   ];
 
@@ -109,10 +109,10 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+    <section className="relative py-24 bg-white overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_70%)]"></div>
         <div
           className="absolute w-96 h-96 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"
           style={{
@@ -124,7 +124,7 @@ const WhyChooseUs = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle at 3px 3px, rgba(255,255,255,0.03) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 3px 3px, rgba(0,0,0,0.03) 1px, transparent 0)`,
             backgroundSize: "50px 50px",
           }}
         ></div>
@@ -135,7 +135,7 @@ const WhyChooseUs = () => {
         {[...Array(12)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full animate-ping"
+            className="absolute w-1 h-1 bg-gray-500/20 rounded-full animate-ping"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -150,24 +150,24 @@ const WhyChooseUs = () => {
         {/* Header Section */}
         <div className="mx-auto max-w-4xl text-center mb-20">
           <div className="inline-flex items-center gap-4 px-0 mb-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
-            <span className="text-sm uppercase tracking-[0.2em] text-blue-400 font-semibold">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div>
+            <span className="text-sm uppercase tracking-[0.2em] text-blue-600 font-semibold">
               Our Advantages
             </span>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div>
           </div>
 
           <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent">
               Your Strategic
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600 bg-clip-text text-transparent">
               Technology Partner
             </span>
           </h2>
 
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We don't just build software—we architect digital experiences that
             scale, secure, and revolutionize your business landscape.
           </p>
@@ -192,18 +192,18 @@ const WhyChooseUs = () => {
             >
               {/* Card Glow */}
               <div
-                className={`absolute -inset-0.5 bg-gradient-to-r ${strength.gradient} rounded-2xl blur opacity-0 group-hover:opacity-40 transition-all duration-500`}
+                className={`absolute -inset-0.5 bg-gradient-to-r ${strength.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition-all duration-500`}
               ></div>
 
               {/* Main Card */}
-              <div className="relative bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-xl p-8 h-full hover:bg-slate-800/80 transition-all duration-500 group-hover:border-slate-600/50 group-hover:scale-105">
+              <div className="relative bg-white backdrop-blur-xl border border-gray-200 rounded-xl p-8 h-full hover:bg-gray-50 transition-all duration-500 group-hover:border-gray-300 group-hover:scale-105 shadow-sm hover:shadow-md">
                 {/* Background Pattern */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${strength.bgGradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 ></div>
 
                 {/* Floating Icon Background */}
-                <div className="absolute top-4 right-4 w-16 h-16 rounded-xl bg-gradient-to-br from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"></div>
+                <div className="absolute top-4 right-4 w-16 h-16 rounded-xl bg-gradient-to-br from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"></div>
 
                 {/* Content */}
                 <div className="relative z-10">
@@ -215,18 +215,18 @@ const WhyChooseUs = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-100 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
                     {strength.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-300 leading-relaxed group-hover:text-slate-200 transition-colors duration-300">
+                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {strength.description}
                   </p>
 
                   {/* Check Mark */}
                   <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <FaCheckCircle className={`w-5 h-5 text-green-400`} />
+                    <FaCheckCircle className={`w-5 h-5 text-green-500`} />
                   </div>
                 </div>
 
@@ -258,37 +258,37 @@ const WhyChooseUs = () => {
           <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-2xl blur opacity-20 animate-pulse"></div>
 
           {/* Main CTA Container */}
-          <div className="relative bg-gradient-to-r from-slate-800/90 to-slate-900/90 backdrop-blur-xl border border-slate-700/50 rounded-xl p-12 text-center">
+          <div className="relative bg-white backdrop-blur-xl border border-gray-200 rounded-xl p-12 text-center shadow-lg">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5 rounded-xl"></div>
 
             {/* Content */}
             <div className="relative z-10">
               <h3 className="text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent">
                   Ready to Transform
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600 bg-clip-text text-transparent">
                   Your Business?
                 </span>
               </h3>
 
-              <p className="text-slate-300 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+              <p className="text-gray-600 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
                 Let's discuss your project and create something extraordinary
                 together. Your digital transformation starts here.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="group relative px-10 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <button className="group relative px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                   <span className="relative flex items-center gap-3">
                     Start Your Project
                     <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
 
-                <button className="group px-10 py-4 text-white font-bold text-lg border-2 border-white/20 hover:border-white/40 rounded-full transition-all duration-300 backdrop-blur-sm hover:bg-white/5">
+                <button className="group px-10 py-4 text-gray-800 font-bold text-lg border-2 border-gray-200 hover:border-gray-300 rounded-full transition-all duration-300 hover:bg-gray-50">
                   <span className="flex items-center gap-3">
                     View Our Portfolio
                     <svg
