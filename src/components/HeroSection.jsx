@@ -1,161 +1,204 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  ArrowRight,
+  Play,
+  Sparkles,
+  Zap,
+  Shield,
+} from "lucide-react";
 
 const HeroSection = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [particles, setParticles] = useState([]);
+
+  const slides = [
+    {
+      title: "Cloud Solutions for Scalable Growth",
+      description:
+        "Enterprise-grade cloud infrastructure tailored to your business needs with 99.9% uptime guarantee",
+      cta: "Explore Cloud Services",
+      badge: "New",
+      icon: Sparkles,
+      gradient: "from-blue-600 via-purple-600 to-indigo-800",
+      accentColor: "from-blue-500 to-purple-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80",
+    },
+    {
+      title: "AI & Machine Learning Services",
+      description:
+        "Transform your business with our cutting-edge AI solutions powered by advanced algorithms",
+      cta: "Discover AI Solutions",
+      badge: "Featured",
+      icon: Zap,
+      gradient: "from-emerald-600 via-teal-600 to-cyan-800",
+      accentColor: "from-emerald-500 to-teal-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80",
+    },
+    {
+      title: "Cybersecurity You Can Trust",
+      description:
+        "Protect your digital assets with our comprehensive security solutions and 24/7 monitoring",
+      cta: "Secure Your Business",
+      badge: "Popular",
+      icon: Shield,
+      gradient: "from-orange-600 via-red-600 to-pink-800",
+      accentColor: "from-orange-500 to-red-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80",
+    },
+  ];
 
   useEffect(() => {
-    setIsVisible(true);
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    const newParticles = Array.from({ length: 50 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 4 + 2,
+      opacity: Math.random() * 0.5 + 0.3,
+      delay: Math.random() * 10,
+      duration: Math.random() * 20 + 10,
+    }));
+    setParticles(newParticles);
   }, []);
 
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setIsAutoPlaying(false);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setIsAutoPlaying(false);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+  };
+
+  const currentSlideData = slides[currentSlide];
+  const IconComponent = currentSlideData.icon;
+
   return (
-    <div className="relative min-h-[80vh] bg-white overflow-hidden">
-      {/* Subtle Background Elements */}
-      <div className="absolute inset-0 opacity-10">
+    <div className="relative w-full h-screen overflow-hidden bg-black">
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+        style={{
+          backgroundImage: `url(${currentSlideData.bgImage})`,
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+        }}
+      >
         <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0)`,
-            backgroundSize: "30px 30px",
-          }}
+          className={`absolute inset-0 bg-gradient-to-br ${currentSlideData.gradient} opacity-70`}
         ></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
-      {/* Gradient Orbs */}
+      {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
+        {particles.map((particle) => (
+          <div
+            key={particle.id}
+            className="absolute bg-white/30 rounded-full"
+            style={{
+              left: `${particle.x}%`,
+              top: `${particle.y}%`,
+              width: `${particle.size}px`,
+              height: `${particle.size}px`,
+              opacity: particle.opacity,
+              animation: `float ${particle.duration}s ease-in-out infinite`,
+              animationDelay: `${particle.delay}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Shapes */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-white/10 rounded-full animate-pulse"></div>
         <div
-          className="absolute w-64 h-64 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full blur-xl opacity-50"
-          style={{
-            left: `${mousePosition.x * 0.02}px`,
-            top: `${mousePosition.y * 0.02}px`,
-            transform: "translate(-50%, -50%)",
-          }}
+          className="absolute top-40 right-32 w-24 h-24 border border-white/10 rounded-lg rotate-45 animate-spin"
+          style={{ animationDuration: "20s" }}
+        ></div>
+        <div
+          className="absolute bottom-32 left-1/4 w-16 h-16 border border-white/10 rounded-full animate-bounce"
+          style={{ animationDelay: "2s" }}
         ></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 px-6 py-16 sm:py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text Content */}
-            <div>
-              {/* Announcement Badge */}
-              <div
-                className={`mb-6 transform transition-all duration-700 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
-                }`}
-              >
-                <div className="relative inline-block">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full blur opacity-30 group-hover:opacity-40 transition-all duration-300"></div>
-                  <div className="relative rounded-full px-4 py-1.5 text-xs font-medium text-gray-700 bg-white/90 backdrop-blur-sm border border-gray-200 group-hover:border-gray-300 transition-all duration-200 shadow-xs">
-                    🚀 AI integration services available
-                  </div>
-                </div>
-              </div>
+      <div className="relative h-full flex items-center justify-center z-10">
+        <div className="text-center px-6 max-w-5xl mx-auto">
+          <div className="mb-8">
+            <span
+              className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r ${currentSlideData.accentColor} rounded-full shadow-lg`}
+            >
+              <IconComponent className="w-4 h-4" />
+              {currentSlideData.badge}
+            </span>
+          </div>
 
-              {/* Main Heading */}
-              <h1
-                className={`text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 transform transition-all duration-700 delay-150 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
-                }`}
-              >
-                <span className="block text-gray-900 leading-tight">
-                  Transforming
-                </span>
-                <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
-                  Digital Dreams
-                </span>
-              </h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+              {currentSlideData.title}
+            </span>
+          </h1>
 
-              <p
-                className={`mt-4 text-lg leading-relaxed text-gray-600 max-w-lg transform transition-all duration-700 delay-300 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
-                }`}
-              >
-                We craft extraordinary digital experiences with cutting-edge
-                technology.
-              </p>
+          <p className="text-xl text-gray-200 mb-10">
+            {currentSlideData.description}
+          </p>
 
-              {/* CTA Buttons */}
-              <div
-                className={`mt-8 flex flex-wrap gap-4 transform transition-all duration-700 delay-450 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
-                }`}
-              >
-                <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium text-base rounded-lg transition-all duration-200 transform hover:scale-[1.02] shadow-md hover:shadow-blue-500/20">
-                  Start Your Project
-                </button>
-                <button className="px-6 py-3 text-gray-700 font-medium text-base border border-gray-300 rounded-lg transition-all duration-200 bg-white hover:bg-gray-50 shadow-sm">
-                  View Our Work
-                </button>
-              </div>
-
-              {/* Stats Section */}
-              <div
-                className={`mt-10 grid grid-cols-2 gap-6 max-w-xs transform transition-all duration-700 delay-600 ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
-                }`}
-              >
-                {[
-                  { number: "500+", label: "Projects" },
-                  { number: "99%", label: "Satisfaction" },
-                ].map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-500 text-xs uppercase tracking-wider">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Column - Image */}
-            <div className="relative h-full min-h-[300px] lg:min-h-[400px] transform transition-all duration-700 delay-200">
-              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-                {/* Replace with your actual image */}
-                <img
-                  src="/hero-image.jpg" // Replace with your image path
-                  alt="Digital transformation"
-                  className="w-full h-full object-cover"
-                />
-                {/* Fallback for Next.js Image component */}
-                {/* <Image
-                  src="/hero-image.jpg"
-                  alt="Digital transformation"
-                  layout="fill"
-                  objectFit="cover"
-                  quality={90}
-                  priority
-                /> */}
-              </div>
-            </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <button
+              className={`group relative px-8 py-4 bg-gradient-to-r ${currentSlideData.accentColor} text-white font-semibold rounded-xl shadow-2xl transition-all duration-300 hover:scale-105`}
+            >
+              <span className="relative flex items-center gap-2">
+                {currentSlideData.cta}
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Compact Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <div className="w-5 h-8 border border-gray-300 rounded-full flex justify-center">
-          <div className="w-0.5 h-2 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
-        </div>
+      {/* Controls */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
+        <button
+          onClick={prevSlide}
+          className="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition"
+        >
+          <ChevronLeft className="w-5 h-5 text-white" />
+        </button>
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              index === currentSlide ? "bg-white" : "bg-white/30"
+            }`}
+          ></div>
+        ))}
+        <button
+          onClick={nextSlide}
+          className="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition"
+        >
+          <ChevronRight className="w-5 h-5 text-white" />
+        </button>
       </div>
     </div>
   );
