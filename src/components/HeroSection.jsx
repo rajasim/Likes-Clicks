@@ -3,53 +3,83 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowRight,
-  Play,
   Sparkles,
   Zap,
   Shield,
+  Code,
+  Smartphone,
+  Cpu,
+  Globe,
+  Layout,
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
   const [particles, setParticles] = useState([]);
 
   const slides = [
     {
-      title: "Cloud Solutions for Scalable Growth",
+      title: "Web Development Solutions",
       description:
-        "Enterprise-grade cloud infrastructure tailored to your business needs with 99.9% uptime guarantee",
-      cta: "Explore Cloud Services",
-      badge: "New",
-      icon: Sparkles,
-      gradient: "from-blue-600 via-purple-600 to-indigo-800",
-      accentColor: "from-blue-500 to-purple-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80",
-    },
-    {
-      title: "AI & Machine Learning Services",
-      description:
-        "Transform your business with our cutting-edge AI solutions powered by advanced algorithms",
-      cta: "Discover AI Solutions",
-      badge: "Featured",
-      icon: Zap,
-      gradient: "from-emerald-600 via-teal-600 to-cyan-800",
-      accentColor: "from-emerald-500 to-teal-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80",
-    },
-    {
-      title: "Cybersecurity You Can Trust",
-      description:
-        "Protect your digital assets with our comprehensive security solutions and 24/7 monitoring",
-      cta: "Secure Your Business",
+        "Custom-built websites and web applications with modern frameworks for exceptional performance and user experience",
+      cta: "Explore Web Services",
       badge: "Popular",
-      icon: Shield,
-      gradient: "from-orange-600 via-red-600 to-pink-800",
-      accentColor: "from-orange-500 to-red-600",
+      icon: Code,
+      gradient: "from-blue-600 via-indigo-600 to-purple-800",
+      accentColor: "from-blue-500 to-indigo-600",
       bgImage:
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80",
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "High-performance iOS and Android applications built with native and cross-platform technologies",
+      cta: "View App Portfolio",
+      badge: "Hot",
+      icon: Smartphone,
+      gradient: "from-green-600 via-teal-600 to-cyan-800",
+      accentColor: "from-green-500 to-teal-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
+    },
+    {
+      title: "Full-Stack Development",
+      description:
+        "Complete solutions with robust backends and intuitive frontends for seamless digital experiences",
+      cta: "See Our Work",
+      badge: "Featured",
+      icon: Cpu,
+      gradient: "from-purple-600 via-pink-600 to-red-800",
+      accentColor: "from-purple-500 to-pink-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80",
+    },
+    {
+      title: "Progressive Web Apps",
+      description:
+        "Lightning-fast web applications with native app-like functionality and offline capabilities",
+      cta: "Learn More",
+      badge: "New",
+      icon: Globe,
+      gradient: "from-orange-600 via-amber-600 to-yellow-800",
+      accentColor: "from-orange-500 to-amber-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
+    },
+    {
+      title: "UI/UX Development",
+      description:
+        "Beautiful, intuitive interfaces crafted with user psychology and conversion optimization in mind",
+      cta: "View Designs",
+      badge: "Trending",
+      icon: Layout,
+      gradient: "from-red-600 via-pink-600 to-rose-800",
+      accentColor: "from-red-500 to-pink-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1920&q=80",
     },
   ];
 
@@ -69,22 +99,26 @@ const HeroSection = () => {
   useEffect(() => {
     if (!isAutoPlaying) return;
     const interval = setInterval(() => {
+      setDirection(1);
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [isAutoPlaying, slides.length]);
 
   const nextSlide = () => {
+    setDirection(1);
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setIsAutoPlaying(false);
   };
 
   const prevSlide = () => {
+    setDirection(-1);
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     setIsAutoPlaying(false);
   };
 
   const goToSlide = (index) => {
+    setDirection(index > currentSlide ? 1 : -1);
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
@@ -92,22 +126,50 @@ const HeroSection = () => {
   const currentSlideData = slides[currentSlide];
   const IconComponent = currentSlideData.icon;
 
+  // Animation variants
+  const textVariants = {
+    enter: (direction) => ({
+      opacity: 0,
+      y: direction > 0 ? 50 : -50,
+    }),
+    center: {
+      opacity: 1,
+      y: 0,
+    },
+    exit: (direction) => ({
+      opacity: 0,
+      y: direction > 0 ? -50 : 50,
+    }),
+  };
+
+  const transition = {
+    duration: 0.8,
+    ease: [0.32, 0.72, 0, 1],
+  };
+
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
-        style={{
-          backgroundImage: `url(${currentSlideData.bgImage})`,
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-        }}
-      >
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${currentSlideData.gradient} opacity-70`}
-        ></div>
-        <div className="absolute inset-0 bg-black/30"></div>
-      </div>
+      {/* Background with smooth transition */}
+      <AnimatePresence custom={direction}>
+        <motion.div
+          key={currentSlide}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${currentSlideData.bgImage})`,
+            backgroundAttachment: "fixed",
+            backgroundSize: "cover",
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div
+            className={`absolute inset-0 bg-gradient-to-br ${currentSlideData.gradient} opacity-70`}
+          ></div>
+          <div className="absolute inset-0 bg-black/30"></div>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
@@ -141,38 +203,82 @@ const HeroSection = () => {
         ></div>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content with smooth transitions */}
       <div className="relative h-full flex items-center justify-center z-10">
         <div className="text-center px-6 max-w-5xl mx-auto">
-          <div className="mb-8">
-            <span
-              className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r ${currentSlideData.accentColor} rounded-full shadow-lg`}
+          <AnimatePresence custom={direction} mode="wait">
+            <motion.div
+              key={`badge-${currentSlide}`}
+              custom={direction}
+              variants={textVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={transition}
+              className="mb-8"
             >
-              <IconComponent className="w-4 h-4" />
-              {currentSlideData.badge}
-            </span>
-          </div>
-
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-              {currentSlideData.title}
-            </span>
-          </h1>
-
-          <p className="text-xl text-gray-200 mb-10">
-            {currentSlideData.description}
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button
-              className={`group relative px-8 py-4 bg-gradient-to-r ${currentSlideData.accentColor} text-white font-semibold rounded-xl shadow-2xl transition-all duration-300 hover:scale-105`}
-            >
-              <span className="relative flex items-center gap-2">
-                {currentSlideData.cta}
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <span
+                className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r ${currentSlideData.accentColor} rounded-full shadow-lg`}
+              >
+                <IconComponent className="w-4 h-4" />
+                {currentSlideData.badge}
               </span>
-            </button>
-          </div>
+            </motion.div>
+          </AnimatePresence>
+
+          <AnimatePresence custom={direction} mode="wait">
+            <motion.h1
+              key={`title-${currentSlide}`}
+              custom={direction}
+              variants={textVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={transition}
+              className="text-5xl md:text-6xl font-bold text-white mb-6"
+            >
+              <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                {currentSlideData.title}
+              </span>
+            </motion.h1>
+          </AnimatePresence>
+
+          <AnimatePresence custom={direction} mode="wait">
+            <motion.p
+              key={`desc-${currentSlide}`}
+              custom={direction}
+              variants={textVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ ...transition, delay: 0.1 }}
+              className="text-xl text-gray-200 mb-10"
+            >
+              {currentSlideData.description}
+            </motion.p>
+          </AnimatePresence>
+
+          <AnimatePresence custom={direction} mode="wait">
+            <motion.div
+              key={`button-${currentSlide}`}
+              custom={direction}
+              variants={textVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ ...transition, delay: 0.2 }}
+              className="flex flex-col sm:flex-row justify-center items-center gap-4"
+            >
+              <button
+                className={`group relative px-8 py-4 bg-gradient-to-r ${currentSlideData.accentColor} text-white font-semibold rounded-xl shadow-2xl transition-all duration-300 hover:scale-105`}
+              >
+                <span className="relative flex items-center gap-2">
+                  {currentSlideData.cta}
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </button>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
@@ -185,13 +291,14 @@ const HeroSection = () => {
           <ChevronLeft className="w-5 h-5 text-white" />
         </button>
         {slides.map((_, index) => (
-          <div
+          <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              index === currentSlide ? "bg-white" : "bg-white/30"
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? "bg-white w-6" : "bg-white/30"
             }`}
-          ></div>
+            aria-label={`Go to slide ${index + 1}`}
+          />
         ))}
         <button
           onClick={nextSlide}
