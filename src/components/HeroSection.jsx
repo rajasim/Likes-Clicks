@@ -13,12 +13,14 @@ import {
   Layout,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
   const [particles, setParticles] = useState([]);
+  const navigate = useNavigate();
 
   const slides = [
     {
@@ -32,7 +34,7 @@ const HeroSection = () => {
       accentColor: "from-blue-500 to-indigo-600",
       bgImage:
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80",
-      link:"/webdev"
+      link: "/webdev",
     },
     {
       title: "Mobile App Development",
@@ -45,7 +47,7 @@ const HeroSection = () => {
       accentColor: "from-green-500 to-teal-600",
       bgImage:
         "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
-      link:"/mobileapp"
+      link: "/mobileapp",
     },
     {
       title: "Full-Stack Development",
@@ -58,7 +60,7 @@ const HeroSection = () => {
       accentColor: "from-purple-500 to-pink-600",
       bgImage:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80",
-      link:"/services"
+      link: "/services",
     },
     {
       title: "Progressive Web Apps",
@@ -71,7 +73,7 @@ const HeroSection = () => {
       accentColor: "from-orange-500 to-amber-600",
       bgImage:
         "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
-      link:"/services"
+      link: "/services",
     },
     {
       title: "UI/UX Development",
@@ -84,7 +86,7 @@ const HeroSection = () => {
       accentColor: "from-red-500 to-pink-600",
       bgImage:
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1920&q=80",
-      link:"/services"
+      link: "/services",
     },
   ];
 
@@ -100,6 +102,10 @@ const HeroSection = () => {
     }));
     setParticles(newParticles);
   }, []);
+
+  const redirectTo = (link) => {
+    navigate(link);
+  };
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -275,6 +281,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row justify-center items-center gap-4"
             >
               <button
+                onClick={() => redirectTo(currentSlideData.link)}
                 className={`group relative px-8 py-4 bg-gradient-to-r ${currentSlideData.accentColor} text-white font-semibold rounded-xl shadow-2xl transition-all duration-300 hover:scale-105`}
               >
                 <span className="relative flex items-center gap-2">
