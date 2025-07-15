@@ -30,7 +30,7 @@ const HeroSection = () => {
       cta: "Explore Web Services",
       badge: "Popular",
       icon: Code,
-      gradient: "from-blue-600 via-indigo-600 to-purple-800",
+      gradient: "from-blue-200 ",
       accentColor: "from-blue-500 to-indigo-600",
       bgImage:
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80",
@@ -43,10 +43,10 @@ const HeroSection = () => {
       cta: "View App Portfolio",
       badge: "Hot",
       icon: Smartphone,
-      gradient: "from-green-600 via-teal-600 to-cyan-800",
+      gradient: "from-green-200 ",
       accentColor: "from-green-500 to-teal-600",
       bgImage:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1514996550219-62672472d03b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG1vYmlsZSUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D",
       link: "/mobileapp",
     },
     {
@@ -56,7 +56,7 @@ const HeroSection = () => {
       cta: "See Our Work",
       badge: "Featured",
       icon: Cpu,
-      gradient: "from-purple-600 via-pink-600 to-red-800",
+      gradient: "from-purple-200 ",
       accentColor: "from-purple-500 to-pink-600",
       bgImage:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80",
@@ -69,7 +69,7 @@ const HeroSection = () => {
       cta: "Learn More",
       badge: "New",
       icon: Globe,
-      gradient: "from-orange-600 via-amber-600 to-yellow-800",
+      gradient: "from-orange-200 ",
       accentColor: "from-orange-500 to-amber-600",
       bgImage:
         "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
@@ -82,7 +82,7 @@ const HeroSection = () => {
       cta: "View Designs",
       badge: "Trending",
       icon: Layout,
-      gradient: "from-red-600 via-pink-600 to-rose-800",
+      gradient: "from-red-200 ",
       accentColor: "from-red-500 to-pink-600",
       bgImage:
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1920&q=80",

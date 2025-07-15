@@ -65,69 +65,6 @@ const Services = () => {
       gradient: "from-orange-600 to-yellow-500",
       bgGradient: "from-orange-600/10 to-yellow-500/10",
     },
-    {
-      name: "Content Marketing",
-      description:
-        "Blog writing, press releases, video content, and infographics to attract and retain audiences.",
-      icon: <FaPenFancy className="h-6 w-6" />,
-      cta: "See samples",
-      gradient: "from-indigo-600 to-purple-500",
-      bgGradient: "from-indigo-600/10 to-purple-500/10",
-    },
-    {
-      name: "Email Marketing Automation",
-      description:
-        "Bulk mailing, automated follow-ups, and personalized email campaigns.",
-      icon: <FaEnvelope className="h-6 w-6" />,
-      cta: "Automate now",
-      gradient: "from-red-600 to-pink-500",
-      bgGradient: "from-red-600/10 to-pink-500/10",
-    },
-    {
-      name: "Custom Software Development",
-      description:
-        "ERP, CRM, inventory, and custom SaaS solutions tailored to business needs.",
-      icon: <FaLaptopCode className="h-6 w-6" />,
-      cta: "Request demo",
-      gradient: "from-teal-600 to-cyan-500",
-      bgGradient: "from-teal-600/10 to-cyan-500/10",
-    },
-    {
-      name: "Cloud Services & Hosting",
-      description:
-        "Secure cloud storage, AWS/Azure management, and domain/hosting support.",
-      icon: <FaCloud className="h-6 w-6" />,
-      cta: "Migrate now",
-      gradient: "from-blue-700 to-indigo-600",
-      bgGradient: "from-blue-700/10 to-indigo-600/10",
-    },
-    {
-      name: "Data Analytics & BI",
-      description:
-        "Visual dashboards, sales insights, and predictive analytics for better decisions.",
-      icon: <FaChartBar className="h-6 w-6" />,
-      cta: "Analyze data",
-      gradient: "from-emerald-600 to-teal-500",
-      bgGradient: "from-emerald-600/10 to-teal-500/10",
-    },
-    {
-      name: "Cybersecurity & Protection",
-      description:
-        "Firewall setup, penetration testing, encryption, endpoint protection, and GDPR compliance.",
-      icon: <FaShieldAlt className="h-6 w-6" />,
-      cta: "Secure assets",
-      gradient: "from-red-700 to-orange-600",
-      bgGradient: "from-red-700/10 to-orange-600/10",
-    },
-    {
-      name: "UI/UX Design",
-      description:
-        "Attractive, user-friendly design for websites and mobile apps with wireframes and prototypes.",
-      icon: <FaPaintBrush className="h-6 w-6" />,
-      cta: "View portfolio",
-      gradient: "from-violet-600 to-purple-500",
-      bgGradient: "from-violet-600/10 to-purple-500/10",
-    },
   ];
 
   useEffect(() => {
@@ -201,10 +138,9 @@ const Services = () => {
               Digital Solutions
             </span>
           </h2>
-
+          {/*       End-to-end technology and marketing */}
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            End-to-end technology and marketing services designed to elevate
-            your business in the digital ecosystem.
+            Services designed to elevate your business in the digital ecosystem.
           </p>
         </div>
 

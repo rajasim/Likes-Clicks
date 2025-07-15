@@ -88,8 +88,8 @@ const Navbar = () => {
     <header
       className={`sticky w-full top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-900/95 backdrop-blur-md border-b border-gray-700 shadow-lg"
-          : "bg-gray-900/95 backdrop-blur-md"
+          ? "bg-blue-900/95 backdrop-blur-md border-b border-gray-700 shadow-lg"
+          : "bg-blue-900/95 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

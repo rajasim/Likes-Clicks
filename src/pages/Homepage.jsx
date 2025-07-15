@@ -6,16 +6,18 @@ import Portfolio from "../components/Portfolio";
 import Testimonials from "../components/Testimonials";
 import NewsletterSection from "../components/Newsletter";
 import TrustedBySection from "../components/TrustedBySection";
+import SecondHero from "../components/SecondHero";
 
 const Homepage = () => {
   return (
     <>
       <HeroSection />
+      <SecondHero />
       <Services />
       <TrustedBySection />
       <WhyChooseUs />
       <Portfolio />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <NewsletterSection />
     </>
   );
