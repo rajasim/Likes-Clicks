@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   Menu,
   X,
@@ -95,14 +96,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <a href="/" className="flex items-center group">
+          <Link to="/" className="flex items-center group">
             <div className="relative">
               <span className="text-xl font-bold bg-gradient-to-r from-blue-100 to-white bg-clip-text text-transparent">
                 Likes & Clicks
               </span>
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-400/20 to-indigo-500/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-4">
@@ -142,9 +143,9 @@ const Navbar = () => {
                         {item.dropdown.map((subItem, index) => {
                           const IconComponent = subItem.icon;
                           return (
-                            <a
+                            <Link
                               key={subItem.name}
-                              href={subItem.href}
+                              to={subItem.href}
                               className="group flex items-center p-3 rounded-lg hover:bg-gray-700 transition-all duration-200"
                             >
                               <div className="p-2 bg-gray-700 rounded-lg mr-3 group-hover:bg-indigo-500 transition-all duration-200">
@@ -159,15 +160,15 @@ const Navbar = () => {
                                 </div>
                               </div>
                               <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-indigo-300 group-hover:translate-x-1 transition-all duration-200" />
-                            </a>
+                            </Link>
                           );
                         })}
                       </div>
                     </div>
                   </>
                 ) : (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className={`text-sm font-medium text-gray-200 hover:text-white transition-all duration-200 px-3 py-2 rounded-lg ${
                       window.location.pathname === item.href
                         ? "text-white bg-gray-800"
@@ -175,7 +176,7 @@ const Navbar = () => {
                     }`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
@@ -183,12 +184,12 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
             >
               Get Started
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -243,22 +244,22 @@ const Navbar = () => {
                       {item.dropdown.map((subItem) => {
                         const IconComponent = subItem.icon;
                         return (
-                          <a
+                          <Link
                             key={subItem.name}
-                            href={subItem.href}
+                            to={subItem.href}
                             className="flex items-center py-2 text-gray-400 hover:text-indigo-300 transition-colors"
                           >
                             <IconComponent className="w-4 h-4 mr-2 text-indigo-400" />
                             {subItem.name}
-                          </a>
+                          </Link>
                         );
                       })}
                     </div>
                   </div>
                 </div>
               ) : (
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className={`block py-3 text-gray-200 hover:text-white font-medium transition-colors ${
                     window.location.pathname === item.href
                       ? "text-indigo-300"
@@ -266,17 +267,17 @@ const Navbar = () => {
                   }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               )}
             </div>
           ))}
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="block mt-4 w-full text-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </header>
