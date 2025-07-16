@@ -48,12 +48,6 @@ const Navbar = () => {
       href: "#",
       dropdown: [
         {
-          name: "Custom Software",
-          href: "/services",
-          icon: Code,
-          description: "Tailored solutions for your business",
-        },
-        {
           name: "Web Development",
           href: "/webdev",
           icon: Globe,
@@ -66,17 +60,23 @@ const Navbar = () => {
           description: "iOS and Android applications",
         },
         {
-          name: "AI Solutions",
-          href: "/ai",
-          icon: Brain,
-          description: "Intelligent automation & ML",
+          name: "CyberSecurity",
+          href: "/CyberSecurity",
+          icon: Smartphone,
+          description: "iOS and Android applications",
         },
-        // {
-        //   name: "Cloud Architecture",
-        //   href: "/services/cloud",
-        //   icon: Cloud,
-        //   description: "Scalable cloud infrastructure",
-        // },
+        {
+          name: "MarketingAutomation",
+          href: "/MarketingAutomation",
+          icon: Smartphone,
+          description: "iOS and Android applications",
+        },
+        {
+          name: "AIDevelopment",
+          href: "/AIDevelopment",
+          icon: Smartphone,
+          description: "iOS and Android applications",
+        },
       ],
     },
     { name: "Portfolio", href: "/portfolio" },

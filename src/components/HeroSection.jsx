@@ -3,14 +3,11 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowRight,
-  Sparkles,
-  Zap,
-  Shield,
-  Code,
-  Smartphone,
-  Cpu,
   Globe,
-  Layout,
+  Smartphone,
+  Megaphone,
+  Shield,
+  Cpu,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -18,75 +15,75 @@ import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
+  const [direction, setDirection] = useState(1);
   const [particles, setParticles] = useState([]);
   const navigate = useNavigate();
 
   const slides = [
     {
-      title: "Web Development Solutions",
-      description:
-        "Custom-built websites and web applications with modern frameworks for exceptional performance and user experience",
-      cta: "Explore Web Services",
+      title: "Web Development",
+      subtitle: "Build to Impress, Designed to Perform",
+      description: "Responsive websites that attract, engage, and convert.",
+      cta: "Explore Web Development",
       badge: "Popular",
-      icon: Code,
-      gradient: "from-blue-200 ",
+      icon: Globe,
+      gradient: "from-blue-200",
       accentColor: "from-blue-500 to-indigo-600",
       bgImage:
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80",
       link: "/webdev",
     },
     {
-      title: "Mobile App Development",
-      description:
-        "High-performance iOS and Android applications built with native and cross-platform technologies",
-      cta: "View App Portfolio",
+      title: "Mobile Apps",
+      subtitle: "Apps That Deliver, Anywhere",
+      description: "iOS, Android & cross-platform apps that scale with you.",
+      cta: "View App Services",
       badge: "Hot",
       icon: Smartphone,
-      gradient: "from-green-200 ",
-      accentColor: "from-green-500 to-teal-600",
+      gradient: "from-purple-200",
+      accentColor: "from-purple-500 to-pink-600",
       bgImage:
         "https://images.unsplash.com/photo-1514996550219-62672472d03b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG1vYmlsZSUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D",
       link: "/mobileapp",
     },
     {
-      title: "Full-Stack Development",
-      description:
-        "Complete solutions with robust backends and intuitive frontends for seamless digital experiences",
-      cta: "See Our Work",
+      title: "Marketing & Automation",
+      subtitle: "Turn Clicks Into Customers",
+      description: "SEO, email flows & smart funnels that grow your brand.",
+      cta: "See Marketing Solutions",
       badge: "Featured",
-      icon: Cpu,
-      gradient: "from-purple-200 ",
-      accentColor: "from-purple-500 to-pink-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80",
-      link: "/services",
-    },
-    {
-      title: "Progressive Web Apps",
-      description:
-        "Lightning-fast web applications with native app-like functionality and offline capabilities",
-      cta: "Learn More",
-      badge: "New",
-      icon: Globe,
-      gradient: "from-orange-200 ",
+      icon: Megaphone,
+      gradient: "from-orange-200",
       accentColor: "from-orange-500 to-amber-600",
       bgImage:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
-      link: "/services",
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1920&q=80",
+      link: "/marketing",
     },
     {
-      title: "UI/UX Development",
-      description:
-        "Beautiful, intuitive interfaces crafted with user psychology and conversion optimization in mind",
-      cta: "View Designs",
+      title: "Cybersecurity",
+      subtitle: "Stay Secure, Stay Ahead",
+      description: "Modern protection against threats, breaches, and downtime.",
+      cta: "Learn About Security",
+      badge: "New",
+      icon: Shield,
+      gradient: "from-green-200",
+      accentColor: "from-green-500 to-teal-600",
+      bgImage:
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80",
+      link: "/security",
+    },
+    {
+      title: "AI Development",
+      subtitle: "Smarter Tools. Sharper Results.",
+      description: "Custom AI models, chatbots, and automation workflows.",
+      cta: "Explore AI Capabilities",
       badge: "Trending",
-      icon: Layout,
-      gradient: "from-red-200 ",
+      icon: Cpu,
+      gradient: "from-red-200",
       accentColor: "from-red-500 to-pink-600",
       bgImage:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1920&q=80",
-      link: "/services",
+        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
+      link: "/ai",
     },
   ];
 
@@ -137,7 +134,6 @@ const HeroSection = () => {
   const currentSlideData = slides[currentSlide];
   const IconComponent = currentSlideData.icon;
 
-  // Animation variants
   const textVariants = {
     enter: (direction) => ({
       opacity: 0,
@@ -160,7 +156,6 @@ const HeroSection = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Background with smooth transition */}
       <AnimatePresence custom={direction}>
         <motion.div
           key={currentSlide}
@@ -182,7 +177,6 @@ const HeroSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
         {particles.map((particle) => (
           <div
@@ -201,7 +195,6 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-32 h-32 border border-white/10 rounded-full animate-pulse"></div>
         <div
@@ -214,7 +207,6 @@ const HeroSection = () => {
         ></div>
       </div>
 
-      {/* Main Content with smooth transitions */}
       <div className="relative h-full flex items-center justify-center z-10">
         <div className="text-center px-6 max-w-5xl mx-auto">
           <AnimatePresence custom={direction} mode="wait">
@@ -238,20 +230,24 @@ const HeroSection = () => {
           </AnimatePresence>
 
           <AnimatePresence custom={direction} mode="wait">
-            <motion.h1
-              key={`title-${currentSlide}`}
+            <motion.div
+              key={`title-group-${currentSlide}`}
               custom={direction}
               variants={textVariants}
               initial="enter"
               animate="center"
               exit="exit"
               transition={transition}
-              className="text-5xl md:text-6xl font-bold text-white mb-6"
             >
-              <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                {currentSlideData.title}
-              </span>
-            </motion.h1>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+                <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                  {currentSlideData.title}
+                </span>
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">
+                {currentSlideData.subtitle}
+              </h2>
+            </motion.div>
           </AnimatePresence>
 
           <AnimatePresence custom={direction} mode="wait">
@@ -263,7 +259,7 @@ const HeroSection = () => {
               animate="center"
               exit="exit"
               transition={{ ...transition, delay: 0.1 }}
-              className="text-xl text-gray-200 mb-10"
+              className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto"
             >
               {currentSlideData.description}
             </motion.p>
@@ -294,7 +290,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Controls */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
         <button
           onClick={prevSlide}

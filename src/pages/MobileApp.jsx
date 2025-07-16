@@ -4,85 +4,92 @@ import {
   Cpu,
   Zap,
   Database,
-  GitBranch,
   Shield,
   Layout,
-  Globe,
+  GitMerge,
+  ClipboardList,
+  Code,
+  Play,
+  Figma,
+  Package,
+  Wrench,
 } from "lucide-react";
 
 const MobileApp = () => {
+  const process = [
+    {
+      icon: <ClipboardList className="w-8 h-8 text-blue-600" />,
+      title: "Discovery & Requirement Gathering",
+      description:
+        "Understand your business needs, app goals, user personas, and core functionality.",
+    },
+    {
+      icon: <Figma className="w-8 h-8 text-purple-600" />,
+      title: "Design & Prototyping",
+      description:
+        "Wireframes and high-fidelity UI mockups created using Figma for early feedback.",
+    },
+    {
+      icon: <Code className="w-8 h-8 text-green-600" />,
+      title: "Development & Integration",
+      description:
+        "Frontend development with Flutter, React Native, Swift, or Kotlin with secure API integrations.",
+    },
+    {
+      icon: <Play className="w-8 h-8 text-red-600" />,
+      title: "Testing & Deployment",
+      description:
+        "QA on multiple devices, App Store/Play Store deployment, and post-launch monitoring.",
+    },
+  ];
+
   const services = [
     {
-      icon: <Smartphone className="w-10 h-10 text-blue-600" />,
-      title: "Cross-Platform Apps",
-      description:
-        "Build once, deploy everywhere with React Native and Flutter for maximum efficiency.",
-      highlights: [
-        "React Native development",
-        "Flutter applications",
-        "Single codebase for iOS/Android",
-        "Native-like performance",
-      ],
+      icon: <GitMerge className="w-8 h-8 text-blue-600" />,
+      title: "AppGo (Cross-Platform)",
+      description: "UI for 3 screens + backend API integration",
+      audience: "Startups, MVPs, budget-conscious businesses",
+      outcome:
+        "A sleek, functional app built fast using Flutter or React—ideal for testing or lean launches",
     },
     {
-      icon: <Cpu className="w-10 h-10 text-green-600" />,
-      title: "Native iOS Development",
-      description:
-        "High-performance apps built specifically for Apple's ecosystem.",
-      highlights: [
-        "Swift & SwiftUI",
-        "UIKit development",
-        "iOS SDK integration",
-        "App Store optimization",
-      ],
+      icon: <Zap className="w-8 h-8 text-green-600" />,
+      title: "DroidLaunch (Android)",
+      description: "Kotlin-based Android app build",
+      audience: "Businesses targeting Android-first or device-specific markets",
+      outcome:
+        "Fast, native Android app tailored to your market—built for performance and compatibility",
     },
     {
-      icon: <Zap className="w-10 h-10 text-purple-600" />,
-      title: "Native Android Development",
-      description:
-        "Custom Android applications leveraging Google's latest technologies.",
-      highlights: [
-        "Kotlin development",
-        "Jetpack Compose",
-        "Material Design 3",
-        "Play Store optimization",
-      ],
+      icon: <Cpu className="w-8 h-8 text-purple-600" />,
+      title: "iLaunch (iOS)",
+      description: "Swift-based iOS-only app",
+      audience: "iOS-first markets, premium user segments",
+      outcome: "Smooth, scalable iOS experience with native design guidelines",
     },
     {
-      icon: <Database className="w-10 h-10 text-yellow-600" />,
-      title: "Mobile Backend Services",
-      description:
-        "Scalable cloud infrastructure to power your mobile applications.",
-      highlights: [
-        "Firebase integration",
-        "Custom API development",
-        "Real-time databases",
-        "Cloud functions",
-      ],
+      icon: <Layout className="w-8 h-8 text-yellow-600" />,
+      title: "AppVision (UI/UX)",
+      description: "Figma wireframes and prototypes",
+      audience: "Founders and dev teams needing visuals before coding",
+      outcome:
+        "Wireframes + clickable prototypes that align with user journey and client vision",
     },
     {
-      icon: <Shield className="w-10 h-10 text-orange-600" />,
-      title: "App Security",
-      description:
-        "Enterprise-grade protection for your mobile applications and data.",
-      highlights: [
-        "Data encryption",
-        "Secure authentication",
-        "Penetration testing",
-        "Compliance certifications",
-      ],
+      icon: <Wrench className="w-8 h-8 text-orange-600" />,
+      title: "AppCare (Maintenance)",
+      description: "Bug fixes, upgrades, performance monitoring",
+      audience: "Live apps needing long-term support",
+      outcome:
+        "Reliable monthly maintenance including OS updates, bug resolution, and version upgrades",
     },
     {
-      icon: <Layout className="w-10 h-10 text-indigo-600" />,
-      title: "UI/UX Design",
-      description:
-        "Beautiful, intuitive interfaces that drive engagement and retention.",
-      highlights: [
-        "Mobile-first design",
-        "User testing",
-        "Prototyping",
-        "Accessibility compliance",
-      ],
+      icon: <Package className="w-8 h-8 text-indigo-600" />,
+      title: "AppReady (Publishing)",
+      description: "Metadata, compliance checks, store submission",
+      audience: "SMEs or solo founders launching their first app",
+      outcome:
+        "Seamless app store submissions and compliance (iOS/Android), including ASO basics",
     },
   ];
 
@@ -90,56 +97,72 @@ const MobileApp = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Professional Mobile App Development
+          Mobile App Development Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          We create high-performance mobile applications that deliver
-          exceptional user experiences across all platforms.
+          We create high-performance mobile applications with a structured,
+          collaborative, and scalable approach.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-          >
-            <div className="p-8">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-blue-50">
-                {service.icon}
+      <div className="mb-20">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Our Development Process
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {process.map((step, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+            >
+              <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-blue-50">
+                {step.icon}
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 text-center mb-4">
-                {service.title}
+              <h3 className="text-xl font-semibold text-center mb-3">
+                {step.title}
               </h3>
-              <p className="text-gray-600 mb-6 text-center">
-                {service.description}
-              </p>
-              <ul className="space-y-3">
-                {service.highlights.map((highlight, i) => (
-                  <li key={i} className="flex items-start">
-                    <svg
-                      className="h-5 w-5 text-green-500 mr-2 mt-0.5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-gray-600 text-center">{step.description}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <div className="mt-20 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Our Mobile App Services
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+            >
+              <div className="p-6">
+                <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-blue-50">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
+                  {service.title}
+                </h3>
+                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                  <p className="font-medium text-gray-700">What's Included:</p>
+                  <p className="text-gray-600">{service.description}</p>
+                </div>
+                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                  <p className="font-medium text-gray-700">Best For:</p>
+                  <p className="text-gray-600">{service.audience}</p>
+                </div>
+                <div className="p-3 bg-gray-50 rounded-lg">
+                  <p className="font-medium text-gray-700">Outcome:</p>
+                  <p className="text-gray-600">{service.outcome}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Build Your Mobile App?
