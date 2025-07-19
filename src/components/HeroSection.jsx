@@ -211,26 +211,6 @@ const HeroSection = () => {
         <div className="text-center px-6 max-w-5xl mx-auto">
           <AnimatePresence custom={direction} mode="wait">
             <motion.div
-              key={`badge-${currentSlide}`}
-              custom={direction}
-              variants={textVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={transition}
-              className="mb-8"
-            >
-              <span
-                className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r ${currentSlideData.accentColor} rounded-full shadow-lg`}
-              >
-                <IconComponent className="w-4 h-4" />
-                {currentSlideData.badge}
-              </span>
-            </motion.div>
-          </AnimatePresence>
-
-          <AnimatePresence custom={direction} mode="wait">
-            <motion.div
               key={`title-group-${currentSlide}`}
               custom={direction}
               variants={textVariants}

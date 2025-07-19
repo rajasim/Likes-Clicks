@@ -6,10 +6,6 @@ const SecondHero = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
         {/* Left Content */}
         <div className="max-w-2xl lg:max-w-xl">
-          <div className="mb-6 inline-flex items-center px-4 py-2 bg-purple-100 text-sm font-medium text-purple-800 rounded-full shadow-sm">
-            🚀 AI integration services available
-          </div>
-
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
             Transforming <span className="text-blue-600">Digital Dreams</span>{" "}
             into Reality

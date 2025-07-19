@@ -25,7 +25,7 @@ const features = [
     title: "Client-Centric Process",
     description:
       "Your goals drive our approach. We align every decision with your business objectives.",
-    icon: <FiDollarSign className="w-8 h-8" />,
+    icon: <FiClock className="w-8 h-8" />,
     color: "text-purple-600",
     bgColor: "bg-purple-50",
   },
@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6"
           >
-            Why Partner With Us?
+            Why Choose Us?
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -129,10 +129,10 @@ const WhyChooseUs = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {feature.description}
                 </p>
-                <div className="flex items-center text-sm text-gray-500">
+                {/* <div className="flex items-center text-sm text-gray-500">
                   <FiCheckCircle className="mr-2 text-green-500" />
                   <span>Included in all projects</span>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}
@@ -148,10 +148,6 @@ const WhyChooseUs = () => {
           className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 sm:p-12"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-white rounded-full shadow-sm mb-6">
-              <FiClock className="text-blue-600 mr-2" />
-              <span className="text-blue-600 font-medium">Time-Saving</span>
-            </div>
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Get to Market Faster
             </h3>

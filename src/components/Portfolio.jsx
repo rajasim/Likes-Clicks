@@ -1,27 +1,25 @@
-import { useState } from "react";
+import React from "react";
 import {
   FaExternalLinkAlt,
   FaGithub,
   FaShoppingCart,
-  FaHospital,
-  FaMobile,
-  FaTruck,
+  FaCoffee,
+  FaCogs,
+  FaShieldAlt,
+  FaFileDownload,
 } from "react-icons/fa";
-import { FiArrowRight } from "react-icons/fi";
 
 const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
     description:
-      "Custom Shopify alternative with AI-powered recommendations and advanced analytics for fashion retail",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&crop=center",
-    results: "+32% conversion rate, -45% cart abandonment",
+      "Modern storefront for fashion and lifestyle brands with AI recommendations and smart analytics.",
+    results: "+32% conversions, -45% cart abandonment",
     metrics: { users: "50K+", revenue: "$2M+", uptime: "99.9%" },
-    tech: ["React", "Node.js", "MongoDB", "TensorFlow", "Stripe"],
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
     category: "E-Commerce",
-    icon: <FaShoppingCart />,
+    icon: <FaShoppingCart className="text-4xl text-blue-600" />,
     links: [
       {
         url: "https://example.com",
@@ -30,284 +28,160 @@ const projects = [
       },
       { url: "https://github.com", icon: <FaGithub />, label: "Source Code" },
     ],
+    pdfurl: "/pdf/Ecom.pdf",
+    pdfName: "E-Commerce_Case_Study.pdf",
   },
   {
     id: 2,
-    title: "Healthcare SaaS Platform",
+    title: "Cafe & Food Business (Anuhira.com)",
     description:
-      "HIPAA-compliant patient management system with telemedicine capabilities and automated scheduling",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop&crop=center",
-    results: "-60% admin workload, 200+ clinics onboarded",
-    metrics: { users: "25K+", practices: "200+", satisfaction: "4.9/5" },
-    tech: ["TypeScript", "Next.js", "PostgreSQL", "AWS", "Socket.io"],
-    category: "Healthcare",
-    icon: <FaHospital />,
+      "Online presence for a vibrant café chain offering regional delicacies and beverages.",
+    results: "Increased footfall and online orders by 40%",
+    metrics: { cafes: "5+", dailyOrders: "300+", feedback: "4.7★" },
+    tech: ["Next.js", "TailwindCSS", "Firebase"],
+    category: "Food & Beverage",
+    icon: <FaCoffee className="text-4xl text-amber-600" />,
     links: [
       {
-        url: "https://example.com",
+        url: "https://anuhira.com",
         icon: <FaExternalLinkAlt />,
-        label: "Live Demo",
+        label: "Website",
       },
     ],
+    pdfurl: "/pdf/Cafe.pdf",
+    pdfName: "Cafe_Business_Case_Study.pdf",
   },
   {
     id: 3,
-    title: "Mobile Banking Application",
+    title: "CRM for CA Firms",
     description:
-      "Fintech application with biometric authentication, budgeting tools, and real-time transaction monitoring",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&crop=center",
-    results: "250K users in 6 months, 4.8★ rating",
-    metrics: { downloads: "250K+", rating: "4.8/5", retention: "85%" },
-    tech: ["Flutter", "Firebase", "Node.js", "Plaid API", "ML Kit"],
-    category: "FinTech",
-    icon: <FaMobile />,
+      "Centralized app to manage client data, documents, and automated task workflows for accounting professionals.",
+    results: "Saved 20+ hours/week per team, improved response time",
+    metrics: { firms: "80+", retention: "95%", support: "24/7" },
+    tech: ["React", "Express.js", "MongoDB", "NodeMailer"],
+    category: "CRM",
+    icon: <FaCogs className="text-4xl text-purple-600" />,
     links: [],
+    pdfurl: "/pdf/CRM.pdf",
+    pdfName: "CRM_Case_Study.pdf",
   },
   {
     id: 4,
-    title: "IoT Fleet Management",
+    title: "VAPT & Cybersecurity Services",
     description:
-      "Real-time vehicle tracking and analytics platform with predictive maintenance and route optimization",
-    image:
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop&crop=center",
-    results: "-22% fuel costs, improved delivery efficiency",
-    metrics: { vehicles: "5K+", savings: "$500K+", efficiency: "+35%" },
-    tech: ["React Native", "Python", "AWS IoT", "DynamoDB", "TensorFlow"],
-    category: "Logistics",
-    icon: <FaTruck />,
-    links: [
-      { url: "https://github.com", icon: <FaGithub />, label: "Source Code" },
-    ],
+      "Advanced vulnerability assessments, penetration testing, and audits for web and network infrastructure.",
+    results: "Secured over 100+ assets, zero critical vulnerabilities post-fix",
+    metrics: { audits: "100+", avgFixTime: "<48h", criticalsPrevented: "50+" },
+    tech: ["Nmap", "OWASP", "Burp Suite", "Kali Linux"],
+    category: "Cybersecurity",
+    icon: <FaShieldAlt className="text-4xl text-green-600" />,
+    links: [{ url: "#", icon: <FaExternalLinkAlt />, label: "More Info" }],
+    author: "By Aftab B. Maldar",
+    pdfurl: "/pdf/Vapt.pdf", // Fixed typo from '/pad' to '/pdf'
+    pdfName: "Cybersecurity_Case_Study.pdf",
   },
 ];
 
 const Portfolio = () => {
-  const [hoveredProject, setHoveredProject] = useState(null);
+  const handleDownloadCaseStudy = (pdfurl, pdfName) => {
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = pdfurl;
+    link.download = pdfName || "Case_Study.pdf"; // Fallback filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Optional: Track download in analytics
+    console.log(`Downloaded: ${pdfName}`);
+  };
 
   return (
-    <section className="min-h-screen bg-white py-24 overflow-hidden relative">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-50 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-50 to-transparent"></div>
+    <section className="min-h-screen py-20 px-6 ">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+          Our Featured Projects
+        </h2>
 
-        {/* Subtle grid pattern */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #3b82f6 1px, transparent 1px), linear-gradient(to bottom, #3b82f6 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-      </div>
-
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        {/* Premium Header Section */}
-        <div className="mx-auto max-w-3xl text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-0 mb-8">
-            <span className="w-12 h-px bg-blue-500"></span>
-            <span className="text-sm uppercase tracking-widest text-blue-500 font-medium">
-              Selected Works
-            </span>
-            <span className="w-12 h-px bg-blue-500"></span>
-          </div>
-
-          <h2 className="text-4xl font-light tracking-tight text-gray-900 sm:text-5xl mb-6 leading-tight">
-            <span className="block font-normal text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
-              Crafting Digital
-            </span>
-            <span className="block font-medium text-gray-900">
-              Masterpieces
-            </span>
-          </h2>
-
-          <p className="text-lg leading-relaxed text-gray-600 max-w-2xl mx-auto">
-            We transform visionary ideas into exceptional digital experiences
-            that elevate brands and drive measurable results.
-          </p>
-        </div>
-
-        {/* Premium Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
-          {projects.map((project, index) => (
-            <article
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((project) => (
+            <div
               key={project.id}
-              className="group relative bg-white rounded-xl border border-gray-200 pt-8 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-100 hover:border-blue-300"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              style={{ "--index": index }}
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200 overflow-hidden flex flex-col"
             >
-              {/* Project Header */}
-              <div className="flex justify-between items-start mb-8 px-8">
-                <div>
-                  <div className="text-xs uppercase tracking-widest text-blue-500 mb-2">
-                    {project.category}
-                  </div>
-                  <h3 className="text-2xl font-light text-gray-900">
-                    {project.title}
-                  </h3>
-                </div>
-                <div className="text-gray-400 group-hover:text-blue-500 transition-colors duration-300 text-xl">
+              <div className="relative h-56 w-full bg-gray-100 flex items-center justify-center">
+                <div className="p-8 bg-white rounded-full shadow-lg">
                   {project.icon}
                 </div>
               </div>
 
-              {/* Project Image */}
-              <div className="relative h-80 overflow-hidden mb-8 mx-8 rounded-lg">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
-              </div>
-
-              {/* Project Content */}
-              <div className="px-8 pb-8">
-                <p className="text-gray-600 leading-relaxed mb-8 border-b border-gray-200 pb-8">
-                  {project.description}
-                </p>
-
-                {/* Results */}
-                <div className="mb-8">
-                  <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">
-                    Key Achievements
-                  </div>
-                  <p className="text-lg text-gray-900 font-light">
-                    {project.results}
-                  </p>
-                </div>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  {Object.entries(project.metrics).map(([key, value]) => (
-                    <div key={key} className="border-l border-gray-200 pl-4">
-                      <div className="text-2xl font-light text-gray-900 mb-1">
-                        {value}
-                      </div>
-                      <div className="text-xs uppercase tracking-widest text-gray-500">
-                        {key}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Tech Stack */}
+              <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">
-                    Technologies
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-blue-600 uppercase font-medium">
+                      {project.category}
+                    </span>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm mb-4">
+                    {project.description}
+                  </p>
+
+                  <div className="text-sm text-gray-800 mb-4">
+                    <strong>Highlights:</strong> {project.results}
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4 text-center text-sm mb-4">
+                    {Object.entries(project.metrics).map(([key, value]) => (
+                      <div key={key}>
+                        <div className="text-lg font-semibold text-gray-900">
+                          {value}
+                        </div>
+                        <div className="uppercase text-gray-500 text-xs tracking-widest">
+                          {key}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs uppercase tracking-widest text-gray-600 border border-gray-200 hover:border-blue-500 hover:text-blue-500 transition-all duration-300"
+                        className="px-3 py-1 border border-gray-300 rounded-full text-xs text-gray-600 hover:border-blue-500 hover:text-blue-500 transition"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                </div>
 
-                {/* Links */}
-                {project.links.length > 0 && (
-                  <div
-                    className={`absolute top-8 right-8 flex gap-3 transition-all duration-500 ${
-                      hoveredProject === project.id
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 -translate-y-4"
-                    }`}
-                  >
-                    {project.links.map((link, linkIndex) => (
-                      <a
-                        key={linkIndex}
-                        href={link.url}
-                        className="bg-white hover:bg-gray-50 text-gray-600 hover:text-blue-500 p-3 transition-all duration-300 border border-gray-200 hover:border-blue-500 flex items-center justify-center rounded-lg shadow-sm"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={link.label}
-                      >
-                        {link.icon}
-                      </a>
-                    ))}
+                  <div className="flex justify-between items-center mt-4">
+                    <button
+                      onClick={() =>
+                        handleDownloadCaseStudy(project.pdfurl, project.pdfName)
+                      }
+                      className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                    >
+                      <FaFileDownload />
+                      Case Study
+                    </button>
                   </div>
-                )}
+
+                  {project.author && (
+                    <p className="mt-4 text-xs text-right text-gray-400 italic">
+                      {project.author}
+                    </p>
+                  )}
+                </div>
               </div>
-            </article>
+            </div>
           ))}
         </div>
-
-        {/* Premium CTA Section */}
-        <div className="relative text-center">
-          <div className="mb-16">
-            <div className="inline-flex items-center gap-2 px-0">
-              <span className="w-12 h-px bg-blue-500"></span>
-              <span className="text-sm uppercase tracking-widest text-blue-500 font-medium">
-                Get In Touch
-              </span>
-              <span className="w-12 h-px bg-blue-500"></span>
-            </div>
-          </div>
-
-          <h3 className="text-3xl font-light text-gray-900 mb-6">
-            Ready to begin your project?
-          </h3>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-            Let's collaborate to create something extraordinary that reflects
-            your vision and exceeds your expectations.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 transition-all duration-300 text-sm uppercase tracking-widest font-medium rounded-lg shadow-lg hover:shadow-xl hover:shadow-blue-200"
-            >
-              Start a Conversation
-              <FiArrowRight className="transform transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
-          </div>
-        </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        article {
-          animation: fadeIn 0.8s ease-out forwards;
-          animation-delay: calc(var(--index) * 0.1s);
-          transform-style: preserve-3d;
-        }
-
-        article::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border-radius: inherit;
-          padding: 1px;
-          background: linear-gradient(
-            135deg,
-            rgba(59, 130, 246, 0.3),
-            rgba(29, 78, 216, 0.3)
-          );
-          -webkit-mask: linear-gradient(#fff 0 0) content-box,
-            linear-gradient(#fff 0 0);
-          -webkit-mask-composite: xor;
-          mask-composite: exclude;
-          pointer-events: none;
-        }
-      `}</style>
     </section>
   );
 };

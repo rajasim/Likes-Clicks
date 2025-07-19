@@ -18,7 +18,7 @@ const Homepage = () => {
       <WhyChooseUs />
       <Portfolio />
       <Testimonials />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
     </>
   );
 };

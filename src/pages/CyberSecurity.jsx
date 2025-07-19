@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Shield,
   Search,
@@ -12,6 +13,12 @@ import {
   Gauge,
   ClipboardCheck,
 } from "lucide-react";
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const CyberSecurity = () => {
   const approach = [
@@ -96,37 +103,75 @@ const CyberSecurity = () => {
         </p>
       </div>
 
+      {/* Process Section with Arrows */}
       <div className="mb-20">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           Our Cybersecurity Approach
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {approach.map((step, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
-            >
-              <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-blue-50">
-                {step.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-center mb-3">
-                {step.title}
-              </h3>
-              <p className="text-gray-600 text-center">{step.description}</p>
-            </div>
-          ))}
+        <div className="relative">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {approach.map((step, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative"
+              >
+                {/* Process Arrow */}
+                {index < approach.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <svg
+                      className="w-8 h-8 text-gray-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 5l7 7-7 7M5 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                )}
+
+                {/* Process Card */}
+                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200 h-full">
+                  <div className="flex items-center justify-center w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50">
+                    {step.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-center mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-center">
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
+      {/* Services Section */}
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           Cybersecurity Service Packages
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200"
             >
               <div className="p-6">
                 <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-blue-50">
@@ -136,23 +181,26 @@ const CyberSecurity = () => {
                   {service.title}
                 </h3>
                 <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-gray-700">What's Included:</p>
-                  <p className="text-gray-600">{service.included}</p>
+                  <p className="font-medium text-sm text-gray-700">
+                    What's Included:
+                  </p>
+                  <p className="text-gray-600 text-sm">{service.included}</p>
                 </div>
                 <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-gray-700">Best For:</p>
-                  <p className="text-gray-600">{service.audience}</p>
+                  <p className="font-medium text-sm text-gray-700">Best For:</p>
+                  <p className="text-gray-600 text-sm">{service.audience}</p>
                 </div>
                 <div className="p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-gray-700">Outcome:</p>
-                  <p className="text-gray-600">{service.outcome}</p>
+                  <p className="font-medium text-sm text-gray-700">Outcome:</p>
+                  <p className="text-gray-600 text-sm">{service.outcome}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
+      {/* CTA Section */}
       <div className="mt-12 bg-gradient-to-r from-blue-800 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

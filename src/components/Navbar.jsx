@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Menu,
   X,
   ChevronDown,
-  Code,
   Smartphone,
   Globe,
-  Cloud,
-  Brain,
   ArrowRight,
 } from "lucide-react";
 
@@ -17,6 +14,13 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRefs = useRef({});
+  const location = useLocation();
+
+  // Close all menus when location changes
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [location]);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -62,25 +66,25 @@ const Navbar = () => {
         },
         {
           name: "CyberSecurity",
-          href: "/CyberSecurity",
+          href: "/cybersecurity",
           icon: Smartphone,
-          description: "iOS and Android applications",
+          description: "Security solutions for your business",
         },
         {
-          name: "MarketingAutomation",
+          name: "Marketing Automation",
           href: "/MarketingAutomation",
           icon: Smartphone,
-          description: "iOS and Android applications",
+          description: "Streamline your marketing efforts",
         },
         {
-          name: "AIDevelopment",
+          name: "AI Development",
           href: "/AIDevelopment",
           icon: Smartphone,
-          description: "iOS and Android applications",
+          description: "Custom AI solutions",
         },
       ],
     },
-    { name: "Portfolio", href: "/portfolio" },
+    // { name: "Portfolio", href: "/portfolio" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -119,8 +123,8 @@ const Navbar = () => {
                       onClick={() => toggleDropdown(item.name)}
                       className={`flex items-center text-sm font-medium text-gray-200 hover:text-white transition-all duration-200 px-3 py-2 rounded-lg ${
                         activeDropdown === item.name
-                          ? "text-white bg-gray-800"
-                          : "hover:bg-gray-800/50"
+                          ? "text-white bg-blue-600/20"
+                          : "hover:bg-blue-600/20"
                       }`}
                     >
                       {item.name}
@@ -140,13 +144,14 @@ const Navbar = () => {
                       }`}
                     >
                       <div className="p-1">
-                        {item.dropdown.map((subItem, index) => {
+                        {item.dropdown.map((subItem) => {
                           const IconComponent = subItem.icon;
                           return (
                             <Link
                               key={subItem.name}
                               to={subItem.href}
                               className="group flex items-center p-3 rounded-lg hover:bg-gray-700 transition-all duration-200"
+                              onClick={() => setActiveDropdown(null)}
                             >
                               <div className="p-2 bg-gray-700 rounded-lg mr-3 group-hover:bg-indigo-500 transition-all duration-200">
                                 <IconComponent className="w-5 h-5 text-indigo-300 group-hover:text-white" />
@@ -170,7 +175,7 @@ const Navbar = () => {
                   <Link
                     to={item.href}
                     className={`text-sm font-medium text-gray-200 hover:text-white transition-all duration-200 px-3 py-2 rounded-lg ${
-                      window.location.pathname === item.href
+                      location.pathname === item.href
                         ? "text-white bg-gray-800"
                         : "hover:bg-gray-800/50"
                     }`}
@@ -248,6 +253,10 @@ const Navbar = () => {
                             key={subItem.name}
                             to={subItem.href}
                             className="flex items-center py-2 text-gray-400 hover:text-indigo-300 transition-colors"
+                            onClick={() => {
+                              setIsOpen(false);
+                              setActiveDropdown(null);
+                            }}
                           >
                             <IconComponent className="w-4 h-4 mr-2 text-indigo-400" />
                             {subItem.name}
@@ -261,10 +270,9 @@ const Navbar = () => {
                 <Link
                   to={item.href}
                   className={`block py-3 text-gray-200 hover:text-white font-medium transition-colors ${
-                    window.location.pathname === item.href
-                      ? "text-indigo-300"
-                      : ""
+                    location.pathname === item.href ? "text-indigo-300" : ""
                   }`}
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
@@ -275,6 +283,7 @@ const Navbar = () => {
           <Link
             to="/contact"
             className="block mt-4 w-full text-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200"
+            onClick={() => setIsOpen(false)}
           >
             Get Started
           </Link>

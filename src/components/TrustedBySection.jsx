@@ -4,34 +4,32 @@ const TrustedBySection = () => {
   const companies = [
     {
       name: "Transistor",
-      logo: "https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg",
+      logo: "/logos/logo1.jpg",
       width: 158,
       height: 48,
     },
     {
       name: "Reform",
-      logo: "https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg",
+      logo: "/logos/logo2.jpg",
       width: 158,
       height: 48,
     },
     {
       name: "Tuple",
-      logo: "https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg",
+      logo: "/logos/logo3.jpg",
       width: 158,
       height: 48,
     },
     {
       name: "SavvyCal",
-      logo: "https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg",
-      width: 158,
-      height: 48,
+      logo: "/logos/logo4.jpg",
     },
-    {
-      name: "Statamic",
-      logo: "https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg",
-      width: 158,
-      height: 48,
-    },
+    // {
+    //   name: "Statamic",
+    //   logo: "https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg",
+    //   width: 158,
+    //   height: 48,
+    // },
   ];
 
   return (
@@ -48,7 +46,7 @@ const TrustedBySection = () => {
           <div className="relative inline-flex items-center justify-center mb-8">
             <span className=" h-px w-16 bg-blue-600 left-0"></span>
             <span className="text-xs uppercase tracking-[0.2em] text-blue-600 font-medium px-4">
-              Partnerships
+              Clients
             </span>
             <span className=" h-px w-16 bg-blue-600 right-0"></span>
           </div>
@@ -58,11 +56,11 @@ const TrustedBySection = () => {
         </div>
 
         {/* Companies grid */}
-        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center justify-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           {companies.map((company, index) => (
             <div
               key={company.name}
-              className={`col-span-2 max-h-12 w-full object-contain ${
+              className={`col-span-2 max-h-12 w-full object-contain flex items-center justify-center ${
                 index === 3
                   ? "sm:col-start-2 lg:col-span-1"
                   : index === 4
@@ -73,9 +71,9 @@ const TrustedBySection = () => {
               <img
                 src={company.logo}
                 alt={company.name}
-                width={company.width}
-                height={company.height}
-                className="opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                // width={company.width}
+                // height={company.height}
+                className="opacity-80 hover:opacity-100 transition-opacity duration-300  hover:grayscale-0 max-h-12 object-contain"
                 loading="lazy"
               />
             </div>

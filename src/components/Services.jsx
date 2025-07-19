@@ -69,16 +69,16 @@ const Services = () => {
       bgGradient: "from-indigo-600/10 to-violet-500/10",
       particles: "indigo",
     },
-    {
-      name: "UI/UX Design",
-      description:
-        "Creating beautiful, intuitive interfaces that delight users and drive engagement through thoughtful design principles and user-centered approaches.",
-      icon: <FaPalette className="h-6 w-6" />,
-      cta: "Design your vision",
-      gradient: "from-pink-600 to-rose-500",
-      bgGradient: "from-pink-600/10 to-rose-500/10",
-      particles: "pink",
-    },
+    // {
+    //   name: "UI/UX Design",
+    //   description:
+    //     "Creating beautiful, intuitive interfaces that delight users and drive engagement through thoughtful design principles and user-centered approaches.",
+    //   icon: <FaPalette className="h-6 w-6" />,
+    //   cta: "Design your vision",
+    //   gradient: "from-pink-600 to-rose-500",
+    //   bgGradient: "from-pink-600/10 to-rose-500/10",
+    //   particles: "pink",
+    // },
   ];
 
   useEffect(() => {

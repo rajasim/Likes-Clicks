@@ -72,7 +72,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href="#"
-                  className={`bg-gray-800 p-3 rounded-full transition-all duration-300 ${social.color} hover:text-white`}
+                  className={`bg-gray-400 p-3 rounded-full transition-all duration-300 ${social.color} hover:text-white`}
                 >
                   {social.icon}
                 </a>
@@ -89,11 +89,11 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 "Services",
-                "Case Studies",
+                "Projects",
                 "About Us",
-                "Team",
-                "Blog",
-                "Careers",
+                // "Team",
+                // "Blog",
+                // "Careers",
               ].map((item) => (
                 <li key={item}>
                   <a
@@ -117,19 +117,20 @@ const Footer = () => {
             <ul className="space-y-5">
               {[
                 {
-                  city: "New York",
+                  city: "India",
                   address:
-                    "123 Tech Street, Suite 456\nNew York, NY 10001, USA",
+                    "20, Saraf Kaskar Estate, Jogeshwari, Mumbai, India.",
                   time: "Mon-Fri: 9AM-6PM EST",
                 },
                 {
-                  city: "London",
-                  address: "45 Innovation Road\nLondon EC1V 8AB, UK",
+                  city: "UAE",
+                  address: "197, Discovery Garden, Dubai, United Arab Emirates",
                   time: "Mon-Fri: 9AM-6PM GMT",
                 },
                 {
-                  city: "Singapore",
-                  address: "10 Digital Avenue\nSingapore 038983",
+                  city: "Australia",
+                  address:
+                    "106, St Andrew Street, Kuraby, Brisbane, Australia.",
                   time: "Mon-Fri: 9AM-6PM SGT",
                 },
               ].map((office, index) => (
@@ -148,7 +149,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-medium text-white mb-6 relative pb-4">
               <span className="absolute bottom-0 left-0 h-px w-12 bg-blue-400"></span>
               Newsletter
@@ -190,7 +191,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom bar */}
@@ -198,7 +199,7 @@ const Footer = () => {
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} Digital Nexus. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          {/* <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {[
               "Privacy Policy",
               "Terms of Service",
@@ -214,7 +215,7 @@ const Footer = () => {
                 {item}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
