@@ -10,8 +10,37 @@ import {
   FaPinterestP,
 } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
+import { useState } from "react";
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+
+    window.location.href = `mailto:info@digitalnexus.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Optionally reset the form after submission
+    setFormData({ name: "", email: "", message: "" });
+  };
+
   return (
     <footer className="relative bg-gray-900 pt-28 pb-16 overflow-hidden">
       {/* Decorative elements */}
@@ -81,20 +110,13 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-medium text-white mb-6 relative pb-4">
               <span className="absolute bottom-0 left-0 h-px w-12 bg-blue-400"></span>
               Quick Links
             </h4>
             <ul className="space-y-3">
-              {[
-                "Services",
-                "Projects",
-                "About Us",
-                // "Team",
-                // "Blog",
-                // "Careers",
-              ].map((item) => (
+              {["Services", "Projects", "About Us"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -106,7 +128,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Global offices */}
           <div>
@@ -148,50 +170,55 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          {/* <div>
+          {/* Contact Form */}
+          <div>
             <h4 className="text-lg font-medium text-white mb-6 relative pb-4">
               <span className="absolute bottom-0 left-0 h-px w-12 bg-blue-400"></span>
-              Newsletter
+              Contact Us
             </h4>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest updates and insights.
-            </p>
-            <form className="flex mb-6">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="bg-gray-800 text-white px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
-                required
-              />
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  required
+                />
+              </div>
+              <div>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows="3"
+                  className="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  required
+                ></textarea>
+              </div>
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-r-lg transition-colors duration-300 flex items-center"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center justify-center w-full"
               >
-                <FiSend className="h-5 w-5" />
+                <span>Send Message</span>
+                <FiSend className="ml-2 h-5 w-5" />
               </button>
             </form>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <FaPhone className="text-blue-400 mr-4" />
-                <a
-                  href="tel:+18005551234"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                >
-                  +1 (800) 555-1234
-                </a>
-              </div>
-              <div className="flex items-center">
-                <FaEnvelope className="text-blue-400 mr-4" />
-                <a
-                  href="mailto:info@digitalnexus.com"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
-                >
-                  info@digitalnexus.com
-                </a>
-              </div>
-            </div>
-          </div> */}
+          </div>
         </div>
 
         {/* Bottom bar */}
@@ -199,23 +226,6 @@ const Footer = () => {
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} Digital Nexus. All rights reserved.
           </p>
-          {/* <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            {[
-              "Privacy Policy",
-              "Terms of Service",
-              "Cookies",
-              "Sitemap",
-              "GDPR",
-            ].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-gray-500 hover:text-blue-400 text-sm transition-colors duration-300"
-              >
-                {item}
-              </a>
-            ))}
-          </div> */}
         </div>
       </div>
     </footer>

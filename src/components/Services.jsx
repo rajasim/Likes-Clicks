@@ -28,6 +28,7 @@ const Services = () => {
       gradient: "from-blue-600 to-cyan-500",
       bgGradient: "from-blue-600/10 to-cyan-500/10",
       particles: "blue",
+      link: "/webdev",
     },
     {
       name: "Mobile App Development",
@@ -38,6 +39,7 @@ const Services = () => {
       gradient: "from-purple-600 to-fuchsia-500",
       bgGradient: "from-purple-600/10 to-fuchsia-500/10",
       particles: "purple",
+      link: "/mobileapp",
     },
     {
       name: "Marketing & Automation",
@@ -48,6 +50,7 @@ const Services = () => {
       gradient: "from-green-600 to-emerald-500",
       bgGradient: "from-green-600/10 to-emerald-500/10",
       particles: "green",
+      link: "/cybersecurity",
     },
     {
       name: "Cybersecurity",
@@ -58,6 +61,7 @@ const Services = () => {
       gradient: "from-red-600 to-orange-500",
       bgGradient: "from-red-600/10 to-orange-500/10",
       particles: "red",
+      link: "/MarketingAutomation",
     },
     {
       name: "AI Development",
@@ -68,6 +72,7 @@ const Services = () => {
       gradient: "from-indigo-600 to-violet-500",
       bgGradient: "from-indigo-600/10 to-violet-500/10",
       particles: "indigo",
+      link: "/AIDevelopment",
     },
     // {
     //   name: "UI/UX Design",
@@ -191,6 +196,7 @@ const Services = () => {
               }`}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
+              onClick={() => (window.location.href = service.link)}
             >
               {/* Card Glow Effect */}
               <div
@@ -198,7 +204,7 @@ const Services = () => {
               ></div>
 
               {/* Main Card */}
-              <div className="relative bg-white backdrop-blur-xl border border-gray-200 rounded-xl p-8 h-full hover:bg-gray-50 transition-all duration-500 group-hover:border-transparent group-hover:scale-[1.02] shadow-sm hover:shadow-lg overflow-hidden">
+              <div className=" cursor-pointer crelative bg-white backdrop-blur-xl border border-gray-200 rounded-xl p-8 h-full hover:bg-gray-50 transition-all duration-500 group-hover:border-transparent group-hover:scale-[1.02] shadow-sm hover:shadow-lg overflow-hidden">
                 {/* Background Pattern */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}

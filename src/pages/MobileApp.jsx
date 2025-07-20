@@ -22,31 +22,67 @@ const fadeIn = {
   visible: { opacity: 1, y: 0 },
 };
 
+// Color classes for consistent styling
+const colorClasses = {
+  blue: {
+    bg: "bg-blue-100",
+    text: "text-blue-600",
+    border: "border-blue-200",
+    hover: "hover:bg-blue-50",
+    darkBg: "bg-blue-200",
+  },
+  purple: {
+    bg: "bg-purple-100",
+    text: "text-purple-600",
+    border: "border-purple-200",
+    hover: "hover:bg-purple-50",
+    darkBg: "bg-purple-200",
+  },
+  green: {
+    bg: "bg-green-100",
+    text: "text-green-600",
+    border: "border-green-200",
+    hover: "hover:bg-green-50",
+    darkBg: "bg-green-200",
+  },
+  red: {
+    bg: "bg-red-100",
+    text: "text-red-600",
+    border: "border-red-200",
+    hover: "hover:bg-red-50",
+    darkBg: "bg-red-200",
+  },
+};
+
 const MobileApp = () => {
   const process = [
     {
-      icon: <ClipboardList className="w-8 h-8 text-blue-600" />,
+      icon: <ClipboardList className="w-6 h-6" />,
       title: "Discovery & Requirement Gathering",
       description:
         "Understand your business needs, app goals, user personas, and core functionality.",
+      color: "blue",
     },
     {
-      icon: <Figma className="w-8 h-8 text-purple-600" />,
+      icon: <Figma className="w-6 h-6" />,
       title: "Design & Prototyping",
       description:
         "Wireframes and high-fidelity UI mockups created using Figma for early feedback.",
+      color: "purple",
     },
     {
-      icon: <Code className="w-8 h-8 text-green-600" />,
+      icon: <Code className="w-6 h-6" />,
       title: "Development & Integration",
       description:
         "Frontend development with Flutter, React Native, Swift, or Kotlin with secure API integrations.",
+      color: "green",
     },
     {
-      icon: <Play className="w-8 h-8 text-red-600" />,
+      icon: <Play className="w-6 h-6" />,
       title: "Testing & Deployment",
       description:
         "QA on multiple devices, App Store/Play Store deployment, and post-launch monitoring.",
+      color: "red",
     },
   ];
 
@@ -112,7 +148,7 @@ const MobileApp = () => {
         </p>
       </div>
 
-      {/* Process Section with Arrows */}
+      {/* Process Section with Numbered Steps */}
       <div className="mb-20">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           Our Development Process
@@ -129,11 +165,24 @@ const MobileApp = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative"
               >
+                {/* Numbered Badge */}
+                <div
+                  className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center ${
+                    colorClasses[step.color].bg
+                  } border-4 border-white shadow-lg`}
+                >
+                  <span
+                    className={`font-bold ${colorClasses[step.color].text}`}
+                  >
+                    {index + 1}
+                  </span>
+                </div>
+
                 {/* Process Arrow */}
                 {index < process.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                     <svg
-                      className="w-8 h-8 text-gray-300"
+                      className={`w-8 h-8 ${colorClasses[step.color].text}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -149,9 +198,19 @@ const MobileApp = () => {
                 )}
 
                 {/* Process Card */}
-                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200 h-full">
-                  <div className="flex items-center justify-center w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50">
-                    {step.icon}
+                <div
+                  className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
+                    colorClasses[step.color].border
+                  } h-full pt-8`}
+                >
+                  <div
+                    className={`w-14 h-14 mx-auto ${
+                      colorClasses[step.color].bg
+                    } rounded-xl flex items-center justify-center mb-4 shadow-inner`}
+                  >
+                    <div className={colorClasses[step.color].text}>
+                      {step.icon}
+                    </div>
                   </div>
                   <h3 className="text-xl font-semibold text-center mb-3">
                     {step.title}
