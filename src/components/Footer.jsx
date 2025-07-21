@@ -139,21 +139,22 @@ const Footer = () => {
             <ul className="space-y-5">
               {[
                 {
-                  city: "India",
+                  city: "Australia",
                   address:
-                    "20, Saraf Kaskar Estate, Jogeshwari, Mumbai, India.",
-                  time: "Mon-Fri: 9AM-6PM EST",
+                    "106, St Andrew Street, Kuraby, Brisbane, Australia.",
+                  time: "Mon-Fri: 9AM-6PM SGT",
                 },
                 {
                   city: "UAE",
                   address: "197, Discovery Garden, Dubai, United Arab Emirates",
                   time: "Mon-Fri: 9AM-6PM GMT",
                 },
+
                 {
-                  city: "Australia",
+                  city: "India",
                   address:
-                    "106, St Andrew Street, Kuraby, Brisbane, Australia.",
-                  time: "Mon-Fri: 9AM-6PM SGT",
+                    "20, Saraf Kaskar Estate, Jogeshwari, Mumbai, India.",
+                  time: "Mon-Fri: 9AM-6PM EST",
                 },
               ].map((office, index) => (
                 <li key={index} className="flex items-start">

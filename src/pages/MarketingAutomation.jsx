@@ -20,46 +20,46 @@ const fadeIn = {
 // Color classes for consistent styling
 const colorClasses = {
   blue: {
-    bg: 'bg-blue-100',
-    text: 'text-blue-600',
-    border: 'border-blue-200',
-    hover: 'hover:bg-blue-50',
-    darkBg: 'bg-blue-200',
+    bg: "bg-blue-100",
+    text: "text-blue-600",
+    border: "border-blue-200",
+    hover: "hover:bg-blue-50",
+    darkBg: "bg-blue-200",
   },
   purple: {
-    bg: 'bg-purple-100',
-    text: 'text-purple-600',
-    border: 'border-purple-200',
-    hover: 'hover:bg-purple-50',
-    darkBg: 'bg-purple-200',
+    bg: "bg-purple-100",
+    text: "text-purple-600",
+    border: "border-purple-200",
+    hover: "hover:bg-purple-50",
+    darkBg: "bg-purple-200",
   },
   green: {
-    bg: 'bg-green-100',
-    text: 'text-green-600',
-    border: 'border-green-200',
-    hover: 'hover:bg-green-50',
-    darkBg: 'bg-green-200',
+    bg: "bg-green-100",
+    text: "text-green-600",
+    border: "border-green-200",
+    hover: "hover:bg-green-50",
+    darkBg: "bg-green-200",
   },
   red: {
-    bg: 'bg-red-100',
-    text: 'text-red-600',
-    border: 'border-red-200',
-    hover: 'hover:bg-red-50',
-    darkBg: 'bg-red-200',
+    bg: "bg-red-100",
+    text: "text-red-600",
+    border: "border-red-200",
+    hover: "hover:bg-red-50",
+    darkBg: "bg-red-200",
   },
   yellow: {
-    bg: 'bg-yellow-100',
-    text: 'text-yellow-600',
-    border: 'border-yellow-200',
-    hover: 'hover:bg-yellow-50',
-    darkBg: 'bg-yellow-200',
+    bg: "bg-yellow-100",
+    text: "text-yellow-600",
+    border: "border-yellow-200",
+    hover: "hover:bg-yellow-50",
+    darkBg: "bg-yellow-200",
   },
   orange: {
-    bg: 'bg-orange-100',
-    text: 'text-orange-600',
-    border: 'border-orange-200',
-    hover: 'hover:bg-orange-50',
-    darkBg: 'bg-orange-200',
+    bg: "bg-orange-100",
+    text: "text-orange-600",
+    border: "border-orange-200",
+    hover: "hover:bg-orange-50",
+    darkBg: "bg-orange-200",
   },
 };
 
@@ -68,26 +68,28 @@ const MarketingAutomation = () => {
     {
       icon: <ClipboardList className="w-6 h-6" />,
       title: "Audit & Setup",
-      description: "Evaluate current digital presence, tracking setup, and content health.",
-      color: 'blue',
+      description:
+        "Evaluate current digital presence, tracking setup, and content health.",
+      color: "blue",
     },
     {
       icon: <Search className="w-6 h-6" />,
       title: "Optimization",
       description: "Improve on-page SEO, funnel design, and user tracking.",
-      color: 'purple',
+      color: "purple",
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Automation",
       description: "Set up email workflows and retargeting for lead nurturing.",
-      color: 'green',
+      color: "green",
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Analysis & Reporting",
-      description: "Monthly insights and performance dashboards to guide growth.",
-      color: 'red',
+      description:
+        "Monthly insights and performance dashboards to guide growth.",
+      color: "red",
     },
   ];
 
@@ -97,40 +99,45 @@ const MarketingAutomation = () => {
       title: "SEOBoost (Audit + On-Page)",
       included: "Keyword targeting, meta tags, page speed optimization",
       audience: "Small businesses launching or redesigning websites",
-      outcome: "SEO report, implementation checklist, and basic improvements for faster indexing",
-      color: 'blue',
+      outcome:
+        "SEO report, implementation checklist, and basic improvements for faster indexing",
+      color: "blue",
     },
     {
       icon: <BarChart className="w-8 h-8" />,
       title: "TrackMate (GA4 Setup)",
       included: "GA4 + Tag Manager, custom event configuration",
       audience: "Anyone needing traffic insights or setting up analytics",
-      outcome: "Real-time insights with custom tracking across websites or campaigns",
-      color: 'purple',
+      outcome:
+        "Real-time insights with custom tracking across websites or campaigns",
+      color: "purple",
     },
     {
       icon: <Mail className="w-8 h-8" />,
       title: "AutoMail (Email Automation)",
       included: "Mailchimp setup, drip workflows, lead nurture sequences",
       audience: "Coaches, consultants, service providers",
-      outcome: "Automated welcome flows, lead scoring, and behavior-based follow-ups",
-      color: 'green',
+      outcome:
+        "Automated welcome flows, lead scoring, and behavior-based follow-ups",
+      color: "green",
     },
     {
       icon: <MousePointerClick className="w-8 h-8" />,
       title: "PixelTrack (Social Pixels)",
       included: "Facebook, LinkedIn, TikTok conversion tags",
       audience: "Anyone running paid ads or remarketing",
-      outcome: "Better ad attribution and audience retargeting through pixel tracking",
-      color: 'yellow',
+      outcome:
+        "Better ad attribution and audience retargeting through pixel tracking",
+      color: "yellow",
     },
     {
       icon: <Filter className="w-8 h-8" />,
       title: "FunnelFix (Conversion Opt.)",
       included: "A/B testing, funnel audit, CRO dashboard",
       audience: "eCommerce, SaaS, and product-focused sites",
-      outcome: "Visual funnel heatmaps, testing reports, and conversion lift tracking",
-      color: 'orange',
+      outcome:
+        "Visual funnel heatmaps, testing reports, and conversion lift tracking",
+      color: "orange",
     },
   ];
 
@@ -149,7 +156,7 @@ const MarketingAutomation = () => {
       {/* Process Section with Numbered Steps */}
       <div className="mb-20">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Our Growth Marketing Process
+          Our Marketing Process
         </h2>
         <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -164,10 +171,14 @@ const MarketingAutomation = () => {
                 className="relative"
               >
                 {/* Numbered Badge */}
-                <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center ${
-                  colorClasses[step.color].bg
-                } border-4 border-white shadow-lg`}>
-                  <span className={`font-bold ${colorClasses[step.color].text}`}>
+                <div
+                  className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center ${
+                    colorClasses[step.color].bg
+                  } border-4 border-white shadow-lg`}
+                >
+                  <span
+                    className={`font-bold ${colorClasses[step.color].text}`}
+                  >
                     {index + 1}
                   </span>
                 </div>
@@ -192,12 +203,16 @@ const MarketingAutomation = () => {
                 )}
 
                 {/* Process Card */}
-                <div className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
-                  colorClasses[step.color].border
-                } h-full pt-8`}>
-                  <div className={`w-14 h-14 mx-auto ${
-                    colorClasses[step.color].bg
-                  } rounded-xl flex items-center justify-center mb-4 shadow-inner`}>
+                <div
+                  className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
+                    colorClasses[step.color].border
+                  } h-full pt-8`}
+                >
+                  <div
+                    className={`w-14 h-14 mx-auto ${
+                      colorClasses[step.color].bg
+                    } rounded-xl flex items-center justify-center mb-4 shadow-inner`}
+                  >
                     <div className={colorClasses[step.color].text}>
                       {step.icon}
                     </div>
@@ -234,30 +249,97 @@ const MarketingAutomation = () => {
               }`}
             >
               <div className="p-6">
-                <div className={`w-14 h-14 mx-auto mb-4 ${
-                  colorClasses[service.color].bg
-                } rounded-xl flex items-center justify-center shadow-inner`}>
-                  <div className={colorClasses[service.color].text}>
-                    {service.icon}
+                <div
+                  className={`w-14 h-14 mx-auto mb-4 ${
+                    colorClasses[service.color].bg
+                  } rounded-xl flex items-center justify-center shadow-inner`}
+                >
+                  <div
+                    className={`${colorClasses[service.color].text} w-6 h-6`}
+                  >
+                    {React.cloneElement(service.icon, {
+                      className: `w-6 h-6 ${colorClasses[service.color].text}`,
+                    })}
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
                   {service.title}
                 </h3>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">
-                    What's Included:
-                  </p>
-                  <p className="text-gray-600 text-sm">{service.included}</p>
-                </div>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Best For:</p>
-                  <p className="text-gray-600 text-sm">{service.audience}</p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Outcome:</p>
-                  <p className="text-gray-600 text-sm">{service.outcome}</p>
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        What's Included:
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {service.included}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        Best For:
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {service.audience}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        Outcome:
+                      </p>
+                      <p className="text-gray-600 text-sm">{service.outcome}</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </motion.div>
           ))}

@@ -257,27 +257,92 @@ const AIDevelopment = () => {
                     colorClasses[service.color].bg
                   } rounded-xl flex items-center justify-center shadow-inner`}
                 >
-                  <div className={colorClasses[service.color].text}>
-                    {service.icon}
+                  <div
+                    className={`${colorClasses[service.color].text} w-6 h-6`}
+                  >
+                    {React.cloneElement(service.icon, {
+                      className: `w-6 h-6 ${colorClasses[service.color].text}`,
+                    })}
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
                   {service.title}
                 </h3>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">
-                    What's Included:
-                  </p>
-                  <p className="text-gray-600 text-sm">{service.included}</p>
-                </div>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Best For:</p>
-                  <p className="text-gray-600 text-sm">{service.audience}</p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Outcome:</p>
-                  <p className="text-gray-600 text-sm">{service.outcome}</p>
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        What's Included:
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {service.included}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        Best For:
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {service.audience}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        Outcome:
+                      </p>
+                      <p className="text-gray-600 text-sm">{service.outcome}</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </motion.div>
           ))}

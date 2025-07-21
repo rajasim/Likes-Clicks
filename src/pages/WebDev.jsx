@@ -191,7 +191,7 @@ const processData = [
   },
   {
     icon: <Cpu className="w-8 h-8" />,
-    title: "Development & Testing",
+    title: "DevMent & Testing",
     description:
       "We build the site using secure, scalable technologies with rigorous testing.",
     clientInputs: [
@@ -253,7 +253,7 @@ const packagesData = [
       "Blog setup",
       "Contact forms",
       "Basic analytics",
-      "3 rounds of revisions",
+      // "3 rounds of revisions",
     ],
     color: "purple",
   },
@@ -268,7 +268,7 @@ const packagesData = [
       "API connections",
       "Premium hosting",
       "SEO optimization",
-      "Unlimited revisions",
+      // "Unlimited revisions",
     ],
     color: "green",
   },
@@ -283,7 +283,7 @@ const packagesData = [
       "Payment processing",
       "Inventory system",
       "Mobile optimized",
-      "5 rounds of revisions",
+      // "5 rounds of revisions",
     ],
     color: "orange",
   },
@@ -303,7 +303,7 @@ const HeroSection = () => (
       <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
         Web Development
       </span>{" "}
-      Services
+      Website
     </h1>
     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
       We create high-performance, scalable web solutions that drive results and
@@ -520,7 +520,7 @@ const PackageCard = ({ pkg, index }) => (
     variants={fadeIn}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     whileHover={{ y: -5 }}
-    className={`border rounded-xl overflow-hidden ${
+    className={`border rounded-xl overflow-hidden flex flex-col justify-between h-full ${
       colorClasses[pkg.color].border
     } ${colorClasses[pkg.color].hover} transition-all`}
   >
@@ -531,8 +531,9 @@ const PackageCard = ({ pkg, index }) => (
         <span className="font-semibold">Ideal for:</span> {pkg.idealFor}
       </div>
     </div>
-    <div className="p-6">
-      <ul className="space-y-3">
+
+    <div className="p-6 flex flex-col flex-grow justify-between">
+      {/* <ul className="space-y-3 mb-6">
         {pkg.features.map((feature, i) => (
           <li key={i} className="flex items-start">
             <svg
@@ -551,11 +552,12 @@ const PackageCard = ({ pkg, index }) => (
             <span className="text-gray-700">{feature}</span>
           </li>
         ))}
-      </ul>
+      </ul> */}
+
       <button
-        className={`w-full mt-6 py-3 ${colorClasses[pkg.color].bg} ${
+        className={`w-full py-3 ${colorClasses[pkg.color].bg} ${
           colorClasses[pkg.color].hover
-        } rounded-lg font-medium transition-colors`}
+        } rounded-lg font-medium transition-colors mt-auto`}
       >
         Learn More
       </button>

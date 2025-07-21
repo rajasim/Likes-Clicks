@@ -150,11 +150,12 @@ const CyberSecurity = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Enterprise Cybersecurity Services
+          Cybersecurity Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          We secure your digital assets through layered protection, risk
-          identification, and proactive monitoring.
+          We secure your digital assets through layered protection
+          {/* , risk
+          identification, and proactive monitoring. */}
         </p>
       </div>
 
@@ -173,7 +174,7 @@ const CyberSecurity = () => {
                 viewport={{ once: true }}
                 variants={fadeIn}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
+                className={`relative ${colorClasses[step.color].bg}`}
               >
                 {/* Numbered Badge */}
                 <div
@@ -190,7 +191,9 @@ const CyberSecurity = () => {
 
                 {/* Process Arrow */}
                 {index < approach.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                  <div
+                    className={`hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2`}
+                  >
                     <svg
                       className={`w-8 h-8 ${colorClasses[step.color].text}`}
                       fill="none"
@@ -209,7 +212,9 @@ const CyberSecurity = () => {
 
                 {/* Process Card */}
                 <div
-                  className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
+                  className={`bg-${
+                    colorClasses[step.color]
+                  } rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
                     colorClasses[step.color].border
                   } h-full pt-8`}
                 >
@@ -259,27 +264,92 @@ const CyberSecurity = () => {
                     colorClasses[service.color].bg
                   } rounded-xl flex items-center justify-center shadow-inner`}
                 >
-                  <div className={colorClasses[service.color].text}>
-                    {service.icon}
+                  <div
+                    className={`${colorClasses[service.color].text} w-6 h-6`}
+                  >
+                    {React.cloneElement(service.icon, {
+                      className: `w-6 h-6 ${colorClasses[service.color].text}`,
+                    })}
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
                   {service.title}
                 </h3>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">
-                    What's Included:
-                  </p>
-                  <p className="text-gray-600 text-sm">{service.included}</p>
-                </div>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Best For:</p>
-                  <p className="text-gray-600 text-sm">{service.audience}</p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Outcome:</p>
-                  <p className="text-gray-600 text-sm">{service.outcome}</p>
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        What's Included:
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {service.included}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        Best For:
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {service.audience}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className={`h-5 w-5 ${
+                        colorClasses[service.color].text
+                      } mr-2 mt-0.5 flex-shrink-0`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <p className="font-medium text-sm text-gray-700">
+                        Outcome:
+                      </p>
+                      <p className="text-gray-600 text-sm">{service.outcome}</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </motion.div>
           ))}

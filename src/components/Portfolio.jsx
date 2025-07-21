@@ -76,7 +76,7 @@ const projects = [
     category: "Cybersecurity",
     icon: <FaShieldAlt className="text-4xl text-green-600" />,
     links: [{ url: "#", icon: <FaExternalLinkAlt />, label: "More Info" }],
-    author: "By Aftab B. Maldar",
+    // author: "By Aftab B. Maldar",
     pdfurl: "/pdf/Vapt.pdf", // Fixed typo from '/pad' to '/pdf'
     pdfName: "Cybersecurity_Case_Study.pdf",
   },

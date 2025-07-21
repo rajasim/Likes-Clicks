@@ -33,7 +33,7 @@ const Testimonials = () => {
       id: 4,
       quote:
         "From strategy to execution, Likes and Clicks nailed every aspect of our campaign. Their attention to brand detail and commitment to results have made them our go-to for all things digital. Exceptional team with a forward-thinking approach.",
-      author: "Andrew Barbra (From Aftab B. Maldar)",
+      author: "Andrew Barbra ",
       role: "Head of Brand & Communication Strategy",
       rating: 5,
       date: "2 months ago",

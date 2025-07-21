@@ -96,13 +96,13 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
-            We combine technical excellence with business acumen to deliver
-            solutions that drive real results.
+            We combine technical excellence with business to deliver real
+            results.
           </motion.p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
@@ -115,9 +115,9 @@ const WhyChooseUs = () => {
                 delay: 0.1 * index,
               }}
               whileHover={{ y: -5 }}
-              className="group"
+              className="group "
             >
-              <div className="h-full p-8 rounded-xl transition-all duration-300 hover:shadow-lg border border-gray-100 hover:border-transparent">
+              <div className="h-full p-8 rounded-xl transition-all duration-300 hover:shadow-lg border border-gray-300/90 shadow-xl ">
                 <div
                   className={`w-16 h-16 ${feature.bgColor} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
                 >

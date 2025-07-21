@@ -143,8 +143,8 @@ const MobileApp = () => {
           Mobile App Development Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          We create high-performance mobile applications with a structured,
-          collaborative, and scalable approach.
+          We create high-performance mobile applications
+          {/* with a structured,           collaborative, and scalable approach. */}
         </p>
       </div>
 
@@ -226,45 +226,135 @@ const MobileApp = () => {
       </div>
 
       {/* Services Section */}
+      {/* Services Section */}
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           Our Mobile App Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-blue-50">
-                  {service.icon}
+          {services.map((service, index) => {
+            // Color mapping for consistent styling
+            const colorMap = {
+              blue: {
+                bg: "bg-blue-100",
+                text: "text-blue-600",
+                border: "border-blue-200",
+              },
+              green: {
+                bg: "bg-green-100",
+                text: "text-green-600",
+                border: "border-green-200",
+              },
+              purple: {
+                bg: "bg-purple-100",
+                text: "text-purple-600",
+                border: "border-purple-200",
+              },
+              yellow: {
+                bg: "bg-yellow-100",
+                text: "text-yellow-600",
+                border: "border-yellow-200",
+              },
+              orange: {
+                bg: "bg-orange-100",
+                text: "text-orange-600",
+                border: "border-orange-200",
+              },
+              indigo: {
+                bg: "bg-indigo-100",
+                text: "text-indigo-600",
+                border: "border-indigo-200",
+              },
+            };
+
+            // Get the appropriate color based on the icon's existing color
+            const iconColor =
+              service.icon.props.className.match(
+                /text-(blue|green|purple|yellow|orange|indigo)-600/
+              )?.[1] || "blue";
+            const currentColor = colorMap[iconColor];
+
+            return (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border ${currentColor.border}`}
+              >
+                <div className="p-6">
+                  <div
+                    className={`flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full ${currentColor.bg}`}
+                  >
+                    {React.cloneElement(service.icon, {
+                      className: `w-6 h-6 ${currentColor.text}`,
+                    })}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
+                    {service.title}
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <svg
+                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span className="text-gray-600 text-sm">
+                        {service.description}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span className="text-gray-600 text-sm">
+                        {service.audience}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span className="text-gray-600 text-sm">
+                        {service.outcome}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
-                  {service.title}
-                </h3>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">
-                    What's Included:
-                  </p>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </div>
-                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Best For:</p>
-                  <p className="text-gray-600 text-sm">{service.audience}</p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-sm text-gray-700">Outcome:</p>
-                  <p className="text-gray-600 text-sm">{service.outcome}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
