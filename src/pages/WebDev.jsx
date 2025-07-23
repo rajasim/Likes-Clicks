@@ -301,9 +301,8 @@ const HeroSection = () => (
   >
     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
       <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-        Web Development
+        Web Development Website
       </span>{" "}
-      Website
     </h1>
     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
       We create high-performance, scalable web solutions that drive results and
@@ -405,6 +404,19 @@ const ProcessStage = ({ stage, index }) => {
                 : "bg-white/80"
             }`}
           >
+            <svg
+              className={`h-5 w-5  mr-2 mt-0.5`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
             <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
               Your Contribution
             </h4>
@@ -460,6 +472,19 @@ const ProcessStage = ({ stage, index }) => {
               showOurRole ? colorClasses[stage.color].darkBg : "bg-white/80"
             }`}
           >
+            <svg
+              className={`h-5 w-5  mr-2 mt-0.5`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
             <h4 className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
               Our Deliverables
             </h4>
@@ -533,7 +558,7 @@ const PackageCard = ({ pkg, index }) => (
     </div>
 
     <div className="p-6 flex flex-col flex-grow justify-between">
-      {/* <ul className="space-y-3 mb-6">
+      <ul className="space-y-3 mb-6">
         {pkg.features.map((feature, i) => (
           <li key={i} className="flex items-start">
             <svg
@@ -552,7 +577,7 @@ const PackageCard = ({ pkg, index }) => (
             <span className="text-gray-700">{feature}</span>
           </li>
         ))}
-      </ul> */}
+      </ul>
 
       <button
         className={`w-full py-3 ${colorClasses[pkg.color].bg} ${
@@ -651,7 +676,7 @@ const WebDev = () => {
       {/* Our Process */}
       <div className="mb-28">
         <SectionHeader
-          title="Our Premium Development Process"
+          title="Our  Development Process"
           subtitle="A seamless, collaborative journey to deliver exceptional digital experiences."
         />
         <div className="relative">
