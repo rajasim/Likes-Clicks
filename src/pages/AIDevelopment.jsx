@@ -100,7 +100,7 @@ const AIDevelopment = () => {
   const services = [
     {
       icon: <Bot className="w-6 h-6" />,
-      title: "ChatIQ (FAQ or Lead Bot)",
+      title: "ChatIQ ",
       included: "Web/WhatsApp-based bot with GPT/Dialogflow",
       audience: "Customer support, sales teams, website onboarding",
       outcome:
@@ -109,7 +109,7 @@ const AIDevelopment = () => {
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
-      title: "SmartGPT (Custom Tools)",
+      title: "SmartGPT ",
       included: "Custom GPT integration with OpenAI API",
       audience: "SaaS platforms, automation dashboards, education tools",
       outcome:
@@ -118,7 +118,7 @@ const AIDevelopment = () => {
     },
     {
       icon: <FileSearch className="w-6 h-6" />,
-      title: "DocScan (OCR Automation)",
+      title: "DocScan ",
       included: "Image-to-text workflows using Tesseract/API",
       audience: "Legal firms, document-heavy teams, operations staff",
       outcome:
@@ -127,7 +127,7 @@ const AIDevelopment = () => {
     },
     {
       icon: <LineChart className="w-6 h-6" />,
-      title: "ForecastAI (Predictive)",
+      title: "ForecastAI ",
       included: "Python-based regression/classification model",
       audience: "Financial analysts, marketers, planners",
       outcome:
@@ -136,7 +136,7 @@ const AIDevelopment = () => {
     },
     {
       icon: <LayoutDashboard className="w-6 h-6" />,
-      title: "InsightDash (BI Dashboards)",
+      title: "InsightDash ",
       included: "Power BI + AI for automated dashboards",
       audience: "Ops teams, founders, performance-driven leaders",
       outcome: "Business dashboards with AI-driven insights and auto reports",
@@ -205,15 +205,17 @@ const AIDevelopment = () => {
                   </div>
                 )}
 
-                {/* Process Card */}
+                {/* Process Card with background color */}
                 <div
-                  className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
+                  className={`${
+                    colorClasses[step.color].bg
+                  } rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
                     colorClasses[step.color].border
                   } h-full pt-8`}
                 >
                   <div
                     className={`w-14 h-14 mx-auto ${
-                      colorClasses[step.color].bg
+                      colorClasses[step.color].darkBg
                     } rounded-xl flex items-center justify-center mb-4 shadow-inner`}
                   >
                     <div className={colorClasses[step.color].text}>

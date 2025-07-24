@@ -101,7 +101,7 @@ const CyberSecurity = () => {
   const services = [
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "SecureStart (Hardening)",
+      title: "SecureStart ",
       included: "SSL setup, WAF, plugin audit, brute-force protection",
       audience: "Any small business website needing secure setup",
       outcome:
@@ -110,7 +110,7 @@ const CyberSecurity = () => {
     },
     {
       icon: <AlertTriangle className="w-6 h-6" />,
-      title: "VulneraScan (Pen Test)",
+      title: "VulneraScan",
       included: "Manual + automated OWASP testing, remediation guide",
       audience: "Startups, SaaS, or e-commerce platforms pre-launch",
       outcome:
@@ -119,7 +119,7 @@ const CyberSecurity = () => {
     },
     {
       icon: <Eye className="w-6 h-6" />,
-      title: "LiveShield (Monitoring)",
+      title: "LiveShield ",
       included: "Real-time alerts, logs, response plan, dashboard",
       audience: "Active businesses needing always-on monitoring",
       outcome:
@@ -128,7 +128,7 @@ const CyberSecurity = () => {
     },
     {
       icon: <FileText className="w-6 h-6" />,
-      title: "CompliAudit (GDPR + Privacy)",
+      title: "CompliAudit",
       included: "Templates, data mapping, gap analysis",
       audience: "Teams handling customer data, apps, or European users",
       outcome:
@@ -137,7 +137,7 @@ const CyberSecurity = () => {
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "CodeGuard (Review)",
+      title: "CodeGuard ",
       included: "Static code scan, CI/CD integration, risk report",
       audience: "Dev teams inheriting outsourced codebases or doing releases",
       outcome:

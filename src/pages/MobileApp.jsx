@@ -89,50 +89,56 @@ const MobileApp = () => {
   const services = [
     {
       icon: <GitMerge className="w-8 h-8 text-blue-600" />,
-      title: "AppGo (Cross-Platform)",
+      title: "AppGo ",
       description: "UI for 3 screens + backend API integration",
       audience: "Startups, MVPs, budget-conscious businesses",
       outcome:
         "A sleek, functional app built fast using Flutter or React—ideal for testing or lean launches",
+      bg: "bg-blue-50",
     },
     {
       icon: <Zap className="w-8 h-8 text-green-600" />,
-      title: "DroidLaunch (Android)",
+      title: "DroidLaunch ",
       description: "Kotlin-based Android app build",
       audience: "Businesses targeting Android-first or device-specific markets",
       outcome:
         "Fast, native Android app tailored to your market—built for performance and compatibility",
+      bg: "green-500",
     },
     {
       icon: <Cpu className="w-8 h-8 text-purple-600" />,
-      title: "iLaunch (iOS)",
+      title: "iLaunch ",
       description: "Swift-based iOS-only app",
       audience: "iOS-first markets, premium user segments",
       outcome: "Smooth, scalable iOS experience with native design guidelines",
+      bg: "bg-purple-100",
     },
     {
       icon: <Layout className="w-8 h-8 text-yellow-600" />,
-      title: "AppVision (UI/UX)",
+      title: "AppVision ",
       description: "Figma wireframes and prototypes",
       audience: "Founders and dev teams needing visuals before coding",
       outcome:
         "Wireframes + clickable prototypes that align with user journey and client vision",
+      bg: "bg-yellow-100",
     },
     {
       icon: <Wrench className="w-8 h-8 text-orange-600" />,
-      title: "AppCare (Maintenance)",
+      title: "AppCare ",
       description: "Bug fixes, upgrades, performance monitoring",
       audience: "Live apps needing long-term support",
       outcome:
         "Reliable monthly maintenance including OS updates, bug resolution, and version upgrades",
+      bg: "bg-orange-100",
     },
     {
       icon: <Package className="w-8 h-8 text-indigo-600" />,
-      title: "AppReady (Publishing)",
+      title: "AppReady ",
       description: "Metadata, compliance checks, store submission",
       audience: "SMEs or solo founders launching their first app",
       outcome:
         "Seamless app store submissions and compliance (iOS/Android), including ASO basics",
+      bg: "bg-indigo-100",
     },
   ];
 
@@ -197,15 +203,17 @@ const MobileApp = () => {
                   </div>
                 )}
 
-                {/* Process Card */}
+                {/* Process Card - Added background color here */}
                 <div
-                  className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
+                  className={`${
+                    colorClasses[step.color].bg
+                  } rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
                     colorClasses[step.color].border
                   } h-full pt-8`}
                 >
                   <div
                     className={`w-14 h-14 mx-auto ${
-                      colorClasses[step.color].bg
+                      colorClasses[step.color].darkBg
                     } rounded-xl flex items-center justify-center mb-4 shadow-inner`}
                   >
                     <div className={colorClasses[step.color].text}>

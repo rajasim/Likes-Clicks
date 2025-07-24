@@ -121,7 +121,7 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className={`flex items-center text-xl font-medium text-gray-200 hover:text-white transition-all duration-200 px-4 py-2.5 rounded-lg ${
+                      className={`flex items-center p-2 text-xl font-medium text-gray-200 hover:text-white transition-all duration-200 px-4  rounded-lg ${
                         activeDropdown === item.name
                           ? "text-white bg-blue-600/30"
                           : "hover:bg-blue-600/20"
@@ -137,7 +137,7 @@ const Navbar = () => {
 
                     {/* Dropdown Menu */}
                     <div
-                      className={`absolute left-1/2 transform -translate-x-1/2 mt-2 w-80 bg-gray-800 backdrop-blur-md rounded-xl border border-gray-700 shadow-xl overflow-hidden transition-all duration-300 ${
+                      className={`absolute left-1/2 transform -translate-x-1/2 w-80 bg-gray-800 backdrop-blur-md rounded-xl border border-gray-700 shadow-xl overflow-hidden transition-all duration-300 ${
                         activeDropdown === item.name
                           ? "opacity-100 visible translate-y-0"
                           : "opacity-0 invisible translate-y-2"
@@ -150,7 +150,7 @@ const Navbar = () => {
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="group flex items-center p-3.5 rounded-lg hover:bg-gray-700/80 transition-all duration-200"
+                              className="group flex items-center p-2 rounded-lg hover:bg-gray-700/80 transition-all duration-200"
                               onClick={() => setActiveDropdown(null)}
                             >
                               <div className="p-2.5 bg-gray-700 rounded-lg mr-3 group-hover:bg-indigo-500 transition-all duration-200">

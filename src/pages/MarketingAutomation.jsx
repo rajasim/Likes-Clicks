@@ -96,7 +96,7 @@ const MarketingAutomation = () => {
   const services = [
     {
       icon: <Search className="w-8 h-8" />,
-      title: "SEOBoost (Audit + On-Page)",
+      title: "SEOBoost ",
       included: "Keyword targeting, meta tags, page speed optimization",
       audience: "Small businesses launching or redesigning websites",
       outcome:
@@ -105,7 +105,7 @@ const MarketingAutomation = () => {
     },
     {
       icon: <BarChart className="w-8 h-8" />,
-      title: "TrackMate (GA4 Setup)",
+      title: "TrackMate ",
       included: "GA4 + Tag Manager, custom event configuration",
       audience: "Anyone needing traffic insights or setting up analytics",
       outcome:
@@ -114,7 +114,7 @@ const MarketingAutomation = () => {
     },
     {
       icon: <Mail className="w-8 h-8" />,
-      title: "AutoMail (Email Automation)",
+      title: "AutoMail ",
       included: "Mailchimp setup, drip workflows, lead nurture sequences",
       audience: "Coaches, consultants, service providers",
       outcome:
@@ -123,7 +123,7 @@ const MarketingAutomation = () => {
     },
     {
       icon: <MousePointerClick className="w-8 h-8" />,
-      title: "PixelTrack (Social Pixels)",
+      title: "PixelTrack",
       included: "Facebook, LinkedIn, TikTok conversion tags",
       audience: "Anyone running paid ads or remarketing",
       outcome:
@@ -132,7 +132,7 @@ const MarketingAutomation = () => {
     },
     {
       icon: <Filter className="w-8 h-8" />,
-      title: "FunnelFix (Conversion Opt.)",
+      title: "FunnelFix",
       included: "A/B testing, funnel audit, CRO dashboard",
       audience: "eCommerce, SaaS, and product-focused sites",
       outcome:
@@ -202,15 +202,17 @@ const MarketingAutomation = () => {
                   </div>
                 )}
 
-                {/* Process Card */}
+                {/* Process Card with background color */}
                 <div
-                  className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
+                  className={`${
+                    colorClasses[step.color].bg
+                  } rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-2 ${
                     colorClasses[step.color].border
                   } h-full pt-8`}
                 >
                   <div
                     className={`w-14 h-14 mx-auto ${
-                      colorClasses[step.color].bg
+                      colorClasses[step.color].darkBg
                     } rounded-xl flex items-center justify-center mb-4 shadow-inner`}
                   >
                     <div className={colorClasses[step.color].text}>
@@ -229,7 +231,6 @@ const MarketingAutomation = () => {
           </div>
         </div>
       </div>
-
       {/* Services Section */}
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">

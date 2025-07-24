@@ -692,7 +692,7 @@ const WebDev = () => {
       <div className="mb-28">
         <SectionHeader
           title="Web Development Solutions"
-          subtitle="Flexible solutions designed for businesses at every stage."
+          // subtitle="Flexible solutions designed for businesses at every stage."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {packagesData.map((pkg, index) => (

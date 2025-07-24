@@ -58,7 +58,7 @@ const Footer = () => {
             <div className="flex items-center mb-6">
               <span className="h-px w-8 bg-blue-400"></span>
               <span className="text-xs uppercase tracking-widest text-blue-400 font-medium px-4">
-                Digital Nexus
+                Likes & Clicks
               </span>
               <span className="h-px w-8 bg-blue-400"></span>
             </div>
@@ -66,9 +66,9 @@ const Footer = () => {
               Elevating Brands Through{" "}
               <span className="text-blue-400">Digital Excellence</span>
             </h3>
-            <p className="text-gray-400 mb-8 max-w-lg">
-              We craft transformative digital experiences that drive growth,
-              engagement, and measurable results for forward-thinking businesses
+            <p className="text-gray-400 mb-8 w-full">
+              We craft transformative digital experiences that drive growth, and
+              engagement, measurable results for forward-thinking businesses
               worldwide.
             </p>
             <div className="flex space-x-3">
@@ -225,7 +225,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Digital Nexus. All rights reserved.
+            © {new Date().getFullYear()} Likes and clicks. All rights reserved.
           </p>
         </div>
       </div>
