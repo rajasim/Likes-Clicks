@@ -24,7 +24,7 @@ const features = [
     id: 2,
     title: "Client-Centric Process",
     description:
-      "Your goals drive our approach. We align every decision with your business objectives.",
+      "Your goals drive our approach. We align every decision with  business objectives.",
     icon: <FiClock className="w-8 h-8" />,
     color: "text-purple-600",
     bgColor: "bg-purple-50",
@@ -102,7 +102,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
@@ -115,24 +115,25 @@ const WhyChooseUs = () => {
                 delay: 0.1 * index,
               }}
               whileHover={{ y: -5 }}
-              className="group "
+              className="group"
             >
-              <div className="h-full p-8 rounded-xl transition-all duration-300 hover:shadow-lg border border-gray-300/90 shadow-xl ">
+              <div className="h-full p-8 rounded-xl transition-all duration-300 hover:shadow-lg border border-gray-300/90 shadow-xl text-center flex flex-col items-center">
+                {/* Centered Logo */}
                 <div
-                  className={`w-16 h-16 ${feature.bgColor} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                  className={`w-16 h-16 ${feature.bgColor} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto`}
                 >
                   <div className={`${feature.color}`}>{feature.icon}</div>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+
+                {/* Centered Title */}
+                <h3 className="text-2xl font-semibold text-gray-800 mb-3 w-full">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+
+                {/* Centered Description */}
+                <p className="text-gray-600 leading-relaxed mb-6 w-full">
                   {feature.description}
                 </p>
-                {/* <div className="flex items-center text-sm text-gray-500">
-                  <FiCheckCircle className="mr-2 text-green-500" />
-                  <span>Included in all projects</span>
-                </div> */}
               </div>
             </motion.div>
           ))}
@@ -145,15 +146,15 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           variants={fadeIn}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 sm:p-12"
+          className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-12"
         >
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="w-full mx-auto text-center">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Get to Market Faster
             </h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Our streamlined processes and experienced team reduce development
-              time by 30-40% compared to industry averages.
+            <p className="text-xl text-gray-600 mb-8 w-full mx-auto">
+              streamlined processes & experienced team reduce development time
+              by 30-40% compared to averages.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:shadow-lg transition-all transform hover:scale-105">
               Start Your Project Now

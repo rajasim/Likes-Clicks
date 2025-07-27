@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
               <span className="h-px w-8 bg-blue-400"></span>
-              <span className="text-xs uppercase tracking-widest text-blue-400 font-medium px-4">
+              <span className="text-xl uppercase tracking-widest text-blue-400 font-medium px-4">
                 Likes & Clicks
               </span>
               <span className="h-px w-8 bg-blue-400"></span>
@@ -68,8 +68,7 @@ const Footer = () => {
             </h3>
             <p className="text-gray-400 mb-8 w-full">
               We craft transformative digital experiences that drive growth, and
-              engagement, measurable results for forward-thinking businesses
-              worldwide.
+              engagement, measurable results for businesses worldwide.
             </p>
             <div className="flex space-x-3">
               {[

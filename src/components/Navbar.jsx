@@ -7,6 +7,12 @@ import {
   Smartphone,
   Globe,
   ArrowRight,
+  Shield,
+  Zap,
+  Cpu,
+  BookOpen,
+  Mail,
+  Home,
 } from "lucide-react";
 
 const Navbar = () => {
@@ -47,10 +53,15 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: "Home", href: "/" },
+    {
+      name: "Home",
+      href: "/",
+      icon: Home,
+    },
     {
       name: "Services",
       href: "#",
+      icon: Zap, // Using Zap for services as a general icon
       dropdown: [
         {
           name: "Web Development",
@@ -67,26 +78,33 @@ const Navbar = () => {
         {
           name: "CyberSecurity",
           href: "/cybersecurity",
-          icon: Smartphone,
+          icon: Shield,
           description: "Security solutions for your business",
         },
         {
           name: "Marketing Automation",
           href: "/MarketingAutomation",
-          icon: Smartphone,
+          icon: Zap,
           description: "Streamline your marketing efforts",
         },
         {
           name: "AI Development",
           href: "/AIDevelopment",
-          icon: Smartphone,
+          icon: Cpu,
           description: "Custom AI solutions",
         },
       ],
     },
-    // { name: "Portfolio", href: "/portfolio" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    {
+      name: "About",
+      href: "/about",
+      icon: BookOpen,
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      icon: Mail,
+    },
   ];
 
   return (

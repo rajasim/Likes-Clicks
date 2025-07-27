@@ -149,7 +149,7 @@ const MobileApp = () => {
           Mobile App Development Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          We create high-performance mobile applications
+          {/* We create high-performance mobile applications */}
           {/* with a structured,           collaborative, and scalable approach. */}
         </p>
       </div>
@@ -293,16 +293,21 @@ const MobileApp = () => {
                 className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border ${currentColor.border}`}
               >
                 <div className="p-6">
+                  {/* Left-aligned Logo */}
                   <div
-                    className={`flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full ${currentColor.bg}`}
+                    className={`flex items-center w-12 h-12 mb-4 rounded-full ${currentColor.bg}`}
                   >
                     {React.cloneElement(service.icon, {
-                      className: `w-6 h-6 ${currentColor.text}`,
+                      className: `w-6 h-6 ${currentColor.text} ml-3`,
                     })}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
+
+                  {/* Left-aligned Main Title */}
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {service.title}
                   </h3>
+
+                  {/* Feature Sections with Left-aligned Content */}
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <svg
@@ -318,9 +323,14 @@ const MobileApp = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="text-gray-600 text-sm">
-                        {service.description}
-                      </span>
+                      <div>
+                        <p className="font-medium text-sm text-gray-700">
+                          What's Included:
+                        </p>
+                        <p className="text-gray-600 text-sm">
+                          {service.description}
+                        </p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <svg
@@ -336,9 +346,14 @@ const MobileApp = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="text-gray-600 text-sm">
-                        {service.audience}
-                      </span>
+                      <div>
+                        <p className="font-medium text-sm text-gray-700">
+                          Best For:
+                        </p>
+                        <p className="text-gray-600 text-sm">
+                          {service.audience}
+                        </p>
+                      </div>
                     </li>
                     <li className="flex items-start">
                       <svg
@@ -354,11 +369,47 @@ const MobileApp = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="text-gray-600 text-sm">
-                        {service.outcome}
-                      </span>
+                      <div>
+                        <p className="font-medium text-sm text-gray-700">
+                          Outcome:
+                        </p>
+                        <p className="text-gray-600 text-sm">
+                          {service.outcome}
+                        </p>
+                      </div>
                     </li>
                   </ul>
+
+                  {/* Left-aligned Highlights List (if exists) */}
+                  {service.highlights && (
+                    <div className="mt-4">
+                      <p className="font-medium text-sm text-gray-700 mb-2">
+                        Key Features:
+                      </p>
+                      <ul className="space-y-2">
+                        {service.highlights.map((highlight, i) => (
+                          <li key={i} className="flex items-start">
+                            <svg
+                              className={`h-4 w-4 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                            <span className="text-gray-600 text-sm">
+                              {highlight}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );

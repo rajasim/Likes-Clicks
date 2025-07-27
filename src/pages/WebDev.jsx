@@ -153,7 +153,7 @@ const servicesData = [
 const processData = [
   {
     icon: <Search className="w-8 h-8" />,
-    title: "Discovery & Planning",
+    title: "Discover & Plan",
     description:
       "We understand your business goals, audience, and preferred design styles.",
     clientInputs: [
@@ -172,7 +172,7 @@ const processData = [
   },
   {
     icon: <PenTool className="w-8 h-8" />,
-    title: "Design & Prototyping",
+    title: "Design & Prototype",
     description:
       "Wireframes and UI mockups are created for your review and approval.",
     clientInputs: [
@@ -191,7 +191,7 @@ const processData = [
   },
   {
     icon: <Cpu className="w-8 h-8" />,
-    title: "DevMent & Testing",
+    title: "Develop & Test",
     description:
       "We build the site using secure, scalable technologies with rigorous testing.",
     clientInputs: [
@@ -239,7 +239,7 @@ const packagesData = [
       "Mobile responsive",
       "Basic SEO setup",
       "Contact form",
-      "1 round of revisions",
+      // "1 round of revisions",
     ],
     color: "blue",
   },
@@ -289,6 +289,39 @@ const packagesData = [
   },
 ];
 
+const webServices = [
+  {
+    title: "Custom Web Development",
+    // icon: <FiCode />,
+    color: "blue",
+    included:
+      "Tailored website solutions, custom functionality, API integrations",
+    audience: "Businesses needing unique digital experiences",
+    outcome:
+      "Fully customized website that meets specific business requirements",
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
+  },
+  {
+    title: "E-Commerce Solutions",
+    // icon: <FiShoppingCart />,
+    color: "purple",
+    included: "Online store setup, payment integration, inventory management",
+    audience: "Retail businesses expanding online",
+    outcome: "Scalable e-commerce platform with secure transactions",
+    technologies: ["Shopify", "WooCommerce", "Magento", "Stripe"],
+  },
+  {
+    title: "CMS Development",
+    // icon: <FiLayout />,
+    color: "green",
+    included: "Content management system, user roles, SEO optimization",
+    audience: "Businesses requiring frequent content updates",
+    outcome: "Easy-to-manage website with full content control",
+    technologies: ["WordPress", "Contentful", "Strapi", "Sanity"],
+  },
+  // Add more services as needed
+];
+
 // Component parts
 const HeroSection = () => (
   <motion.div
@@ -301,10 +334,10 @@ const HeroSection = () => (
   >
     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
       <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-        Web Development Website
+        Web Development Services
       </span>{" "}
     </h1>
-    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+    <p className="text-xl text-gray-600 w-full mx-auto leading-relaxed">
       We create high-performance, scalable web solutions that drive results and
       deliver exceptional user experiences.
     </p>
@@ -390,14 +423,18 @@ const ProcessStage = ({ stage, index }) => {
         <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
           {stage.title}
         </h3>
-        <p className="text-gray-600 mb-4 text-sm text-center leading-relaxed">
+        <p className="text-gray-600 mb-4 pt-4 text-sm text-center leading-relaxed">
           {stage.description}
         </p>
 
         {/* Your Contribution - Dropdown */}
-        <div className="mb-4">
+        <div
+          className="mb-4"
+          onMouseEnter={() => setShowClientInputs(!showClientInputs)}
+          onMouseLeave={() => setShowClientInputs()}
+        >
           <button
-            onClick={() => setShowClientInputs(!showClientInputs)}
+            // onMouseLeave={()=>set}
             className={`w-full flex justify-between items-center p-3 rounded-lg ${
               showClientInputs
                 ? colorClasses[stage.color].darkBg
@@ -465,9 +502,11 @@ const ProcessStage = ({ stage, index }) => {
         </div>
 
         {/* Our Deliverables - Dropdown */}
-        <div>
+        <div
+          onMouseEnter={() => setShowOurRole(!showOurRole)}
+          onMouseLeave={() => setShowOurRole()}
+        >
           <button
-            onClick={() => setShowOurRole(!showOurRole)}
             className={`w-full flex justify-between items-center p-3 rounded-lg ${
               showOurRole ? colorClasses[stage.color].darkBg : "bg-white/80"
             }`}
@@ -551,7 +590,7 @@ const PackageCard = ({ pkg, index }) => (
   >
     <div className={`p-6 ${colorClasses[pkg.color].bg} text-center`}>
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-      <p className="text-gray-600 mb-3">{pkg.description}</p>
+      {/* <p className="text-gray-600 mb-3">{pkg.description}</p> */}
       <div className="text-sm font-medium bg-white/80 rounded-lg py-2 px-3 inline-block">
         <span className="font-semibold">Ideal for:</span> {pkg.idealFor}
       </div>
@@ -677,7 +716,7 @@ const WebDev = () => {
       <div className="mb-28">
         <SectionHeader
           title="Our  Development Process"
-          subtitle="A seamless, collaborative journey to deliver exceptional digital experiences."
+          // subtitle="A seamless, collaborative journey to deliver exceptional digital experiences."
         />
         <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
@@ -691,13 +730,151 @@ const WebDev = () => {
       {/* Service Packages */}
       <div className="mb-28">
         <SectionHeader
-          title="Web Development Solutions"
+          title="Web Development Services"
           // subtitle="Flexible solutions designed for businesses at every stage."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {packagesData.map((pkg, index) => (
             <PackageCard key={index} pkg={pkg} index={index} />
           ))}
+        </div>
+      </div>
+
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Our Web Development Services
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {webServices.map((service, index) => {
+            // Color mapping for consistent styling
+            const colorMap = {
+              blue: {
+                bg: "bg-blue-100",
+                text: "text-blue-600",
+                border: "border-blue-200",
+              },
+              green: {
+                bg: "bg-green-100",
+                text: "text-green-600",
+                border: "border-green-200",
+              },
+              purple: {
+                bg: "bg-purple-100",
+                text: "text-purple-600",
+                border: "border-purple-200",
+              },
+              yellow: {
+                bg: "bg-yellow-100",
+                text: "text-yellow-600",
+                border: "border-yellow-200",
+              },
+              orange: {
+                bg: "bg-orange-100",
+                text: "text-orange-600",
+                border: "border-orange-200",
+              },
+              indigo: {
+                bg: "bg-indigo-100",
+                text: "text-indigo-600",
+                border: "border-indigo-200",
+              },
+            };
+
+            // Get the appropriate color
+            const currentColor = colorMap[service.color || "blue"];
+
+            return (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border ${currentColor.border}`}
+              >
+                <div className="p-6">
+                  {/* Left-aligned Main Title */}
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {service.title}
+                  </h3>
+
+                  {/* Feature Sections */}
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <svg
+                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <div>
+                        <p className="font-medium text-sm text-gray-700">
+                          What's Included:
+                        </p>
+                        <p className="text-gray-600 text-sm">
+                          {service.included}
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <div>
+                        <p className="font-medium text-sm text-gray-700">
+                          Best For:
+                        </p>
+                        <p className="text-gray-600 text-sm">
+                          {service.audience}
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <div>
+                        <p className="font-medium text-sm text-gray-700">
+                          Outcome:
+                        </p>
+                        <p className="text-gray-600 text-sm">
+                          {service.outcome}
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 

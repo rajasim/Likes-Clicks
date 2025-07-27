@@ -8,10 +8,12 @@ import MobileApp from "./pages/MobileApp";
 import CyberSecurity from "./pages/CyberSecurity";
 import MarketingAutomation from "./pages/MarketingAutomation";
 import AIDevelopment from "./pages/AIDevelopment";
+import ScrollToTop from "../ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />

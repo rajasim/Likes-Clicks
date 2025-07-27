@@ -60,8 +60,7 @@ const Testimonials = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it—hear what our clients say about
-            working with us.
+            Don't just take our word hear what our clients have to say
           </p>
         </div>
 

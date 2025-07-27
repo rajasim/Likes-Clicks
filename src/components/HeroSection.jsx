@@ -29,8 +29,7 @@ const HeroSection = () => {
       icon: Globe,
       gradient: "from-blue-200",
       accentColor: "from-blue-500 to-indigo-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80",
+      bgImage: "/hero",
       link: "/webdev",
     },
     {
@@ -42,8 +41,7 @@ const HeroSection = () => {
       icon: Smartphone,
       gradient: "from-purple-200",
       accentColor: "from-purple-500 to-pink-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1514996550219-62672472d03b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG1vYmlsZSUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D",
+      bgImage: "/hero/app.jpg",
       link: "/mobileapp",
     },
     {
@@ -177,7 +175,7 @@ const HeroSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         {particles.map((particle) => (
           <div
             key={particle.id}
@@ -193,9 +191,9 @@ const HeroSection = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-32 h-32 border border-white/10 rounded-full animate-pulse"></div>
         <div
           className="absolute top-40 right-32 w-24 h-24 border border-white/10 rounded-lg rotate-45 animate-spin"
@@ -205,7 +203,7 @@ const HeroSection = () => {
           className="absolute bottom-32 left-1/4 w-16 h-16 border border-white/10 rounded-full animate-bounce"
           style={{ animationDelay: "2s" }}
         ></div>
-      </div>
+      </div> */}
 
       <div className="relative h-full flex items-center justify-center z-10">
         <div className="text-center px-6 max-w-5xl mx-auto">

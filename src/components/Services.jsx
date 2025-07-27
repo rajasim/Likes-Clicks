@@ -70,7 +70,7 @@ const Services = () => {
       icon: <GiArtificialIntelligence className="h-6 w-6" />,
       cta: "Explore AI solutions",
       gradient: "from-indigo-600 to-violet-500",
-      bgGradient: "from-indigo-600/10 to-violet-500/10",
+      bgGradient: "from-indigo-600/20 to-violet-500/20",
       particles: "indigo",
       link: "/AIDevelopment",
     },
@@ -107,62 +107,17 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Particle colors
-  const particleColors = {
-    blue: "bg-blue-500",
-    purple: "bg-purple-500",
-    green: "bg-green-500",
-    red: "bg-red-500",
-    indigo: "bg-indigo-500",
-    pink: "bg-pink-500",
-  };
-
   return (
     <div className="relative py-24 bg-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.05),transparent_70%)]"></div>
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        ></div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-3 h-3 rounded-full opacity-10 animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              backgroundColor: [
-                "#3b82f6",
-                "#8b5cf6",
-                "#10b981",
-                "#ef4444",
-                "#6366f1",
-                "#ec4899",
-              ][Math.floor(Math.random() * 6)],
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${15 + Math.random() * 20}s`,
-            }}
-          ></div>
-        ))}
-      </div>
-
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+      <div className="mx-auto w-full px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="mx-auto max-w-4xl text-center mb-20">
+        <div className="mx-auto w-full text-center mb-20">
           <div className="inline-flex items-center gap-4 px-0 mb-8">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div>
+            {/* <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div> */}
             <span className="text-sm uppercase tracking-[0.2em] text-blue-600 font-semibold">
               Our Expertise
             </span>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div>
+            {/* <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse"></div> */}
           </div>
 
           <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
@@ -174,8 +129,8 @@ const Services = () => {
               For Modern Businesses
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive services designed to elevate your digital presence,
+          <p className="text-xl text-gray-600 w-full ">
+            Comprehensive services designed to elevate your digital presence
             secure your assets, and drive measurable growth.
           </p>
         </div>
@@ -204,78 +159,82 @@ const Services = () => {
               ></div>
 
               {/* Main Card */}
-              <div className=" cursor-pointer crelative bg-white backdrop-blur-xl border border-gray-200 rounded-xl p-8 h-full hover:bg-gray-50 transition-all duration-500 group-hover:border-transparent group-hover:scale-[1.02] shadow-sm hover:shadow-lg overflow-hidden">
+              <div className="cursor-pointer relative bg-white backdrop-blur-xl border border-gray-200 rounded-xl p-8 h-full hover:bg-gray-50 transition-all duration-500 group-hover:border-transparent group-hover:scale-[1.02] shadow-sm hover:shadow-lg overflow-hidden">
                 {/* Background Pattern */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-gradient-to-br rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 ></div>
 
                 {/* Floating Circles */}
-                <div className="absolute -right-10 -top-10 w-32 h-32 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-700 group-hover:scale-150 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-                <div className="absolute -left-5 -bottom-5 w-20 h-20 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-700 group-hover:scale-150 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                <div
+                  className={`absolute -right-10 -top-10 w-32 h-32 rounded-full opacity-40 group-hover:opacity-20 transition-all duration-700 group-hover:scale-150 bg-gradient-to-r ${service.bgGradient} `}
+                ></div>
+                <div
+                  className={`absolute -left-5 -bottom-5 w-20 h-20 rounded-full opacity-10 group-hover:opacity-20 transition-all duration-700 group-hover:scale-150 bg-gradient-to-r ${service.gradient} `}
+                ></div>
 
                 {/* Content */}
                 <div className="relative z-10">
-                  {/* Icon */}
+                  {/* Centered Icon */}
                   <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg mx-auto`}
                   >
                     <div className="text-white text-2xl">{service.icon}</div>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                  {/* Centered Heading */}
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300 text-center">
                     {service.name}
                   </h3>
 
-                  {/* Description */}
+                  {/* Original Description (unchanged) */}
                   <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {service.description}
                   </p>
 
-                  {/* CTA Button */}
+                  {/* Original CTA Button (unchanged) */}
                   {/* <button
-                    className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-lg opacity-100 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-[1.03] shadow-lg hover:shadow-xl`}
-                  >
-                    {service.cta}
-                    <svg
-                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </button> */}
+            className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-lg opacity-100 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-[1.03] shadow-lg hover:shadow-xl`}
+          >
+            {service.cta}
+            <svg
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </button> */}
                 </div>
 
                 {/* Hover Particles */}
-                {hoveredCard === index && (
-                  <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                    {[...Array(12)].map((_, i) => (
-                      <div
-                        key={i}
-                        className={`absolute rounded-full animate-float ${
-                          particleColors[service.particles]
-                        }`}
-                        style={{
-                          left: `${10 + Math.random() * 80}%`,
-                          top: `${10 + Math.random() * 80}%`,
-                          width: `${Math.random() * 3 + 1}px`,
-                          height: `${Math.random() * 3 + 1}px`,
-                          opacity: 0.7,
-                          animationDelay: `${Math.random() * 2}s`,
-                          animationDuration: `${3 + Math.random() * 4}s`,
-                        }}
-                      ></div>
-                    ))}
-                  </div>
-                )}
+                {/* {hoveredCard === index && (
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {[...Array(12)].map((_, i) => (
+              <div
+                key={i}
+                className={`absolute rounded-full animate-float ${
+                  particleColors[service.particles]
+                }`}
+                style={{
+                  left: `${10 + Math.random() * 80}%`,
+                  top: `${10 + Math.random() * 80}%`,
+                  width: `${Math.random() * 3 + 1}px`,
+                  height: `${Math.random() * 3 + 1}px`,
+                  opacity: 0.7,
+                  animationDelay: `${Math.random() * 2}s`,
+                  animationDuration: `${3 + Math.random() * 4}s`,
+                }}
+              ></div>
+            ))}
+          </div>
+        )} */}
               </div>
             </div>
           ))}
@@ -285,9 +244,7 @@ const Services = () => {
         <div className="text-center mt-20">
           <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 overflow-hidden">
             {/* Button shine effect */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
-              <div className="absolute top-0 left-0 w-20 h-full bg-white/30 animate-shine"></div>
-            </div>
+
             <span className="flex items-center gap-3 relative z-10">
               Start Your Project Today
               <svg
