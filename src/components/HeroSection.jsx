@@ -175,35 +175,21 @@ const HeroSection = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* <div className="absolute inset-0 overflow-hidden">
-        {particles.map((particle) => (
-          <div
-            key={particle.id}
-            className="absolute bg-white/30 rounded-full"
-            style={{
-              left: `${particle.x}%`,
-              top: `${particle.y}%`,
-              width: `${particle.size}px`,
-              height: `${particle.size}px`,
-              opacity: particle.opacity,
-              animation: `float ${particle.duration}s ease-in-out infinite`,
-              animationDelay: `${particle.delay}s`,
-            }}
-          />
-        ))}
-      </div> */}
+      {/* Left Navigation Arrow */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition backdrop-blur-sm"
+      >
+        <ChevronLeft className="w-6 h-6 text-white" />
+      </button>
 
-      {/* <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-white/10 rounded-full animate-pulse"></div>
-        <div
-          className="absolute top-40 right-32 w-24 h-24 border border-white/10 rounded-lg rotate-45 animate-spin"
-          style={{ animationDuration: "20s" }}
-        ></div>
-        <div
-          className="absolute bottom-32 left-1/4 w-16 h-16 border border-white/10 rounded-full animate-bounce"
-          style={{ animationDelay: "2s" }}
-        ></div>
-      </div> */}
+      {/* Right Navigation Arrow */}
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition backdrop-blur-sm"
+      >
+        <ChevronRight className="w-6 h-6 text-white" />
+      </button>
 
       <div className="relative h-full flex items-center justify-center z-10">
         <div className="text-center px-6 max-w-5xl mx-auto">
@@ -268,13 +254,8 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Slide Indicators - moved to bottom center */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20">
-        <button
-          onClick={prevSlide}
-          className="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition"
-        >
-          <ChevronLeft className="w-5 h-5 text-white" />
-        </button>
         {slides.map((_, index) => (
           <button
             key={index}
@@ -285,12 +266,6 @@ const HeroSection = () => {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-        <button
-          onClick={nextSlide}
-          className="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition"
-        >
-          <ChevronRight className="w-5 h-5 text-white" />
-        </button>
       </div>
     </div>
   );
