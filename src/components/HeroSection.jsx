@@ -55,7 +55,7 @@ const HeroSection = () => {
       accentColor: "from-orange-500 to-amber-600",
       bgImage:
         "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1920&q=80",
-      link: "/marketing",
+      link: "/MarketingAutomation",
     },
     {
       title: "Cybersecurity",
@@ -68,7 +68,7 @@ const HeroSection = () => {
       accentColor: "from-green-500 to-teal-600",
       bgImage:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80",
-      link: "/security",
+      link: "/cybersecurity",
     },
     {
       title: "AI Development",
@@ -81,7 +81,7 @@ const HeroSection = () => {
       accentColor: "from-red-500 to-pink-600",
       bgImage:
         "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
-      link: "/ai",
+      link: "/AIDevelopment",
     },
   ];
 

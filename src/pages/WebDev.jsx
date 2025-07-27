@@ -73,9 +73,9 @@ const colorClasses = {
 const servicesData = [
   {
     icon: <Code className="w-10 h-10" />,
-    title: "Custom Web Development",
+    title: "Custom Development",
     description:
-      "Bespoke websites built with modern technologies to meet your specific business requirements.",
+      "built with modern technologies to for your specific  requirements.",
     highlights: [
       "React.js/Next.js applications",
       "TypeScript development",
@@ -730,7 +730,7 @@ const WebDev = () => {
       {/* Service Packages */}
       <div className="mb-28">
         <SectionHeader
-          title="Web Development Services"
+          title="Web Development Packages"
           // subtitle="Flexible solutions designed for businesses at every stage."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -741,9 +741,9 @@ const WebDev = () => {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        {/* <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
           Our Web Development Services
-        </h2>
+        </h2> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {webServices.map((service, index) => {
             // Color mapping for consistent styling

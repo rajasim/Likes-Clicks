@@ -150,7 +150,7 @@ const AIDevelopment = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           AI Development Services
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 w-full mx-auto">
           We turn your business challenges into smart, automated, and scalable
           AI-powered solutions.
         </p>

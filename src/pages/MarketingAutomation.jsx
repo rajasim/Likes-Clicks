@@ -147,7 +147,7 @@ const MarketingAutomation = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Marketing & Automation Services
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 w-full mx-auto">
           We help businesses build visibility, attract leads, and increase
           conversions through data-driven strategies.
         </p>

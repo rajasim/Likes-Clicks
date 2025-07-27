@@ -3,7 +3,7 @@ import React from "react";
 const TrustedBySection = () => {
   const companies = [
     { name: "Sozortus.ai" },
-    { name: "Bridging Borders" },
+    { name: "Easy global" },
     { name: "AWWAL" },
     { name: "Anuhira" },
   ];

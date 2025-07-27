@@ -16,7 +16,7 @@ const projects = [
     description:
       "Modern storefront for fashion and lifestyle brands with AI recommendations and smart analytics.",
     results: "+32% conversions, -45% cart abandonment",
-    metrics: { users: "50K+", revenue: "$2M+", uptime: "99.9%" },
+    metrics: { users: "1100+", revenue: "$10K+", uptime: "99.9%" },
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
     category: "E-Commerce",
     icon: <FaShoppingCart className="text-4xl text-blue-600" />,
