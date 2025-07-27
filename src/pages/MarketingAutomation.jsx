@@ -116,7 +116,8 @@ const MarketingAutomation = () => {
       icon: <Mail className="w-8 h-8" />,
       title: "AutoMail ",
       included: "Mailchimp setup, drip workflows, lead nurture sequences",
-      audience: "Coaches, consultants, service providers",
+      audience:
+        "Coaches, consultants, service providers , Teachers and realteable to education",
       outcome:
         "Automated welcome flows, lead scoring, and behavior-based follow-ups",
       color: "green",
@@ -125,7 +126,8 @@ const MarketingAutomation = () => {
       icon: <MousePointerClick className="w-8 h-8" />,
       title: "PixelTrack",
       included: "Facebook, LinkedIn, TikTok conversion tags",
-      audience: "Anyone running paid ads or remarketing",
+      audience:
+        "Anyone running paid ads or remarketing ex. Facebook and Google Marketing",
       outcome:
         "Better ad attribution and audience retargeting through pixel tracking",
       color: "yellow",
