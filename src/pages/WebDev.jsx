@@ -306,7 +306,8 @@ const webServices = [
     // icon: <FiShoppingCart />,
     color: "purple",
     included: "Online store setup, payment integration, inventory management",
-    audience: "Retail businesses expanding online",
+    audience:
+      "Retail businesses expanding online , Can sell multiple Products from Web",
     outcome: "Scalable e-commerce platform with secure transactions",
     technologies: ["Shopify", "WooCommerce", "Magento", "Stripe"],
   },
