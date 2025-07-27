@@ -112,8 +112,7 @@ const AIDevelopment = () => {
       title: "SmartGPT ",
       included: "Custom GPT integration with OpenAI API",
       audience: "SaaS platforms, automation dashboards, education tools",
-      outcome:
-        "Context-aware GPT tools providing summaries and smart replies in your brand tone",
+      outcome: "Context-aware GPT tools providing summaries and smart replies",
       color: "purple",
     },
     {
@@ -129,7 +128,7 @@ const AIDevelopment = () => {
       icon: <LineChart className="w-6 h-6" />,
       title: "ForecastAI ",
       included: "Python-based regression/classification model",
-      audience: "Financial analysts, marketers, planners",
+      audience: "Financial analysts, marketers, planners, Market Audit",
       outcome:
         "Models forecasting demand, churn or risk with real-time visual predictions",
       color: "yellow",
