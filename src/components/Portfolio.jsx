@@ -76,28 +76,31 @@ const projects = [
     category: "Cybersecurity",
     icon: <FaShieldAlt className="text-4xl text-green-600" />,
     links: [{ url: "#", icon: <FaExternalLinkAlt />, label: "More Info" }],
-    // author: "By Aftab B. Maldar",
-    pdfurl: "/pdf/Vapt.pdf", // Fixed typo from '/pad' to '/pdf'
+    pdfurl: "/pdf/Vapt.pdf",
     pdfName: "Cybersecurity_Case_Study.pdf",
   },
 ];
 
 const Portfolio = () => {
   const handleDownloadCaseStudy = (pdfurl, pdfName) => {
-    // Create a temporary anchor element
-    const link = document.createElement("a");
-    link.href = pdfurl;
-    link.download = pdfName || "Case_Study.pdf"; // Fallback filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    // Optional: Track download in analytics
-    console.log(`Downloaded: ${pdfName}`);
+    fetch(pdfurl)
+      .then((res) => res.blob())
+      .then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = pdfName;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        console.log(`Downloaded: ${pdfName}`);
+      })
+      .catch((err) => console.error("Download failed:", err));
   };
 
   return (
-    <section className="min-h-screen py-20 px-6 ">
+    <section className="min-h-screen py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
           Our Featured Projects
