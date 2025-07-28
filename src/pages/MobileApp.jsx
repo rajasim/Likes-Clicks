@@ -293,21 +293,23 @@ const MobileApp = () => {
                 className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border ${currentColor.border}`}
               >
                 <div className="p-6">
-                  {/* Left-aligned Logo */}
-                  <div
-                    className={`flex items-center w-12 h-12 mb-4 rounded-full ${currentColor.bg}`}
-                  >
-                    {React.cloneElement(service.icon, {
-                      className: `w-6 h-6 ${currentColor.text} ml-3`,
-                    })}
+                  {/* Centered Logo */}
+                  <div className="flex justify-center mb-4">
+                    <div
+                      className={`flex items-center justify-center w-12 h-12 rounded-full ${currentColor.bg}`}
+                    >
+                      {React.cloneElement(service.icon, {
+                        className: `w-6 h-6 ${currentColor.text}`,
+                      })}
+                    </div>
                   </div>
 
-                  {/* Left-aligned Main Title */}
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {/* Centered Main Title */}
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
                     {service.title}
                   </h3>
 
-                  {/* Feature Sections with Left-aligned Content */}
+                  {/* Left-aligned Feature Sections */}
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <svg
