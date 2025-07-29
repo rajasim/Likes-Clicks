@@ -29,7 +29,8 @@ const HeroSection = () => {
       icon: Globe,
       gradient: "from-blue-200",
       accentColor: "from-blue-500 to-indigo-600",
-      bgImage: "/hero",
+      bgImage:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80",
       link: "/webdev",
     },
     {
@@ -41,7 +42,8 @@ const HeroSection = () => {
       icon: Smartphone,
       gradient: "from-purple-200",
       accentColor: "from-purple-500 to-pink-600",
-      bgImage: "/hero/app.jpg",
+      bgImage:
+        "https://images.unsplash.com/photo-1514996550219-62672472d03b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG1vYmlsZSUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D",
       link: "/mobileapp",
     },
     {
