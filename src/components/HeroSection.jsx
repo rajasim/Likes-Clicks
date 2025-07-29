@@ -29,8 +29,7 @@ const HeroSection = () => {
       icon: Globe,
       gradient: "from-blue-200",
       accentColor: "from-blue-500 to-indigo-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80",
+      bgImage: "/hero/web.jpg",
       link: "/webdev",
     },
     {
@@ -42,8 +41,7 @@ const HeroSection = () => {
       icon: Smartphone,
       gradient: "from-purple-200",
       accentColor: "from-purple-500 to-pink-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1514996550219-62672472d03b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG1vYmlsZSUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D",
+      bgImage: "/hero/app.jpg",
       link: "/mobileapp",
     },
     {
@@ -55,23 +53,21 @@ const HeroSection = () => {
       icon: Megaphone,
       gradient: "from-orange-200",
       accentColor: "from-orange-500 to-amber-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1920&q=80",
+      bgImage: "/hero/marketing.jpg",
       link: "/MarketingAutomation",
     },
-    {
-      title: "Cybersecurity",
-      subtitle: "Stay Secure, Stay Ahead",
-      description: "Modern protection against threats, breaches, and downtime.",
-      cta: "Learn About Security",
-      badge: "New",
-      icon: Shield,
-      gradient: "from-green-200",
-      accentColor: "from-green-500 to-teal-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80",
-      link: "/cybersecurity",
-    },
+    // {
+    //   title: "Cybersecurity",
+    //   subtitle: "Stay Secure, Stay Ahead",
+    //   description: "Modern protection against threats, breaches, and downtime.",
+    //   cta: "Learn About Security",
+    //   badge: "New",
+    //   icon: Shield,
+    //   gradient: "from-green-200",
+    //   accentColor: "from-green-500 to-teal-600",
+    //   bgImage:"",
+    //   link: "/cybersecurity",
+    // },
     {
       title: "AI Development",
       subtitle: "Smarter Tools. Sharper Results.",
@@ -81,8 +77,7 @@ const HeroSection = () => {
       icon: Cpu,
       gradient: "from-red-200",
       accentColor: "from-red-500 to-pink-600",
-      bgImage:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80",
+      bgImage: "/hero/ai.jpg",
       link: "/AIDevelopment",
     },
   ];
