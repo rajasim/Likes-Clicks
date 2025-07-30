@@ -95,16 +95,16 @@ const Navbar = () => {
         },
       ],
     },
-    // {
-    //   name: "About",
-    //   href: "/about",
-    //   icon: BookOpen,
-    // },
-    // {
-    //   name: "Contact",
-    //   href: "/contact",
-    //   icon: Mail,
-    // },
+    {
+      name: "About",
+      href: "/about",
+      icon: BookOpen,
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      icon: Mail,
+    },
   ];
 
   return (
