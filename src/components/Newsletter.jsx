@@ -26,7 +26,7 @@ const NewsletterSection = () => {
           <div className="relative inline-flex items-center justify-center mb-8">
             <span className="h-px w-16 bg-blue-500 left-0"></span>
             <span className="text-xs uppercase tracking-[0.2em] text-blue-500 font-light px-4">
-              Stay Updated
+              Stay Updated1234
             </span>
             <span className="h-px w-16 bg-blue-500 right-0"></span>
           </div>
