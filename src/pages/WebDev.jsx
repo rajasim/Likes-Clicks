@@ -233,12 +233,14 @@ const packagesData = [
   {
     name: "LaunchLite",
     description: "1-page website with basic SEO",
-    idealFor: "Startups, event pages, quick campaign landers",
+    idealFor: "Single-Page Sites",
     features: [
-      "Single page design",
-      "Mobile responsive",
-      "Basic SEO setup",
-      "Contact form",
+      "A Design to Make a Strong First Impression",
+      "Optimized for Global Mobile Users",
+      "Basic SEO to Help People Find You on Google",
+      "Contact Form to Capture Leads Easily",
+      "A sleek, single-page site that grabs attention fast",
+      
       // "1 round of revisions",
     ],
     color: "blue",
@@ -246,13 +248,13 @@ const packagesData = [
   {
     name: "BizStart",
     description: "5-page CMS site with forms, blog setup, basic UI/UX",
-    idealFor: "Local businesses, freelancers, early-stage brands",
+    idealFor: "Local Businesses",
     features: [
-      "WordPress or Webflow CMS",
-      "5 custom pages",
-      "Blog setup",
-      "Contact forms",
-      "Basic analytics",
+      "A 5-Page Website to Showcase your Services",
+      "✓ Fully Responsive Layout for a Seamless Mobile Experience",
+      "Blog + SEO Setup to Grow Your Audience",
+      "Contact Forms That Turn Visitors into Customers",
+      "A powerful online presence tailored for your local market",
       // "3 rounds of revisions",
     ],
     color: "purple",
@@ -260,14 +262,14 @@ const packagesData = [
   {
     name: "ProPresence",
     description: "10+ page custom site with animations, blog, integrations",
-    idealFor: "Professional firms, consultancies, mid-size brands",
+    idealFor: "Professional Services",
     features: [
-      "Custom design",
-      "Advanced animations",
-      "CMS integration",
-      "API connections",
-      "Premium hosting",
-      "SEO optimization",
+      "Custom Website That Reflects Your Expertise and Brand",
+      "Fast-Loading Mobile Experience to Keep Users Engaged",
+      "Built-In SEO Tools to Attract High-Value Traffic",
+      "Easy-to-Manage CMS With Automation Integrations",
+      "A high-performance site that enhances your professional image",
+      
       // "Unlimited revisions",
     ],
     color: "green",
@@ -275,14 +277,14 @@ const packagesData = [
   {
     name: "ShopLaunch",
     description: "Shopify or WooCommerce store with 10 products + checkout",
-    idealFor: "Small retailers, handmade stores, boutique brands",
+    idealFor: "E-Commerce Stores",
     features: [
-      "E-commerce platform",
-      "Product listings",
-      "Secure checkout",
-      "Payment processing",
-      "Inventory system",
-      "Mobile optimized",
+      "Custom Online Store Built to Sell",
+      "Mobile Shopping Experience to Boost Conversions",
+      "Secure Payment System your Customers Trust",
+      "Inventory Setup for Streamline Operations",
+      "A conversion-optimized e-commerce store ready for growth",
+      
       // "5 rounds of revisions",
     ],
     color: "orange",
@@ -295,29 +297,29 @@ const webServices = [
     // icon: <FiCode />,
     color: "blue",
     included:
-      "Tailored website solutions, custom functionality, API integrations",
-    audience: "Businesses needing unique digital experiences",
+      "Bespoke Design and Layout Customiomization +Interactive Features with Seamless API Integrations",
+    audience: "Brands Needing a Unique Design with Custom Features",
     outcome:
-      "Fully customized website that meets specific business requirements",
+      " A  Tailored Website  Reflecting your Brand ",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
     title: "E-Commerce Solutions",
     // icon: <FiShoppingCart />,
     color: "purple",
-    included: "Online store setup, payment integration, inventory management",
+    included: "Custom Storefront with Secure Checkout + Product Listings, Inventory & Order Management",
     audience:
-      "Retail businesses expanding online , Can sell multiple Products from Web",
-    outcome: "Scalable e-commerce platform with secure transactions",
+      "Businesses Ready to Launch or Grow an Online Store",
+    outcome: "A Seamless Online Store Built for Sales",
     technologies: ["Shopify", "WooCommerce", "Magento", "Stripe"],
   },
   {
     title: "CMS Development",
     // icon: <FiLayout />,
     color: "green",
-    included: "Content management system, user roles, SEO optimization",
-    audience: "Businesses requiring frequent content updates",
-    outcome: "Easy-to-manage website with full content control",
+    included: "Easy-to-Use CMS with SEO Tools + User Access Controls and Fully Customizeble Layouts",
+    audience: "Teams Managing Content Without any Technical Help",
+    outcome: "A Flexible Site You Can Update Anytime",
     technologies: ["WordPress", "Contentful", "Strapi", "Sanity"],
   },
   // Add more services as needed
@@ -342,6 +344,7 @@ const HeroSection = () => (
       We create high-performance, scalable web solutions that drive results and
       deliver exceptional user experiences.
     </p>
+    
   </motion.div>
 );
 
@@ -498,6 +501,7 @@ const ProcessStage = ({ stage, index }) => {
                   </li>
                 ))}
               </ul>
+              
             </motion.div>
           )}
         </div>
@@ -592,8 +596,8 @@ const PackageCard = ({ pkg, index }) => (
     <div className={`p-6 ${colorClasses[pkg.color].bg} text-center`}>
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
       {/* <p className="text-gray-600 mb-3">{pkg.description}</p> */}
-      <div className="text-sm font-medium bg-white/80 rounded-lg py-2 px-3 inline-block">
-        <span className="font-semibold">Ideal for:</span> {pkg.idealFor}
+      <div className="text-m font-medium bg-white/80 rounded-lg py-2 px-3 inline-block">
+        <span className="font-bold"> For:</span> {pkg.idealFor}
       </div>
     </div>
 
@@ -624,7 +628,7 @@ const PackageCard = ({ pkg, index }) => (
           colorClasses[pkg.color].hover
         } rounded-lg font-medium transition-colors mt-auto`}
       >
-        Learn More
+         Build My Site
       </button>
     </div>
   </motion.div>
@@ -656,7 +660,7 @@ const ServiceCard = ({ service, index }) => (
       <h3 className="text-2xl font-semibold text-gray-900 text-center mb-4">
         {service.title}
       </h3>
-      <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+      <p className="text-gray-600 mb-6 text-left">{service.description}</p>
       <ul className="space-y-3">
         {service.highlights.map((highlight, i) => (
           <li key={i} className="flex items-start">
@@ -679,6 +683,11 @@ const ServiceCard = ({ service, index }) => (
           </li>
         ))}
       </ul>
+      <div className="mt-5 flex justify-center">
+    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+  </div>
     </div>
   </motion.div>
 );
@@ -738,6 +747,7 @@ const WebDev = () => {
           {packagesData.map((pkg, index) => (
             <PackageCard key={index} pkg={pkg} index={index} />
           ))}
+          
         </div>
       </div>
 
@@ -796,86 +806,71 @@ const WebDev = () => {
               >
                 <div className="p-6">
                   {/* Left-aligned Main Title */}
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
                     {service.title}
                   </h3>
 
                   {/* Feature Sections */}
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <svg
-                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <div>
-                        <p className="font-medium text-sm text-gray-700">
-                          What's Included:
-                        </p>
-                        <p className="text-gray-600 text-sm">
-                          {service.included}
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <div>
-                        <p className="font-medium text-sm text-gray-700">
-                          Best For:
-                        </p>
-                        <p className="text-gray-600 text-sm">
-                          {service.audience}
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <div>
-                        <p className="font-medium text-sm text-gray-700">
-                          Outcome:
-                        </p>
-                        <p className="text-gray-600 text-sm">
-                          {service.outcome}
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
+                   <ul className="tech-card space-y-4">
+    {/* Best For */}
+    <li className="flex items-start">
+      <svg
+        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      </svg>
+      <div>
+        <p className="font-medium text-sm text-gray-700">Best For:</p>
+        <p className="text-gray-600 text-sm">{service.audience}</p>
+      </div>
+    </li>
+
+    {/* What's Included */}
+    <li className="flex items-start">
+      <svg
+        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      </svg>
+      <div>
+        <p className="font-medium text-sm text-gray-700">What's Included:</p>
+        <p className="text-gray-600 text-sm">{service.included}</p>
+      </div>
+    </li>
+
+    {/* Outcome */}
+    <li className="flex items-start">
+      <svg
+        className={`h-5 w-5 ${currentColor.text} mr-2 mt-0.5 flex-shrink-0`}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      </svg>
+      <div>
+        <p className="font-medium text-sm text-gray-700">Outcome:</p>
+        <p className="text-gray-600 text-sm">{service.outcome}</p>
+      </div>
+    </li>
+  </ul>
+
+                  <div className="mt-4 flex justify-center">
+    <button className="bg-black text-white text-sm font-medium py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+    </div>
                 </div>
               </motion.div>
             );
           })}
+          
         </div>
       </div>
 
@@ -888,7 +883,10 @@ const WebDev = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
+            
+            
           ))}
+          
         </div>
       </div>
 

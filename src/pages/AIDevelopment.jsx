@@ -72,27 +72,27 @@ const AIDevelopment = () => {
       icon: <Search className="w-6 h-6" />,
       title: "Discovery",
       description:
-        "Identify repetitive tasks, data-driven decisions, or prediction needs.",
+        "Identify Data, Workflows, and AI Opportunitites",
       color: "blue",
     },
     {
       icon: <Cpu className="w-6 h-6" />,
       title: "Design",
       description:
-        "Choose the best AI model/framework and outline solution flow.",
+        "Define Logic, User Flow, and Tools",
       color: "purple",
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: "Development",
-      description: "Build and train using APIs, Python, GPT, or OCR as needed.",
+      title: "Develop",
+      description: "Build Using GPT, Python, APIs, or Vision Models",
       color: "green",
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Integration & Support",
+      title: "Deploy",
       description:
-        "Deploy securely with real-time insights or API connectivity.",
+        "Integrate ,Test,and Support Seamlessly",
       color: "red",
     },
   ];
@@ -101,44 +101,44 @@ const AIDevelopment = () => {
     {
       icon: <Bot className="w-6 h-6" />,
       title: "ChatIQ ",
-      included: "Web/WhatsApp-based bot with GPT/Dialogflow",
-      audience: "Customer support, sales teams, website onboarding",
+      included: "GPT/Dialogflow Chatbot (Web /WhatsApp) ,CRM Integration & Multilingual Support",
+      audience: "Businesses automating customer support or lead qualification",
       outcome:
-        "Multilingual smart chatbot that handles queries and integrates with CRMs",
+        "An Intelligent Assistant That Engages, Responds, and Converts",
       color: "blue",
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       title: "SmartGPT ",
-      included: "Custom GPT integration with OpenAI API",
-      audience: "SaaS platforms, automation dashboards, education tools",
-      outcome: "Context-aware GPT tools providing summaries and smart replies",
+      included: "Custom GPT Features via OpenAI API ,Smart Reply, Summarization & Tone Control",
+      audience: "Platforms Needing Embedded AI Capabilities",
+      outcome: "Context-Aware AI Tools That Personalize and Automate",
       color: "purple",
     },
     {
       icon: <FileSearch className="w-6 h-6" />,
       title: "DocScan ",
-      included: "Image-to-text workflows using Tesseract/API",
-      audience: "Legal firms, document-heavy teams, operations staff",
+      included: "OCR Pipelines with Tesseract/API ,PDF Parsing & Excel-Ready Export",
+      audience: "Teams Processing Large Volumes of Documents",
       outcome:
-        "Convert scanned files into Excel, searchable PDFs with AI-powered parsing",
+        "Automated Workflows for Clean, Searchable Data",
       color: "green",
     },
     {
       icon: <LineChart className="w-6 h-6" />,
       title: "ForecastAI ",
-      included: "Python-based regression/classification model",
-      audience: "Financial analysts, marketers, planners, Market Audit",
+      included: "Predictive Models with Real-Time Visuals Dashboards  ",
+      audience: "Finance, Marketing, and Strategy Teams",
       outcome:
-        "Models forecasting demand, churn or risk with real-time visual predictions",
+        "Reliable Forecasts to Guide Smarter Decisions",
       color: "yellow",
     },
     {
       icon: <LayoutDashboard className="w-6 h-6" />,
       title: "InsightDash ",
-      included: "Power BI + AI for automated dashboards",
-      audience: "Ops teams, founders, performance-driven leaders",
-      outcome: "Business dashboards with AI-driven insights and auto reports",
+      included: "AI-Powered Dashboards (Power BI) ,Automated Reports & KPI Tracking",
+      audience: "Founders, Analysts & Data-Driven Ops",
+      outcome: "Clear Insights with Zero Manual Crunching",
       color: "orange",
     },
   ];
@@ -224,9 +224,14 @@ const AIDevelopment = () => {
                   <h3 className="text-xl font-semibold text-center mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-center">
+                  <p className="text-gray-600 text-left">
                     {step.description}
                   </p>
+                  <div className="mt-5 flex justify-center">
+    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+    </div>
                 </div>
               </motion.div>
             ))}
@@ -269,81 +274,75 @@ const AIDevelopment = () => {
                 <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
                   {service.title}
                 </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        What's Included:
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {service.included}
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        Best For:
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {service.audience}
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        Outcome:
-                      </p>
-                      <p className="text-gray-600 text-sm">{service.outcome}</p>
-                    </div>
-                  </li>
-                </ul>
+               <ul className="space-y-3">
+  {/* Best For */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">Best For:</p>
+      <p className="text-gray-600 text-sm">{service.audience}</p>
+    </div>
+  </li>
+
+  {/* What's Included */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">What's Included:</p>
+      <p className="text-gray-600 text-sm">{service.included}</p>
+    </div>
+  </li>
+
+  {/* Outcome */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">Outcome:</p>
+      <p className="text-gray-600 text-sm">{service.outcome}</p>
+    </div>
+  </li>
+</ul>
+<div className="mt-5 flex justify-center">
+    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+    </div>
               </div>
             </motion.div>
           ))}

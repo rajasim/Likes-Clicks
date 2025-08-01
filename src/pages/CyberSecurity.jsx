@@ -70,30 +70,30 @@ const CyberSecurity = () => {
   const approach = [
     {
       icon: <Search className="w-6 h-6" />,
-      title: "Assessment",
+      title: "Assess",
       description:
-        "Analyze current vulnerabilities, threats, and security gaps in your systems.",
+        "Identify Vulnerabilities and Weak Points.",
       color: "blue",
     },
     {
       icon: <Lock className="w-6 h-6" />,
-      title: "Implementation",
+      title: "Secure",
       description:
-        "Apply firewalls, security audits, and compliance protocols tailored to your needs.",
+        "Implement Safeguards Aligned with Standards",
       color: "purple",
     },
     {
       icon: <Activity className="w-6 h-6" />,
-      title: "Monitoring & Response",
+      title: "Monitor",
       description:
-        "24/7 real-time threat detection with alerting and remediation plans.",
+        "Track Threats in Real Time with Response Plans",
       color: "green",
     },
     {
       icon: <ClipboardCheck className="w-6 h-6" />,
-      title: "Compliance & Assurance",
+      title: "Comply",
       description:
-        "Ensure systems meet GDPR, CCPA and other data privacy regulations.",
+        "Stay Audit-Ready with Privacy Compliance",
       color: "red",
     },
   ];
@@ -102,46 +102,46 @@ const CyberSecurity = () => {
     {
       icon: <Shield className="w-6 h-6" />,
       title: "SecureStart ",
-      included: "SSL setup, WAF, plugin audit, brute-force protection",
-      audience: "Any small business website needing secure setup",
+      included: "SSL Certificate, Web Application Firewall (WAF), and Brute-Force Protection ,Plugin Audit to Detect Known Vulnerabilities",
+      audience: "Websites That Need Foundational Security Setup",
       outcome:
-        "A hardened web presence with protection against basic online threats and vulnerabilities",
+        "Hardened Website With Essential Threat Protection in Place",
       color: "blue",
     },
     {
       icon: <AlertTriangle className="w-6 h-6" />,
       title: "VulneraScan",
-      included: "Manual + automated OWASP testing, remediation guide",
-      audience: "Startups, SaaS, or e-commerce platforms pre-launch",
+      included: "Manual and Automated OWASP-Based Vulnerability Testing ,Remediation Report With Risk Grading and Action Pla",
+      audience: "SaaS Platforms, Pre-Launch Apps, and E-Commerce Websites",
       outcome:
-        "Detailed report of security flaws with criticality grading and remediation guide",
+        "Clear Visibility of Security Flaws With Prioritized Fixes",
       color: "purple",
     },
     {
       icon: <Eye className="w-6 h-6" />,
       title: "LiveShield ",
-      included: "Real-time alerts, logs, response plan, dashboard",
-      audience: "Active businesses needing always-on monitoring",
+      included: "24/7 Monitoring With Real-Time Threat Alerts ,Incident Logging and Response Planning",
+      audience: "Live Apps Needing Round-the-Clock Security",
       outcome:
-        "24/7 monitoring with actionable alerts and detailed incident logs for compliance",
+        "Always-On Defense With Instant Visibility of Attacks",
       color: "green",
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "CompliAudit",
-      included: "Templates, data mapping, gap analysis",
-      audience: "Teams handling customer data, apps, or European users",
+      included: "Data Mapping and Gap Analysis ,Policy Templates Aligned With Global Privacy Standards",
+      audience: "Teams Handling User Data and Navigating Compliance (e.g., GDPR, CCPA)",
       outcome:
-        "Compliance checks and documentation support for GDPR, CCPA, and similar frameworks",
+        "Audit-Ready Documentation With Clear Compliance Pathways",
       color: "yellow",
     },
     {
       icon: <Code className="w-6 h-6" />,
       title: "CodeGuard ",
-      included: "Static code scan, CI/CD integration, risk report",
-      audience: "Dev teams inheriting outsourced codebases or doing releases",
+      included: "Static Code Analysis With CI/CD Integration , And  Comprehensive Vulnerability With Reporting",
+      audience: "Developers Reviewing Legacy or Third-Party Codebases",
       outcome:
-        "Detailed risk report with code-level vulnerabilities and pipeline integration",
+        ": Deep Insights Into Code Risks and Secure Development Pipelines",
       color: "orange",
     },
   ];
@@ -230,9 +230,14 @@ const CyberSecurity = () => {
                   <h3 className="text-xl font-semibold text-center mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-center">
+                  <p className="text-gray-600 text-left">
                     {step.description}
                   </p>
+                  <div className="mt-5 flex justify-center">
+    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+  </div>
                 </div>
               </motion.div>
             ))}
@@ -275,81 +280,76 @@ const CyberSecurity = () => {
                 <h3 className="text-xl font-semibold text-gray-900 text-center mb-3">
                   {service.title}
                 </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        What's Included:
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {service.included}
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        Best For:
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {service.audience}
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        Outcome:
-                      </p>
-                      <p className="text-gray-600 text-sm">{service.outcome}</p>
-                    </div>
-                  </li>
-                </ul>
+               <ul className="space-y-3">
+  {/* Best For */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">Best For:</p>
+      <p className="text-gray-600 text-sm">{service.audience}</p>
+    </div>
+  </li>
+
+  {/* What's Included */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">What's Included:</p>
+      <p className="text-gray-600 text-sm">{service.included}</p>
+    </div>
+  </li>
+
+  {/* Outcome */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">Outcome:</p>
+      <p className="text-gray-600 text-sm">{service.outcome}</p>
+    </div>
+  </li>
+</ul>
+<div className="mt-5 flex justify-center">
+    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+  </div>
+
               </div>
             </motion.div>
           ))}

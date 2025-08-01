@@ -188,7 +188,7 @@ const Services = () => {
                   </h3>
 
                   {/* Original Description (unchanged) */}
-                  <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-x text-gray-600 mb-6 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {service.description}
                   </p>
 

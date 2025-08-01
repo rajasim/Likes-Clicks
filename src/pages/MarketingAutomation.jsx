@@ -67,28 +67,28 @@ const MarketingAutomation = () => {
   const approach = [
     {
       icon: <ClipboardList className="w-6 h-6" />,
-      title: "Audit & Setup",
+      title: "Audit",
       description:
-        "Evaluate current digital presence, tracking setup, and content health.",
+        "Review Digital Setup & Tracking Readiness",
       color: "blue",
     },
     {
       icon: <Search className="w-6 h-6" />,
-      title: "Optimization",
-      description: "Improve on-page SEO, funnel design, and user tracking.",
+      title: "Optimize",
+      description: "Enhance SEO & Streamline User Journey",
       color: "purple",
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automation",
-      description: "Set up email workflows and retargeting for lead nurturing.",
+      title: "Automate",
+      description: "Launch Email & Retargeting Workflows",
       color: "green",
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Analysis & Reporting",
+      title: "Analyze",
       description:
-        "Monthly insights and performance dashboards to guide growth.",
+        "Report Insights & Guide Monthly Growth",
       color: "red",
     },
   ];
@@ -97,46 +97,46 @@ const MarketingAutomation = () => {
     {
       icon: <Search className="w-8 h-8" />,
       title: "SEOBoost ",
-      included: "Keyword targeting, meta tags, page speed optimization",
-      audience: "Small businesses launching or redesigning websites",
+      included: "Keyword Targeting , Meta Tags Setup , Speed Optimization",
+      audience: "Businesses aiming to boost online visibility and reach",
       outcome:
-        "SEO report, implementation checklist, and basic improvements for faster indexing",
+        "Improved Google rankings and faster indexing",
       color: "blue",
     },
     {
       icon: <BarChart className="w-8 h-8" />,
       title: "TrackMate ",
-      included: "GA4 + Tag Manager, custom event configuration",
-      audience: "Anyone needing traffic insights or setting up analytics",
+      included: "GGA4 & Tag Manager Setup  ,  Custom Event Tracking",
+      audience: "Teams needing accurate website and campaign tracking",
       outcome:
-        "Real-time insights with custom tracking across websites or campaigns",
+        "Real-time insights that power better decisions",
       color: "purple",
     },
     {
       icon: <Mail className="w-8 h-8" />,
       title: "AutoMail ",
-      included: "Mailchimp setup, drip workflows, lead nurture sequences",
+      included: "Mailchimp Integration , Drip Campaigns & Lead Workflows",
       audience:
-        "Coaches, consultants, service providers , Teachers and realteable to education",
+        "Coaches, Educators & Service-Based Brands",
       outcome:
-        "Automated welcome flows, lead scoring, and behavior-based follow-ups",
+        "Automated email journeys that engage and convert",
       color: "green",
     },
     {
       icon: <MousePointerClick className="w-8 h-8" />,
       title: "PixelTrack",
-      included: "Facebook, LinkedIn, TikTok conversion tags",
+      included: "Facebook, LinkedIn & TikTok Pixel Integration",
       audience:
-        "Anyone running paid ads or remarketing ex. Facebook and Google Marketing",
+        "Marketers running ad or retargeting campaigns",
       outcome:
-        "Better ad attribution and audience retargeting through pixel tracking",
+        "Precise audience tracking and better attribution",
       color: "yellow",
     },
     {
       icon: <Filter className="w-8 h-8" />,
       title: "FunnelFix",
-      included: "A/B testing, funnel audit, CRO dashboard",
-      audience: "eCommerce, SaaS, and product-focused sites",
+      included: "Funnel Audit",
+      audience: "eCommerce, SaaS & Conversion-Focused Sites",
       outcome:
         "Visual funnel heatmaps, testing reports, and conversion lift tracking",
       color: "orange",
@@ -153,6 +153,7 @@ const MarketingAutomation = () => {
           We help businesses build visibility, attract leads, and increase
           conversions through data-driven strategies.
         </p>
+        
       </div>
 
       {/* Process Section with Numbered Steps */}
@@ -224,9 +225,14 @@ const MarketingAutomation = () => {
                   <h3 className="text-xl font-semibold text-center mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-center">
+                  <p className="text-gray-600 text-left">
                     {step.description}
                   </p>
+                  <div className="mt-5 flex justify-center">
+    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+  </div>
                 </div>
               </motion.div>
             ))}
@@ -269,80 +275,74 @@ const MarketingAutomation = () => {
                   {service.title}
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        What's Included:
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {service.included}
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        Best For:
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {service.audience}
-                      </p>
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className={`h-5 w-5 ${
-                        colorClasses[service.color].text
-                      } mr-2 mt-0.5 flex-shrink-0`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-medium text-sm text-gray-700">
-                        Outcome:
-                      </p>
-                      <p className="text-gray-600 text-sm">{service.outcome}</p>
-                    </div>
-                  </li>
-                </ul>
+  {/* Best For */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">Best For:</p>
+      <p className="text-gray-600 text-sm">{service.audience}</p>
+    </div>
+  </li>
+
+  {/* What's Included */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">What's Included:</p>
+      <p className="text-gray-600 text-sm">{service.included}</p>
+    </div>
+  </li>
+
+  {/* Outcome */}
+  <li className="flex items-start">
+    <svg
+      className={`h-5 w-5 ${colorClasses[service.color].text} mr-2 mt-0.5 flex-shrink-0`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+    <div>
+      <p className="font-medium text-sm text-gray-700">Outcome:</p>
+      <p className="text-gray-600 text-sm">{service.outcome}</p>
+    </div>
+  </li>
+</ul>
+<div className="mt-5 flex justify-center">
+    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
+      Start Your Project
+    </button>
+  </div>
               </div>
             </motion.div>
           ))}
