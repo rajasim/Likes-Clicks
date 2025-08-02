@@ -8,6 +8,7 @@ import {
   FaInstagram,
   FaYoutube,
   FaPinterestP,
+  FaSpinner
 } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { useState } from "react";
@@ -19,6 +20,8 @@ const Footer = () => {
     message: "",
   });
 
+  const [loading, setloading]= useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -27,19 +30,34 @@ const Footer = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    const subject = `Contact Form Submission from ${formData.name}`;
-    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setloading(true);
 
-    window.location.href = `mailto:info@digitalnexus.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+  try {
+    const response = await fetch('http://localhost/Likeclickbefe/form-handler.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
 
-    // Optionally reset the form after submission
-    setFormData({ name: "", email: "", message: "" });
-  };
+    const result = await response.json(); 
+
+    if(result.status === "success"){
+      alert("Message Sent Successfully");
+          setloading(false)
+
+    }
+    
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Something went wrong. Check the console.");
+    setloading(false)
+  }
+};
 
   return (
     <footer className="relative bg-gray-900 pt-28 pb-16 overflow-hidden">
@@ -214,8 +232,11 @@ const Footer = () => {
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center justify-center w-full"
               >
+              {loading ? <FaSpinner />:
+              <>
                 <span>Send Message</span>
                 <FiSend className="ml-2 h-5 w-5" />
+                </>}
               </button>
             </form>
           </div>

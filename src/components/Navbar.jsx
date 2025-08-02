@@ -111,8 +111,8 @@ const Navbar = () => {
     <header
       className={`sticky w-full top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-blue-900/95 backdrop-blur-md border-b border-gray-700 shadow-lg"
-          : "bg-blue-900/95 backdrop-blur-md"
+          ? "bg-blue-500/84 border-b border-gray-700 shadow-lg"
+          : "bg-blue-500"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -209,7 +209,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
-              className="px-7 py-2.5 text-lg bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+              className="px-7 py-2.5 text-lg bg-gradient-to-r from-neutral-800 to-black text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
             >
               Get Started
             </Link>
