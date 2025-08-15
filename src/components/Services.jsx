@@ -241,32 +241,36 @@ const Services = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 overflow-hidden">
-            {/* Button shine effect */}
-
-            <span className="flex items-center gap-3 relative z-10">
-              Start Your Project Today
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </span>
-          </button>
-          <p className="mt-4 text-gray-500">
-            Let's build something amazing together
-          </p>
-        </div>
-      </div>
+      <div className="text-center mt-20">
+  <button
+    onClick={() =>
+      window.open("https://www.powr.io/form-builder/i/39936984#page", "_blank")
+    }
+    className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 overflow-hidden"
+  >
+    {/* Button shine effect */}
+    <span className="flex items-center gap-3 relative z-10">
+      Start Your Project Today
+      <svg
+        className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 7l5 5m0 0l-5 5m5-5H6"
+        />
+      </svg>
+    </span>
+  </button>
+  <p className="mt-4 text-gray-500">
+    Let's build something amazing together
+  </p>
+</div>
+</div>
 
       {/* Global Styles */}
       <style jsx global>{`

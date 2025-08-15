@@ -149,18 +149,24 @@ const WhyChooseUs = () => {
           className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-12"
         >
           <div className="w-full mx-auto text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Get to Market Faster
-            </h3>
-            <p className="text-xl text-gray-600 mb-8 w-full mx-auto">
-              streamlined processes & experienced team reduce development time
-              by 30-40% compared to averages.
-            </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:shadow-lg transition-all transform hover:scale-105">
-              Start Your Project Now
-              <FiTrendingUp className="inline ml-2" />
-            </button>
-          </div>
+  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+    Get to Market Faster
+  </h3>
+  <p className="text-xl text-gray-600 mb-8 w-full mx-auto">
+    streamlined processes & experienced team reduce development time
+    by 30-40% compared to averages.
+  </p>
+  <button
+    onClick={() =>
+      window.open("https://www.powr.io/form-builder/i/39936984#page", "_blank")
+    }
+    className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-full hover:shadow-lg transition-all transform hover:scale-105"
+  >
+    Start Your Project Now
+    <FiTrendingUp className="inline ml-2" />
+  </button>
+</div>
+
         </motion.div>
       </div>
     </section>

@@ -18,13 +18,15 @@ const SecondHero = () => {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-              Start Your Project
-            </button>
-            <button className="border border-gray-300 px-6 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-colors duration-300">
-              View Our Work
-            </button>
-          </div>
+  <a
+    href="https://www.powr.io/form-builder/i/39936984#page"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+  >
+    Start Your Project
+  </a>
+</div>
 
           {/* Stats */}
           <div className="mt-12 flex flex-wrap gap-8">

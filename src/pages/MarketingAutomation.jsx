@@ -229,9 +229,15 @@ const MarketingAutomation = () => {
                     {step.description}
                   </p>
                   <div className="mt-5 flex justify-center">
-    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+   <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
   </div>
                 </div>
               </motion.div>
@@ -339,9 +345,15 @@ const MarketingAutomation = () => {
   </li>
 </ul>
 <div className="mt-5 flex justify-center">
-    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+  <a
+  href="https://www.powr.io/form-builder/i/39931915#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
   </div>
               </div>
             </motion.div>

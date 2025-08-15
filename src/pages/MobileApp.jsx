@@ -76,13 +76,13 @@ const process = [
   {
     icon: <Code className="w-6 h-6" />,
     title: <>Build</>,
-    description: "Develop App with Backend & Third-Party Integrations",
+    description: "Develop App with Backend  Integrations",
     color: "green",
   },
   {
     icon: <Play className="w-6 h-6" />,
     title: <>Launch</>,
-    description: "Test , Deploy, and Monitor Post-Release ",
+    description: "Test , Deploy, Monitor & Release ",
     color: "red",
   },
 ];
@@ -133,7 +133,7 @@ const services = [
   {
     icon: <Package className="w-8 h-8 text-indigo-600" />,
     title: "AppReady",
-    description: "App Store Submission (iOS & Android) , Metadata & Compliance Review , ASO Essentials",
+    description: "App Store Submission (iOS & Android) , Metadata & Compliance Review ",
     audience: "First-Time App Launches by SMEs, Founders, or Solo Entrepreneurs",
     outcome:
       "A Seamless, Compliant Launch on Both App Stores — Ready for User Downloads",
@@ -152,7 +152,7 @@ const MobileApp = () => {
         Mobile App Development Services
       </h1>
       <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-        We design and build powerful , user-friendly mobile apps for business , brands , and ideas
+        We design and build powerful , user-friendly mobile apps for business , brands ,  ideas
       </p>
     </div>
       <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">
@@ -190,14 +190,20 @@ const MobileApp = () => {
                     {step.title}
                   </h3>
 
-                 <p className="text-gray-700 text-sm text-left leading-relaxed mt-4">
+                 <p className="text-gray-600 text-left leading-relaxed mt-4">
   {step.description}
 </p>
 
                   <div className="mt-5 flex justify-center">
-    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+    <a
+  href="https://www.powr.io/form-builder/i/39931915#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
   </div>
                 </div>
               </div>
@@ -283,9 +289,15 @@ const MobileApp = () => {
                 </li>
               </ul>
               <div className="mt-5 flex justify-center">
-    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+   <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
   </div>
             </motion.div>
           );
@@ -300,9 +312,15 @@ const MobileApp = () => {
         <p className="text-xl mb-6">
           Our experts will help you create a powerful, modern mobile experience.
         </p>
-        <button className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
-          Start Your App Project
-        </button>
+       <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
       </div>
     </div>
   );

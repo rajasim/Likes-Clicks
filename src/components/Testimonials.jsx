@@ -128,12 +128,15 @@ const Testimonials = () => {
           </h3>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 px-8 py-3.5 bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 text-sm uppercase tracking-widest font-medium rounded"
-            >
-              Start Your Project
-            </a>
+           <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group inline-flex items-center gap-2 px-8 py-3.5 bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 text-sm uppercase tracking-widest font-medium rounded"
+>
+  Start Your Project
+</a>
+
           </div>
         </div>
       </div>

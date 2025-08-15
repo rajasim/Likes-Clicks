@@ -130,7 +130,7 @@ const AIDevelopment = () => {
       included: "Predictive Models with Real-Time Visuals Dashboards  ",
       audience: "Finance, Marketing, and Strategy Teams",
       outcome:
-        "Reliable Forecasts to Guide Smarter Decisions",
+        "Reliable Forecasts Guide Smarter Decisions",
       color: "yellow",
     },
     {
@@ -138,7 +138,7 @@ const AIDevelopment = () => {
       title: "InsightDash ",
       included: "AI-Powered Dashboards (Power BI) ,Automated Reports & KPI Tracking",
       audience: "Founders, Analysts & Data-Driven Ops",
-      outcome: "Clear Insights with Zero Manual Crunching",
+      outcome: "Clear Insights with Zero Manually Crunching",
       color: "orange",
     },
   ];
@@ -228,9 +228,15 @@ const AIDevelopment = () => {
                     {step.description}
                   </p>
                   <div className="mt-5 flex justify-center">
-    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+    <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
     </div>
                 </div>
               </motion.div>
@@ -339,9 +345,15 @@ const AIDevelopment = () => {
   </li>
 </ul>
 <div className="mt-5 flex justify-center">
-    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+   <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
     </div>
               </div>
             </motion.div>

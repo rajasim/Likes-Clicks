@@ -109,11 +109,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky w-full top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-blue-500/84 border-b border-gray-700 shadow-lg"
-          : "bg-blue-500"
-      }`}
+     className={`sticky w-full top-0 z-50 transition-all duration-300 ${
+  scrolled
+    ? "bg-blue-500 border-b border-gray-700 shadow-lg"
+    : "bg-blue-500"
+}`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
@@ -207,12 +207,15 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="px-7 py-2.5 text-lg bg-gradient-to-r from-neutral-800 to-black text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              Get Started
-            </Link>
+          <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="px-7 py-2.5 text-lg bg-gradient-to-r from-neutral-800 to-black text-white font-medium rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+>
+  Get Started
+</a>
+
           </div>
 
           {/* Mobile menu button */}

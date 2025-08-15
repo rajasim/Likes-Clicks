@@ -684,9 +684,15 @@ const ServiceCard = ({ service, index }) => (
         ))}
       </ul>
       <div className="mt-5 flex justify-center">
-    <button className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+   <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
   </div>
     </div>
   </motion.div>
@@ -709,9 +715,15 @@ const CTASection = () => (
         Let's discuss how we can create a solution that drives results for your
         business.
       </p>
-      <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
-        Start Your Project
-      </button>
+      <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
     </div>
   </motion.div>
 );
@@ -862,9 +874,15 @@ const WebDev = () => {
   </ul>
 
                   <div className="mt-4 flex justify-center">
-    <button className="bg-black text-white text-sm font-medium py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300">
-      Start Your Project
-    </button>
+  <a
+  href="https://www.powr.io/form-builder/i/39936984#page"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black text-white text-sm font-semibold py-2 px-5 rounded-full hover:bg-neutral-800 transition duration-300"
+>
+  Start Your Project
+</a>
+
     </div>
                 </div>
               </motion.div>

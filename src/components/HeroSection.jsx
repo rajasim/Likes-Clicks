@@ -29,7 +29,7 @@ const HeroSection = () => {
       icon: Globe,
       gradient: "from-blue-200",
       accentColor: "from-blue-500 to-indigo-600",
-      bgImage: "/hero/web.jpg",
+      bgImage: "/hero/webb.jpeg",
       link: "/webdev",
     },
     {
@@ -39,9 +39,9 @@ const HeroSection = () => {
       cta: "View App Services",
       badge: "Hot",
       icon: Smartphone,
-      gradient: "from-purple-200",
+      gradient: "",
       accentColor: "from-purple-500 to-pink-600",
-      bgImage: "/hero/app.jpg",
+      bgImage: "/hero/wpbg.png",
       link: "/mobileapp",
     },
     {
@@ -53,7 +53,7 @@ const HeroSection = () => {
       icon: Megaphone,
       gradient: "from-orange-200",
       accentColor: "from-orange-500 to-amber-600",
-      bgImage: "/hero/marketing.jpg",
+      bgImage: "/hero/marketing.jpeg",
       link: "/MarketingAutomation",
     },
     // {
@@ -75,9 +75,9 @@ const HeroSection = () => {
       cta: "Explore AI Capabilities",
       badge: "Trending",
       icon: Cpu,
-      gradient: "from-red-200",
+      gradient: "",
       accentColor: "from-red-500 to-pink-600",
-      bgImage: "/hero/ai.jpg",
+      bgImage: "/hero/devlopai.png",
       link: "/AIDevelopment",
     },
   ];
